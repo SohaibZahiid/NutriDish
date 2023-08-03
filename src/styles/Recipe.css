@@ -1,0 +1,38 @@
+.recipe {
+    border: 1px solid lightgray;
+}
+
+
+.recipe img {
+
+    object-fit: cover;
+}
+
+.recipe-description {
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
+.small {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--clr-gray);
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.creator {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--clr-gray);
+}
+
+
+

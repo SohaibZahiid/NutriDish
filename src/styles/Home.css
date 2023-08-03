@@ -16,3 +16,9 @@
     font-size: large;
     max-width: 600px; /* Puedes ajustar esto según tus necesidades */
   }
+
+  .recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1em;
+}
