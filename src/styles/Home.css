@@ -1,0 +1,18 @@
+
+#hero {
+    background-image: url('/imgs/158-h0.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ajusta esto según tus necesidades */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    color: #fdfcfc; /* Color del texto, cámbialo si es necesario */
+  }
+  
+#hero-content {
+    text-align: center; /* Centra el texto y el botón */
+    font-size: large;
+    max-width: 600px; /* Puedes ajustar esto según tus necesidades */
+  }
