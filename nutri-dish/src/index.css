@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --clr-text: #2b2c34;
+
+  --clr-btn: #6246ea;
+  --clr-btn-text: #001e1d;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.padding-top {
+  padding-top: 5em;
+}
+
+.btn { 
+  background-color: var(--clr-btn);
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 1em 2em;
+  font-size: 1rem;
+  color: #fff;
+}
