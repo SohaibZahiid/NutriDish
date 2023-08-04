@@ -5,7 +5,7 @@ function Recipe() {
     <>
       <div className="recipe">
         <div className="recipe-container">
-          <img src="veggieNoodles.webp" />
+          <img src="imgs/veggieNoodles.webp" />
           <div className="recipe-description">
             <div className="small">Healthy dinner recipes</div>
             <div className="title">13 Quick & Easy Veggie noodle dinner recipes</div>

@@ -12,13 +12,6 @@ function Home() {
           <button>Explora Recetas</button>
         </div>
       </section>
-
-      <div className="recipe-container">
-        <Recipe />
-        <Recipe />
-        <Recipe />
-        <Recipe />
-      </div>
   
         {/* Sección de Características */}
         <section id="features">
