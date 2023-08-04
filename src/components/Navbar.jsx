@@ -12,13 +12,13 @@ const Navbar = () => {
           <div>
             <ul className="nav-links">
               <li>
-                <a href="">Breakfast</a>
+                <Link to="breakfast">Breakfast</Link>
               </li>
               <li>
-                <a href="">Lunch</a>
+              <Link to="lunch">Lunch</Link>
               </li>
               <li>
-                <a href="">Dinner</a>
+              <Link to="dinner">Dinner</Link>
               </li>
             </ul>
           </div>
