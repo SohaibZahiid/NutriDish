@@ -1,10 +1,14 @@
-.recipe {
-    border: 1px solid lightgray;
+
+#recipes{
+    background: #f9f9f9;
 }
 
+.recipe {
+    border: 1px solid lightgray;
+    background-color: white;
+}
 
 .recipe img {
-
     object-fit: cover;
 }
 

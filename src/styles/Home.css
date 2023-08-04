@@ -1,14 +1,16 @@
 
 #hero {
-    background-image: url('/imgs/158-h0.webp');
+    background-image: linear-gradient(rgba(0, 0,0,0.5), rgba(0,0,0,0.5)), url('/imgs/158-h0.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Ajusta esto según tus necesidades */
+    height: 90vh; /* Ajusta esto según tus necesidades */
     display: flex;
     align-items: center; /* Centra el contenido verticalmente */
     justify-content: center; /* Centra el contenido horizontalmente */
-    color: #fdfcfc; /* Color del texto, cámbialo si es necesario */
+    color: #fffcfc; /* Color del texto, cámbialo si es necesario */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 700;
   }
   
 #hero-content {
@@ -17,8 +19,150 @@
     max-width: 600px; /* Puedes ajustar esto según tus necesidades */
   }
 
-  .recipe-container {
+.recipe-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     gap: 1em;
+}
+
+/*Css para Seccion de caracteristicas*/
+#features {
+  background-color: #f9f9f9; /* Color de fondo suave */
+  padding: 5rem 1rem; /* Espacio interior */
+  text-align: center; /* Centra el texto */
+}
+
+#features h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333; /* Color del título principal */
+  font-size: 2.5rem; /* Tamaño del título principal */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 2rem; /* Espacio entre características */
+  text-align: center; /* Alineación del texto en la característica */
+  max-width: 800px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+}
+
+.feature h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #555555; /* Color del título de la característica */
+  font-size: 1.5rem; /* Tamaño del título de la característica */
+}
+
+.feature p {
+  font-family: 'Montserrat', sans-serif;
+  color: #666666; /* Color de la descripción */
+  font-size: 1rem; /* Tamaño de la descripción */
+  line-height: 1.5; /* Espacio entre líneas en la descripción */
+}
+
+/*Recipes*/
+#recipes h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/*Seccion de testimonios*/
+
+#testimonials {
+  background-color: #f9f9f9;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+}
+
+.testimonial-container div {
+  flex: 1;
+}
+
+#testimonials h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem; /* Espacio entre testimonios */
+}
+
+.testimonial div {
+  padding: 2rem;
+  border: 1px solid #d9d9d9;
+  position: relative;
+  background-color: #ffffff; /* Fondo blanco para cada testimonio individual */
+}
+
+.testimonial div:before {
+  content: '\201C';
+  font-size: 3rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #7f7f7f;
+}
+
+.testimonial div:after {
+  content: '\201D';
+  font-size: 3rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: #7f7f7f;
+}
+
+.testimonial p {
+  font-family: 'Montserrat', sans-serif;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial p:last-child {
+  font-style: italic;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+/*CTA final*/
+
+#final-cta {
+  background-color: #f9f9f9; /* Color de fondo suave para la sección */
+  padding: 4rem 1rem; /* Relleno alrededor del contenido */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+#final-cta h2 {
+  font-family: 'Montserrat', sans-serif; /* Fuente moderna y limpia */
+  color: #333333; /* Color de texto oscuro */
+  font-size: 2.5rem; /* Tamaño del título */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+#final-cta button {
+  font-family: 'Montserrat', sans-serif; /* Fuente consistente con el resto de la página */
+  background-color: #333333; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto del botón */
+  padding: 1rem 2rem; /* Relleno alrededor del texto del botón */
+  border: none; /* Sin bordes alrededor del botón */
+  font-size: 1rem; /* Tamaño de la fuente del botón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón sobre el botón */
+  transition: background-color 0.3s ease; /* Suaviza la transición de color al pasar el ratón sobre el botón */
+}
+
+#final-cta button:hover {
+  background-color:#555555;  /* Cambia el color de fondo del botón al pasar el ratón sobre él */
 }

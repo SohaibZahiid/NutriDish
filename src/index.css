@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -10,6 +13,9 @@
 
   --clr-btn: #6246ea;
   --clr-btn-text: #001e1d;
+
+  /*color de fondo de /home*/
+  --clr-bck-fondo: #f9f9f9;
 
 }
 

@@ -1,4 +1,5 @@
 import Recipe from "../components/Recipe";
+import Testimonial from "../components/Testimonial";
 import "../styles/Home.css"
 
 function Home() {
@@ -20,30 +21,31 @@ function Home() {
             <h3>Recetas Personalizadas</h3>
             <h3>Guias nutricionales</h3>
             <h3>Soporte a la Comunidad</h3>
-            <p>Descripción de esta característica.</p>
           </div>
           {/* Agrega más características aquí */}
         </section>
   
         {/* Sección de Recetas Destacadas */}
         <section id="recipes">
-          <h2>Recetas Populares</h2>
-          <div className="recipe">
-            <img src="recipe-image.jpg" alt="Nombre de la receta" />
-            <h3>Nombre de la Receta</h3>
-            <p>Descripción breve de la receta.</p>
+          <h2>Nuestras Recetas Mas Populares</h2>
+          <div className="recipe-container container ">
+            <Recipe/>
+            <Recipe/>
+            <Recipe/>
+            <Recipe/>
           </div>
           {/* Agrega más recetas aquí */}
         </section>
   
         {/* Sección de Testimonios */}
         <section id="testimonials">
-          <h2>Lo Que Nuestros Miembros Dicen</h2>
-          <div className="testimonial">
-            <p>El testimonio va aquí.</p>
-            <p>- Nombre de la Persona</p>
-          </div>
-          {/* Agrega más testimonios aquí */}
+        <h2>Lo Que Nuestros Miembros Dicen</h2>
+        <div className="testimonial-container testimonial">
+          <Testimonial desc="Un lugar donde me dan deliciosas recetas personalizadas!!" name="Santiago C"/>
+          <Testimonial desc="Delicoso y saludable!!" name="Sohaib Z"/>
+          <Testimonial desc="Aqui encontre la importancia de comer sano" name="Mirjan K"/>
+        </div>
+        {/* Agrega más testimonios aquí */}
         </section>
   
         {/* CTA Final */}
