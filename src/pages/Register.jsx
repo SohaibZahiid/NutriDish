@@ -6,7 +6,7 @@ function Register() {
     <>
       <div className="register padding-top">
         <div className="container register-container">
-          <form>
+          <form className="register-form">
             <label>Name</label>
             <input type="text" placeholder="name" />
             <label>Username</label>

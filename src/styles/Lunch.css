@@ -1,5 +1,6 @@
 .lunch {
   background-color: var(--clr-secondary);
+  min-height: 80vh;
 }
 
 .lunch-container {

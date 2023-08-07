@@ -3,6 +3,7 @@ import "../styles/Lunch.css";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Filter from "../components/Filter";
 
 function Lunch() {
   var API = import.meta.env.VITE_API;
@@ -23,7 +24,8 @@ function Lunch() {
 
   return (
     <>
-      <div className="lunch section">
+      <div className="lunch section-x2">
+      <Filter />
         <div className="lunch-container container">
           {recipes.map((recipe) => (
             <Recipe

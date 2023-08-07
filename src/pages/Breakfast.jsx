@@ -3,6 +3,7 @@ import "../styles/Breakfast.css";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Filter from "../components/Filter";
 
 function Breakfast() {
   const [recipes, setRecipes] = useState([]);
@@ -24,7 +25,8 @@ function Breakfast() {
 
   return (
     <>
-      <div className="breakfast section">
+      <div className="breakfast section-x2">
+        <Filter />
         <div className="breakfast-container container">
           {recipes.map((recipe) => (
             <Recipe

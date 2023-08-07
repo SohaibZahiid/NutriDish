@@ -17,31 +17,44 @@
   align-items: center;
 }
 
-form {
+.login-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5em;
 
-  background: var(--clr-card-bg);
+  border-radius: var(--br);
+  background: var(--clr-primary);
   color: var(--clr-card-headline);
   padding: 4em;
   width: min(400px, 95%);
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
-input {
+
+.login-form label {
+  color: var(--clr-secondary);
+}
+
+.login-form input {
   width: 100%;
   border: none;
-  border-bottom: 2px solid var(--clr-card-headline);
   outline: none;
   padding: 0.8em;
+  background-color: var(--clr-secondary);
+  border-radius: var(--br);
 }
 
-input:focus {
-  border-bottom: 2px solid var(--clr-card-headline);
+.login-form input::placeholder {
+  color: var(--clr-primary);
 }
 
-p {
+
+.login p {
   margin-top: 1em;
+  color: var(--clr-primary-text);
+}
+
+.login p a {
+  color: inherit;
 }

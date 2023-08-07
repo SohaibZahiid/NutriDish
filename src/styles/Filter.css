@@ -1,0 +1,37 @@
+.filter {
+  background-color: var(--clr-card-bg);
+  border-radius: var(--br);
+  margin-bottom: 2em !important;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+}
+
+.tags-container {
+  display: flex;
+  gap: 1em;
+}
+
+.tag {
+  display: flex;
+  gap: .5em;
+  color: var(--clr-primary-text);
+}
+
+.search {
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  border-radius: var(--br);
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary-headline);
+}
+
+.search::placeholder {
+  color: var(--clr-secondary-headline);
+}

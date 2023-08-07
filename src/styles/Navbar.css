@@ -14,7 +14,7 @@
 }
 
 .logo {
-  color: var(--clr-headline);
+  color: var(--clr-secondary-headline);
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
@@ -26,7 +26,7 @@
 }
 
 a {
-  color: var(--clr-headline);
+  color: var(--clr-secondary-headline);
   font-size: var(--fz-header);
   font-weight: 500;
 }

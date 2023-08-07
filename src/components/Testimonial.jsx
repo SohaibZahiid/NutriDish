@@ -1,3 +1,4 @@
+import '../styles/Testimonial.css'
 
 function Testimonial({desc, name}) {
   return (
