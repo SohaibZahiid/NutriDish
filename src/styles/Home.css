@@ -155,8 +155,8 @@
 
 #final-cta button {
   font-family: 'Montserrat', sans-serif; /* Fuente consistente con el resto de la página */
-  background-color: #333333; /* Color de fondo del botón */
-  color: #ffffff; /* Color del texto del botón */
+  background-color: var(--clr-btn); /* Color de fondo del botón */
+  color: black; /* Color del texto del botón */
   padding: 1rem 2rem; /* Relleno alrededor del texto del botón */
   border: none; /* Sin bordes alrededor del botón */
   font-size: 1rem; /* Tamaño de la fuente del botón */
@@ -165,5 +165,6 @@
 }
 
 #final-cta button:hover {
-  background-color:#555555;  /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+  background-color: var(--clr-primary);  /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+  color: white;
 }
