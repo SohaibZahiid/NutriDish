@@ -4,7 +4,7 @@ import "../styles/Login.css";
 const Login = () => {
   return (
     <>
-      <div className="login padding-top">
+      <div className="login section">
         <div className="container login-container">
           <form>
             <label>Username</label>

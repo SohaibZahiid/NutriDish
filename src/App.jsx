@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Breakfast from "./pages/Breakfast";
 import Lunch from "./pages/Lunch";
 import Dinner from "./pages/Dinner";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={ <Login /> } />
         <Route path="/register" element={ <Register /> } />
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -1,15 +1,14 @@
 
-#recipes{
-    background: #f9f9f9;
-}
-
 .recipe {
-    border: 1px solid lightgray;
-    background-color: white;
+    border-radius: var(--br);
+    background-color: var(--clr-card-bg);
+    color: #0f3433;
+    max-width: 15rem;
 }
 
 .recipe img {
     object-fit: cover;
+    border-start-start-radius: var(--br);
 }
 
 .recipe-description {
@@ -23,19 +22,18 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
-    color: var(--clr-gray);
 }
 
 .title {
-    font-size: 1.2rem;
+    font-size: var(--fz-title);
     font-weight: bold;
     text-transform: capitalize;
+    color: #001e1d;
 }
 
 .creator {
     font-size: 14px;
     text-transform: capitalize;
-    color: var(--clr-gray);
 }
 
 

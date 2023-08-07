@@ -40,10 +40,10 @@ function Home() {
         {/* Sección de Testimonios */}
         <section id="testimonials">
         <h2>Lo Que Nuestros Miembros Dicen</h2>
-        <div className="testimonial-container testimonial">
-          <Testimonial desc="Un lugar donde me dan deliciosas recetas personalizadas!!" name="Santiago C"/>
-          <Testimonial desc="Delicoso y saludable!!" name="Sohaib Z"/>
-          <Testimonial desc="Aqui encontre la importancia de comer sano" name="Mirjan K"/>
+        <div className="testimonial-container container">
+          <Testimonial className="testimonial" desc="Un lugar donde me dan deliciosas recetas personalizadas!!" name="Santiago C"/>
+          <Testimonial className="testimonial" desc="Delicoso y saludable!!" name="Sohaib Z"/>
+          <Testimonial className="testimonial" desc="Aqui encontre la importancia de comer sano" name="Mirjan K"/>
         </div>
         {/* Agrega más testimonios aquí */}
         </section>

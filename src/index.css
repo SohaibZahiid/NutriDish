@@ -1,21 +1,27 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  --clr-primary: #004643;
+  --clr-secondary: #abd1c6;
+  --clr-primary-text: #abd1c6;
+  --clr-secondary-text: #0f3433;
+  --clr-btn: #f9bc60;
+  --clr-btn-text: #001e1d;
+  --clr-headline: #fffffe;
+  --clr-card-headline: #001e1d;
+  --clr-card-bg: #e8e4e6;
+
+  --fz-header: 1.1rem;
+  --fz-title: 1.3rem;
+
+  --br: 5px;
+
   --clr-white: #fff;
   --clr-black: #000;
-
-  --clr-text: #2b2c34;
-
-  --clr-btn: #6246ea;
-  --clr-btn-text: #001e1d;
-
-  /*color de fondo de /home*/
-  --clr-bck-fondo: #f9f9f9;
 
 }
 
@@ -32,17 +38,28 @@ img {
   height: 100%;
 }
 
+button {
+  border: none;
+  outline: none;
+  padding: .6em 1em;
+  border-radius: var(--br);
+  background-color: var(--clr-btn);
+  color: var(--clr-btn-text);
+  font-size: var(--fz-header);
+  cursor: pointer;
+}
+
 .container {
   width: 90%;
   max-width: 1200px; 
   margin: 0 auto;
 }
 
-.padding-top {
-  padding-top: 5em;
+.section {
+  padding-block: 2em;
 }
 
-.btn { 
+/* .btn { 
   background-color: var(--clr-btn);
   cursor: pointer;
   border: 0;
@@ -51,4 +68,4 @@ img {
   padding: 1em 2em;
   font-size: 1rem;
   color: #fff;
-}
+} */

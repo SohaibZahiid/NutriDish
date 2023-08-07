@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   height: 10vh;
-  background-color: var(--clr-bg);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: var(--clr-primary);
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 .navbar-container {
@@ -14,8 +14,8 @@
 }
 
 .logo {
-  color: var(--clr-text);
-  font-size: 1.2rem;
+  color: var(--clr-headline);
+  font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -26,6 +26,11 @@
 }
 
 a {
-  color: var(--clr-text);
+  color: var(--clr-headline);
+  font-size: var(--fz-header);
   font-weight: 500;
+}
+
+.auth .link{
+  color: var(--clr-btn-text);
 }

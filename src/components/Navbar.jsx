@@ -23,7 +23,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="auth">
-            <Link to="/login">Login</Link>
+            <button><Link to="/login"><span className="link">Login</span></Link></button>
           </div>
         </div>
       </div>
