@@ -1,5 +1,6 @@
 .dinner {
   background-color: var(--clr-secondary);
+  min-height: 80vh;
 }
 
 .dinner-container {
