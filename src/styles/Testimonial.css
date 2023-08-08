@@ -1,0 +1,41 @@
+.testimonial {
+  padding: 2rem;
+  position: relative;
+  background-color: var(--clr-card-bg); 
+  transition: var(--ts)
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial div:before {
+  content: '\201C';
+  font-size: 3rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--clr-primary-text);
+}
+
+.testimonial div:after {
+  content: '\201D';
+  font-size: 3rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: var(--clr-primary-text);
+}
+
+.testimonial p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--clr-primary-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.testimonial p:last-child {
+  font-style: italic;
+  text-align: right;
+  margin-top: 1rem;
+}

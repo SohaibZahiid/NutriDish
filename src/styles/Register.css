@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
+    background-color: var(--clr-secondary);
   }
   
   .register-container {
@@ -15,31 +16,44 @@
     align-items: center;
   }
   
-  form {
+  .register-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
   
+    border-radius: var(--br);
     gap: 1.5em;
-    background: #fff;
+    background: var(--clr-primary);
     padding: 4em;
     width: min(400px, 95%);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
   
-  input {
+  .register-form label {
+    color: var(--clr-secondary);
+  }
+
+  .register-form input {
     width: 100%;
     border: none;
-    border-bottom: 2px solid lightgray;
     outline: none;
     padding: 0.8em;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary-text);
+    border-radius: var(--br);
+  }
+
+  .register-form input::placeholder {
+    color: var(--clr-primary);
   }
   
-  input:focus {
-    border-bottom: 2px solid #555;
-  }
-  
-  p {
+.register p {
     margin-top: 1em;
+    color: var(--clr-primary-text);
   }
+
+ .register p a {
+    color: inherit;
+  }
+
   

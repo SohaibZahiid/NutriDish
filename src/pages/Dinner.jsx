@@ -3,6 +3,7 @@ import "../styles/Dinner.css";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Filter from "../components/Filter";
 
 function Dinner() {
   var API = import.meta.env.VITE_API;
@@ -23,7 +24,8 @@ function Dinner() {
 
   return (
     <>
-      <div className="dinner section">
+      <div className="dinner section-x2">
+      <Filter />
         <div className="dinner-container container">
           {recipes.map((recipe) => (
             <Recipe

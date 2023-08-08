@@ -2,8 +2,13 @@
 .recipe {
     border-radius: var(--br);
     background-color: var(--clr-card-bg);
-    color: #0f3433;
-    max-width: 15rem;
+    color: var(--clr-secondary-text);
+    transition: var(--ts);
+    cursor: pointer;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
 }
 
 .recipe img {
@@ -28,7 +33,7 @@
     font-size: var(--fz-title);
     font-weight: bold;
     text-transform: capitalize;
-    color: #001e1d;
+    color: var(--clr-secondary-text);
 }
 
 .creator {

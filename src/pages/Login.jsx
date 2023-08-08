@@ -4,9 +4,9 @@ import "../styles/Login.css";
 const Login = () => {
   return (
     <>
-      <div className="login section">
+      <div className="login section-x2">
         <div className="container login-container">
-          <form>
+          <form className="login-form">
             <label>Username</label>
             <input type="text" placeholder="Username" />
             <label>Password</label>
