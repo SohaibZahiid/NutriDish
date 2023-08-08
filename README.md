@@ -38,10 +38,6 @@ Este proyecto es parte de nuestro bootcamp y agradecemos cualquier feedback o co
 - [Santiago](https://github.com/scartage)
 - [Marc](https://www.linkedin.com/in/marc-adell-fern%C3%A1ndez-46b30017a)
 
-## Licencia 📄
-
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para más detalles.
-
 ---
 
 ¡Únete a nosotros en NutriDish y comienza tu viaje hacia una vida más saludable y sabrosa hoy! 🌱
