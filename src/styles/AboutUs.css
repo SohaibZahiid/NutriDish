@@ -52,12 +52,12 @@
   color: var(--clr-black);
 }
 
-a {
+.mission-section a {
   color: var(--clr-primary);
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-a:hover {
+.mission-section a:hover {
   color: var(--clr-btn);
 }

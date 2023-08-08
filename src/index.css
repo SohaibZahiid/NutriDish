@@ -6,7 +6,8 @@
   font-weight: 400;
 
   --clr-primary: #004643;
-  --clr-secondary: #abd1c6;
+  /* --clr-secondary: #abd1c6; */
+  --clr-secondary: white;
   --clr-primary-text: #0f3433;
   --clr-secondary-text: #abd1c6;
   --clr-btn: #f9bc60;
