@@ -16,6 +16,8 @@ const Login = () => {
     password: ""
   })
 
+  const [sccMsg, setSccMsg] = useState("")
+
   const navigate = useNavigate()
 
   const handleChange = (e) => {
@@ -26,7 +28,11 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(`${API}/login`, auth);
-      navigate("/")
+      console.log(res.data.success);
+      if(res.data.success) {
+        navigate("/")
+      }
+      setSccMsg(res.data.message)
     } catch (err) {
       setErrMsg(err.response.data);
     }
@@ -39,7 +45,7 @@ const Login = () => {
           <img src="/imgs/login.jpg" />
           <div className="form-container">
             <form className="login-form">
-              {errMsg.auth && <small>{errMsg.auth}</small>}
+              {sccMsg && <small>{sccMsg}</small>}
               <label>Username</label>
               <input
                 type="text"

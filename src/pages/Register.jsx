@@ -8,30 +8,36 @@ function Register() {
 
   const API = import.meta.env.VITE_API;
 
-  const [auth, setAuth] = useState({
+  const [formData, setFormData] = useState({
+    name: "",
     username: "",
     password: "",
   });
 
   const [errMsg, setErrMsg] = useState({
+    name: "",
     username: "",
     password: ""
   })
 
+  const [sccMsg, setSccMsg] = useState("")
+
   const navigate = useNavigate()
 
   const handleChange = (e) => {
-    setAuth((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API}/register`, auth);
-      console.log(res);
-      navigate("/")
+      const res = await axios.post(`${API}/register`, formData);
+      console.log(res.data.status);
+      if(res.data.status == 200) {
+        navigate("/")
+      }
+      setSccMsg(res.data.message)
     } catch (err) {
-      console.log(err);
       setErrMsg(err.response.data);
     }
   };
@@ -43,6 +49,7 @@ function Register() {
           <img src="/imgs/login.jpg"/>
           <div className="form-container">
           <form className="register-form">
+            {sccMsg && <small>{sccMsg}</small>}
             <label>Name</label>
             <input type="text" placeholder="name" name="name" onChange={handleChange}/>
             {errMsg.name && <small>{errMsg.name}</small>}
