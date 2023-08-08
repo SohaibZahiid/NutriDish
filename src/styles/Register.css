@@ -1,59 +1,82 @@
 .register {
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    background-color: var(--clr-secondary);
-  }
-  
-  .register-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .register-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-    border-radius: var(--br);
-    gap: 1.5em;
-    background: var(--clr-primary);
-    padding: 4em;
-    width: min(400px, 95%);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  }
-  
-  .register-form label {
-    color: var(--clr-secondary);
-  }
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--clr-secondary);
+}
 
-  .register-form input {
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 0.8em;
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary-text);
-    border-radius: var(--br);
-  }
+.register-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
-  .register-form input::placeholder {
-    color: var(--clr-primary);
-  }
-  
+.register-container img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: var(--br);
+  gap: 1.5em;
+  background: var(--clr-primary);
+  padding: 4em;
+  width: min(400px, 95%);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.register-form label {
+  color: var(--clr-secondary);
+}
+
+.register-form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.8em;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary-text);
+  border-radius: var(--br);
+}
+
+.register-form input::placeholder {
+  color: var(--clr-primary);
+}
+
 .register p {
-    margin-top: 1em;
-    color: var(--clr-primary-text);
+  margin-top: 1em;
+  color: var(--clr-primary-text);
+}
+
+.register p a {
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  .register-container {
+    grid-template-columns:  1fr;
   }
 
- .register p a {
-    color: inherit;
+  .register-container img {
+    display: none;
   }
 
-  
+  .register {
+    padding-block: 5em;
+  }
+}
