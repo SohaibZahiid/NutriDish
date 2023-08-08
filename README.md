@@ -36,7 +36,7 @@ Este proyecto es parte de nuestro bootcamp y agradecemos cualquier feedback o co
 - [Mirjam](https://github.com/mirjankapxhiu)
 - [Sohaib](https://github.com/SohaibZahiid)
 - [Santiago](https://github.com/scartage)
-- [Marc]
+- [Marc](https://www.linkedin.com/in/marc-adell-fern%C3%A1ndez-46b30017a)
 
 ## Licencia 📄
 
