@@ -22,8 +22,8 @@ function AboutUs() {
       <a href="https://www.linkedin.com/in/santiagocartagenah">Santiago</a>
     </div>
     <div>
-      <img src="/imgs/sac.jpg" alt="Team Member 4" />
-      <a href="https://www.linkedin.com/in/member4">Marc</a>
+      <img src="/imgs/mac.jpg" alt="Team Member 4" />
+      <a href="https://www.linkedin.com/in/marc-adell-fern">Marc</a>
     </div>
         </div>
       </div>
