@@ -52,6 +52,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: var(--clr-secondary);  /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+  color: black;
+}
+
 input {
   font-size: 14px;
 }

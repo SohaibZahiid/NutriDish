@@ -25,7 +25,7 @@
   gap: 2em;
 }
 
-a {
+.nav-links a {
   color: var(--clr-secondary-headline);
   font-size: var(--fz-header);
   font-weight: 500;

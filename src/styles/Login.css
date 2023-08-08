@@ -10,10 +10,23 @@
 
 }
 
+
 .login-container {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ 
+}
+
+.login-container img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -57,4 +70,19 @@
 
 .login p a {
   color: inherit;
+}
+
+
+@media (max-width: 900px) {
+  .login-container {
+    grid-template-columns:  1fr;
+  }
+
+  .login-container img {
+    display: none;
+  }
+
+  .login {
+    padding-block: 5em;
+  }
 }
