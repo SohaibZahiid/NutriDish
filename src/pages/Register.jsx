@@ -4,7 +4,7 @@ import '../styles/Register.css'
 function Register() {
   return (
     <>
-      <div className="register padding-top">
+      <div className="register section-x2">
         <div className="container register-container">
           <form className="register-form">
             <label>Name</label>
