@@ -1,5 +1,5 @@
 #main {
-  background-color: var(--clr-primary);
+  background-color: var(--clr-box-bg);
 }
 
 #hero {
@@ -43,10 +43,11 @@
 /*Css para Seccion de caracteristicas*/
 #features {
   text-align: center; /* Centra el texto */
+  background-color: var(--clr-secondary);
 }
 
 #features h2 {
-  color: var(--clr-secondary-headline);
+  color: var(--clr-primary-headline);
   font-size: 2.5rem; /* Tamaño del título principal */
   margin-bottom: 1rem; /* Espacio debajo del título */
 }
@@ -96,6 +97,7 @@
 #testimonials {
   padding: 5rem 1rem;
   text-align: center;
+  background-color: var(--clr-secondary);
 }
 
 .testimonial-container {
@@ -107,7 +109,7 @@
 }
 
 #testimonials h2 {
-  color: var(--clr-secondary-headline);
+  color: var(--clr-primary-headline);
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }

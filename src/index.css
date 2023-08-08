@@ -5,17 +5,22 @@
   line-height: 1.4;
   font-weight: 400;
 
-  --clr-primary: #004643;
-  /* --clr-secondary: #abd1c6; */
-  --clr-secondary: white;
+  --clr-primary-navbar: #337c22; 
+  --clr-primary: #97d789; 
+  --clr-secondary: #f8f7ed;
+  --clr-secondary-box: #f8f7ed;
   --clr-primary-text: #0f3433;
   --clr-secondary-text: #abd1c6;
-  --clr-btn: #f9bc60;
+  --clr-btn: #79cb67;
+  --clr-btn-navbar: #fffffe;
   --clr-btn-text: #001e1d;
-  --clr-primary-headline: #001e1d;
+  --clr-btn-hover: #489c35;
+  --clr-primary-headline: #86d973;
   --clr-secondary-headline: #fffffe;
   --clr-card-headline: #001e1d;
   --clr-card-bg: #e8e4e6;
+  --clr-box-bg: #fffffe;
+  --clr-footer-bg: #a1db95;
 
   --fz-header: 1.1rem;
   --fz-title: 1.3rem;
@@ -54,7 +59,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--clr-secondary);  /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+  background-color: var(--clr-btn-hover);  /* Cambia el color de fondo del botón al pasar el ratón sobre él */
   color: black;
 }
 

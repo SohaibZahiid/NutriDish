@@ -3,7 +3,7 @@
 }
 
 .footer {
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-footer-bg);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -54,6 +54,6 @@
 }
 
 .footer button:hover {
-  background-color: var( --clr-primary);
+  background-color: var(--clr-btn-hover);
   color: white;
 }
