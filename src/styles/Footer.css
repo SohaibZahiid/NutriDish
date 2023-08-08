@@ -15,7 +15,7 @@
   height: 98%;
   color: var(--clr-primary-text);
   padding: 15px;
-  box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+
 }
 
 .footer h2 {
@@ -24,7 +24,7 @@
 }
 
 .footer a {
-  color: var(--clr-primary);
+  color: White;
   font-weight: 400; /* Peso de fuente para los enlaces */
   transition: color 0.3s ease;
   text-decoration: none; /* Elimina la subraya en los enlaces */
@@ -32,7 +32,7 @@
 }
 
 .footer a:hover {
-  color: var(--clr-btn);
+  color: black;
 }
 
 .footer input[type="email"] {

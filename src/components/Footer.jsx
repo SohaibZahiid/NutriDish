@@ -9,7 +9,7 @@ function Footer() {
         <a href="/About">About Us</a><br></br>
         <a href="/TermsAndConditions">Terms & Conditions</a><br></br> 
       </div>
-      <div className="social-media">
+      <div className="links">
         <h2>Devs who have worked on this project</h2>
         <a href="https://www.linkedin.com/in/mirjan-kapxhiu-ba742527b">Mirjam</a><br></br>
         <a href="https://www.linkedin.com/in/sohaibzahid">Sohaib</a><br></br>

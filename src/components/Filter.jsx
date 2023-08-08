@@ -22,6 +22,14 @@ const Filter = () => {
                 <input type="radio" name="tag" value="non-vegeterian" />
                 <label>Non-Vegeterian</label>
               </div>
+              <div className="tag">
+                <input type="radio" name="tag" value="non-vegeterian" />
+                <label>Paleto</label>
+              </div>
+              <div className="tag">
+                <input type="radio" name="tag" value="non-vegeterian" />
+                <label>Pescadian</label>
+              </div>
             </div>
           </div>
         </form>
