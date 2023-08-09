@@ -10,6 +10,7 @@ import Dinner from "./pages/Dinner";
 import TermsAndConditions from "./pages/TerminosyCondiciones";
 import About from "./pages/AboutUs";
 import Footer from "./components/Footer";
+import SinglePage from "./pages/SinglePage";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/register" element={ <Register /> } />
         <Route path="/TermsAndConditions" element={ <TermsAndConditions/>}/>
         <Route path="/About" element={ <About/>}/>
+        <Route path="/SingelPage" element={ <SinglePage/>}/>
+
       </Routes>
       <Footer />
     </Router>

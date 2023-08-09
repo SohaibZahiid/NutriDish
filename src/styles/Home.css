@@ -137,3 +137,16 @@
   background-color: var(--clr-btn); /* Color de fondo del botón */
   color: var(--clr-btn-text); /* Color del texto del botón */
 }
+.dislike,.like{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -250px;
+}
+.like{
+  margin-left: -40px; 
+}
+.hid{
+  display: none;
+}
+
