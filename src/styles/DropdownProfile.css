@@ -1,0 +1,30 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 4em;
+  right: -5px;
+  width: 120px;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.dropdown::before {
+  position: absolute;
+  content: '';
+  top: -.7em;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: white;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

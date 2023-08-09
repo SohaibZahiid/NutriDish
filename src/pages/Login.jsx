@@ -1,38 +1,39 @@
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Login.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState, useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const Login = () => {
-  const API = import.meta.env.VITE_API;
 
-  const [auth, setAuth] = useState({
+  const [inputs, setInputs] = useState({
     username: "",
     password: "",
   });
 
   const [errMsg, setErrMsg] = useState({
     username: "",
-    password: ""
-  })
+    password: "",
+  });
 
-  const [sccMsg, setSccMsg] = useState("")
+  const [sccMsg, setSccMsg] = useState("");
+  
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+  const { login } = useContext(AuthContext);
+
 
   const handleChange = (e) => {
-    setAuth((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleClick = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API}/login`, auth);
-      console.log(res.data.success);
-      if(res.data.success) {
-        navigate("/")
+      const res = await login(inputs)
+      if (res.data.success) {
+        navigate("/");
       }
-      setSccMsg(res.data.message)
+      setSccMsg(res.data.message);
     } catch (err) {
       setErrMsg(err.response.data);
     }
@@ -62,7 +63,7 @@ const Login = () => {
                 onChange={handleChange}
               />
               {errMsg.password && <small>{errMsg.password}</small>}
-              <button className="submit btn" onClick={handleClick}>
+              <button className="submit btn" onClick={handleSubmit}>
                 Login
               </button>
             </form>

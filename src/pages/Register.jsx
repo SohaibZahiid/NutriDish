@@ -32,9 +32,8 @@ function Register() {
     e.preventDefault();
     try {
       const res = await axios.post(`${API}/register`, formData);
-      console.log(res.data.status);
       if(res.data.status == 200) {
-        navigate("/")
+        navigate("/login")
       }
       setSccMsg(res.data.message)
     } catch (err) {
