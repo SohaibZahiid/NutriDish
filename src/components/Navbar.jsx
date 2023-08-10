@@ -41,8 +41,8 @@ const Navbar = () => {
               </>
             ) : (
               <Link to="/login">
-                <span className="link">
-                  <button>Login</button>
+                <span className="btn">
+                  Login
                 </span>
               </Link>
             )}
