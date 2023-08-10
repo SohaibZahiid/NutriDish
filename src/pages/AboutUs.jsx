@@ -6,25 +6,25 @@ function AboutUs() {
     <div className="about-us-container">
       <h1>About Us</h1>
       <p className="about-us-text">NutriDish is a dedicated platform for healthy food enthusiasts. Our mission is to provide personalized and healthy recipes to anyone looking to improve their diet and lifestyle.</p>
-        <div className="team-section">
+      <div className="team-section">
         <h2>Meet Our Team</h2>
         <div className="team-members">
-        <div>
-      <img src="/imgs/mir.jpg" alt="Team Member 1" />
-      <a href="https://www.linkedin.com/in/mirjan-kapxhiu-ba742527b" target="_blank">Mirjan</a>
-    </div>
-    <div>
-      <img src="/imgs/so.jpg" alt="Team Member 2" />
-      <a href="https://www.linkedin.com/in/sohaibzahid" target="_blank">Sohaib</a>
-    </div>
-    <div>
-      <img src="/imgs/sac.jpg" alt="Team Member 3" />
-      <a href="https://www.linkedin.com/in/santiagocartagenah" target="_blank">Santiago</a>
-    </div>
-    <div>
-      <img src="/imgs/mac.jpg" alt="Team Member 4" />
-      <a href="https://www.linkedin.com/in/marc-adell-fern" target="_blank">Marc</a>
-    </div>
+          <div>
+            <img src="/imgs/mir.jpg" alt="Team Member 1" />
+            <a href="https://www.linkedin.com/in/mirjan-kapxhiu-ba742527b" target="_blank">Mirjan</a>
+          </div>
+          <div>
+            <img src="/imgs/so.jpg" alt="Team Member 2" />
+            <a href="https://www.linkedin.com/in/sohaibzahid" target="_blank">Sohaib</a>
+          </div>
+          <div>
+            <img src="/imgs/sac.jpg" alt="Team Member 3" />
+            <a href="https://www.linkedin.com/in/santiagocartagenah" target="_blank">Santiago</a>
+          </div>
+          <div>
+            <img src="/imgs/mac.jpg" alt="Team Member 4" />
+            <a href="https://www.linkedin.com/in/marc-adell-fern%C3%A1ndez-46b30017a" target="_blank">Marc</a>
+          </div>
         </div>
       </div>
       <div className="mission-section">
