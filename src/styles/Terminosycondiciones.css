@@ -13,10 +13,10 @@
   
   .terms-content {
     font-size: var(--fz-header);
-    color: var();
+    color: var(--clr-black);
     line-height: 1.6;
     padding: 1em;
-    background-color: var(--clr-card-bg);
+    background-color: #e8e4e6;
     border-radius: var(--br);
   }
   

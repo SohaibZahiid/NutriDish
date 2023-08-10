@@ -60,7 +60,7 @@
 /*Css para Seccion de caracteristicas*/
 #features {
   text-align: center; /* Centra el texto */
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
 }
 
 #features h2 {
@@ -91,7 +91,7 @@
 
 /*Recipes*/
 #recipes {
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
 }
 
 #recipes h2 {
@@ -111,7 +111,7 @@
 #testimonials {
   padding: 5rem 1rem;
   text-align: center;
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
 }
 
 .testimonial-container {
@@ -137,7 +137,7 @@
 /*CTA final*/
 
 #final-cta {
-  background-color: var(--clr-secondary); 
+  background-color: var(--clr-white); 
   text-align: center; /* Centra el contenido horizontalmente */
 }
 

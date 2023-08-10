@@ -29,13 +29,14 @@
 
   --ts: .2s;
 
-  --clr-white: #f5f5dc;
+  --clr-beige: #f5f5dc;
+  --clr-white: white;
   --clr-black: #000;
 
 }
 
 body {
-  background-color: #f5f5dc;
+  background-color: var(--clr-white);
 }
 
 /*--clr-primary-navbar: #337c22; 
