@@ -20,12 +20,25 @@
 }
 
 .dropdown li {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+
   border-radius: var(--br);
   padding: .3em;
   cursor: pointer;
   transition: var(--ts);
 }
 
+.dropdown .icon {
+  color: var(--clr-primary);
+}
+
 .dropdown li:hover {
   background-color: var(--clr-primary);
+  color: white;
+}
+
+.dropdown li:hover .icon {
+  color: white;
 }
