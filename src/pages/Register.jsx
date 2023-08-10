@@ -50,7 +50,7 @@ function Register() {
           <form className="register-form">
             {sccMsg && <small>{sccMsg}</small>}
             <label>Name</label>
-            <input type="text" placeholder="name" name="name" onChange={handleChange}/>
+            <input type="text" placeholder="Name" name="Name" onChange={handleChange}/>
             {errMsg.name && <small>{errMsg.name}</small>}
             <label>Username</label>
             <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
