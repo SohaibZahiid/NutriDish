@@ -15,8 +15,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClick = (e) => {
-      if(e.target !== menuRef.current && e.target !== imgRef.current) {
-        setOpenProfile(false)
+      if (e.target !== menuRef.current && e.target !== imgRef.current) {
+        setOpenProfile(false);
       }
     };
 
@@ -36,14 +36,27 @@ const Navbar = () => {
           </Link>
           <div>
             <ul className="nav-links">
+              <Link to="/">
+                <li className="link">Home</li>
+              </Link>
+              <Link to="about">
+                <li className="link">About</li>
+              </Link>
               <li>
-                <Link to="breakfast">Breakfast</Link>
-              </li>
-              <li>
-                <Link to="lunch">Lunch</Link>
-              </li>
-              <li>
-                <Link to="dinner">Dinner</Link>
+                <a className="link" href="#">
+                  Recipes &#x25BE;
+                </a>
+                <ul className="recipes-dropdown">
+                  <Link to="breakfast">
+                    <li>Breakfast</li>
+                  </Link>
+                  <Link to="lunch">
+                    <li>Lunch</li>
+                  </Link>
+                  <Link to="dinner">
+                    <li>Dinner</li>
+                  </Link>
+                </ul>
               </li>
             </ul>
           </div>
