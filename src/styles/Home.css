@@ -1,9 +1,9 @@
-#main {
+/*#main {
   background-color: var(--clr-box-bg);
-}
+}*/
 
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,70,67,0.3)), url('/imgs/158-h0.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,70,67,0.7)), url('/imgs/158-h0.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
     justify-content: center; /* Centra el contenido horizontalmente */
     color: #fffcfc; /* Color del texto, cámbialo si es necesario */
     font-size: 700;
-  }
+}
   
 #hero-content {
     display: flex;
@@ -31,7 +31,24 @@
 
   #hero-content p {
     color: var(--clr-secondary-headline);
-    
+    font-size: 1.4rem;
+  }
+
+  #hero-content button {
+    border: none;
+    outline: none;
+    padding: .6em 1em;
+    border-radius: var(--br);
+    background-color: var(--clr-btn);
+    color: var(--clr-btn-text);
+    font-size: var(--fz-header);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #hero-content button:hover{
+    background-color: var(--clr-btn-hover);
+    color: white;
   }
 
 .recipe-container {
@@ -43,11 +60,11 @@
 /*Css para Seccion de caracteristicas*/
 #features {
   text-align: center; /* Centra el texto */
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
 }
 
 #features h2 {
-  color: var(--clr-primary-headline);
+  color: var(--clr-btn-hover);
   font-size: 2.5rem; /* Tamaño del título principal */
   margin-bottom: 1rem; /* Espacio debajo del título */
 }
@@ -74,19 +91,16 @@
 
 /*Recipes*/
 #recipes {
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
 }
 
 #recipes h2 {
-  color: var(--clr-primary-headline);
+  color: var(--clr-btn-hover);
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.recipe {
-  background-color: var(--clr-primary);
-}
 
 .recipe .title, .small, .creator {
   color: var(--clr-secondary-headline)
@@ -97,7 +111,7 @@
 #testimonials {
   padding: 5rem 1rem;
   text-align: center;
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
 }
 
 .testimonial-container {
@@ -109,7 +123,7 @@
 }
 
 #testimonials h2 {
-  color: var(--clr-primary-headline);
+  color: var(--clr-btn-hover);
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -123,17 +137,29 @@
 /*CTA final*/
 
 #final-cta {
-  background-color: var(--clr-secondary); 
+  background-color: var(--clr-white); 
   text-align: center; /* Centra el contenido horizontalmente */
 }
 
 #final-cta h2 {
-  color: var(--clr-primary-headline); /* Color de texto oscuro */
+  color: var(--clr-btn-hover); /* Color de texto oscuro */
   font-size: 2.5rem; /* Tamaño del título */
   margin-bottom: 1rem; /* Espacio debajo del título */
 }
 
 #final-cta button {
-  background-color: var(--clr-btn); /* Color de fondo del botón */
-  color: var(--clr-btn-text); /* Color del texto del botón */
+  border: none;
+  outline: none;
+  padding: .6em 1em;
+  border-radius: var(--br);
+  background-color: var(--clr-btn);
+  color: var(--clr-btn-text);
+  font-size: var(--fz-header);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#final-cta button:hover{
+  background-color: var(--clr-btn-hover);
+  color: white;
 }
