@@ -8,8 +8,10 @@ const Filter = () => {
     <>
     <div className="btnalergico">
         <h3>Eres Alergico</h3>
-    <button onClick={()=>setAlergico(true)}>si</button>
-    <button onClick={()=>setAlergico(false)}>no</button>
+      <div className="btnYn">
+        <button className="Ybtn" onClick={()=>setAlergico(true)}>Yes</button>
+        <button className="Ybtn" onClick={()=>setAlergico(false)}>No</button>
+      </div>
     </div>
   
       <div className="container ">

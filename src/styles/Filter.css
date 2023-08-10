@@ -42,11 +42,26 @@
 .btnalergico{
   margin:auto; 
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btnYn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btnalergico h3{
   margin:6px ;
- 
 }
+
+.Ybtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btnalergico button{
   margin: 6px;
   width: 55px;
