@@ -1,8 +1,28 @@
 import Recipe from "../components/Recipe";
 import Testimonial from "../components/Testimonial";
 import "../styles/Home.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 function Home() {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    const getRecipes = async () => {
+      const API = import.meta.env.VITE_API;
+
+      try {
+        const res = await axios.get(`${API}/recipes/featured`);
+        setRecipes(res.data);
+        console.log(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getRecipes();
+  }, []);
+
   return (
     <div id="main">
       <section id="hero" className="section-x2">
@@ -29,10 +49,15 @@ function Home() {
       <section id="recipes" className="section-x2">
         <h2>Nuestras Recetas Mas Populares</h2>
         <div className="recipe-container container ">
-          <Recipe title="test" />
-          <Recipe />
-          <Recipe />
-          <Recipe />
+        {recipes.map((recipe) => (
+            <Recipe
+              key={recipe.id}
+              image={recipe.image}
+              type={recipe.mealType}
+              title={recipe.name}
+              creator={recipe.createdBy}
+            />
+          ))}
         </div>
         {/* Agrega más recetas aquí */}
       </section>
