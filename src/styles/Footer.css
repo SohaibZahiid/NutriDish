@@ -25,15 +25,16 @@
 }
 
 .footer a {
-  color: White;
+  color: var(--clr-primary);
   font-weight: 400; /* Peso de fuente para los enlaces */
   transition: color 0.3s ease;
   text-decoration: none; /* Elimina la subraya en los enlaces */
 }
 
 .footer a:hover {
-  color: black;
+  color: var(--clr-btn);
 }
+
 
 .footer input[type="email"] {
   width: 100%;
