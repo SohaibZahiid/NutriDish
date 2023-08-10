@@ -1,11 +1,12 @@
 import '../styles/DropdownProfile.css'
 
-function DropdownProfile({ onClick }) {
+function DropdownProfile({ logout, dropRef }) {
+
   return (
-    <div className="dropdown">
+    <div className="dropdown" ref={dropRef}>
       <ul>
         <li>Profile</li>
-        <li onClick={onClick}>Logout</li>
+        <li onClick={logout}>Logout</li>
       </ul>
     </div>
   );

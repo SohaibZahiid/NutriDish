@@ -1,13 +1,31 @@
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import { useContext, useState } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import DropdownProfile from "./DropdownProfile";
 
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
 
-  const [openProfile, setOpenProfile] = useState(false)
+  const [openProfile, setOpenProfile] = useState(false);
+
+  //Dropdown
+  const menuRef = useRef();
+  const imgRef = useRef();
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      if(e.target !== menuRef.current && e.target !== imgRef.current) {
+        setOpenProfile(false)
+      }
+    };
+
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.addEventListener("click", handleClick);
+    };
+  }, []);
 
   return (
     <>
@@ -32,18 +50,16 @@ const Navbar = () => {
           <div className="auth">
             {currentUser ? (
               <>
-              <p onClick={() => setOpenProfile((prev) => !prev)}>{currentUser.username}</p>
-              {openProfile && (
-                <DropdownProfile
-                onClick={logout}
-              />
-              )}
+                <p onClick={() => setOpenProfile((prev) => !prev)} ref={imgRef}>
+                  {currentUser.username}
+                </p>
+                {openProfile && (
+                  <DropdownProfile logout={logout} dropRef={menuRef} />
+                )}
               </>
             ) : (
               <Link to="/login">
-                <span className="link">
-                  <button>Login</button>
-                </span>
+                <span className="btn">Login</span>
               </Link>
             )}
           </div>

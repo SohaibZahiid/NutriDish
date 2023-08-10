@@ -5,26 +5,27 @@
   top: 4em;
   right: -5px;
   width: 120px;
-  padding: 1em;
+  padding: .8em;
   background-color: white;
-  border: 1px solid gray;
+  border-radius: var(--br);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: 99;
 }
 
-.dropdown::before {
-  position: absolute;
-  content: '';
-  top: -.7em;
-  right: 5px;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  background-color: white;
-  border-left: 1px solid gray;
-  border-top: 1px solid gray;
-}
 
 .dropdown ul {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: .5em;
+}
+
+.dropdown li {
+  border-radius: var(--br);
+  padding: .3em;
+  cursor: pointer;
+  transition: var(--ts);
+}
+
+.dropdown li:hover {
+  background-color: var(--clr-primary);
 }
