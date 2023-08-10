@@ -90,3 +90,20 @@ input {
 .section-x2 {
   padding-block: 5em;
 }
+
+.btn{
+  border: none;
+  outline: none;
+  padding: .6em 1em;
+  border-radius: var(--br);
+  background-color: var(--clr-btn);
+  color: var(--clr-btn-text);
+  font-size: var(--fz-header);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+  background-color: var(--clr-btn-hover);
+  color: white;
+}
