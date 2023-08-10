@@ -7,7 +7,7 @@ const Filter = () => {
   return (
     <>
     <div className="btnalergico">
-        <h3>Eres Alergico</h3>
+        <h3>Are you allergic?</h3>
       <div className="btnYn">
         <button className="Ybtn" onClick={()=>setAlergico(true)}>Yes</button>
         <button className="Ybtn" onClick={()=>setAlergico(false)}>No</button>
