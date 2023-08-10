@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 import '../styles/Recipe.css'
-import likefoto from '/public/imgs/like.png'
-import dislike from '/public/imgs/dislike.png'
+import likefoto from '/imgs/dislike.png'
+import dislike from '/imgs/dislike.png'
 import SinglePage from '../pages/SinglePage'
 
 function Recipe({image, type, title, creator}) {
   const [like, setLike] = useState(false)
-  const [single, setSingle] = useState(true)
+  const [single] = useState(true)
 
   const likefood =()=>{
     setLike(true)

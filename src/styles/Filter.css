@@ -1,8 +1,4 @@
-.filter {
-  background-color: var(--clr-card-bg);
-  border-radius: var(--br);
-  margin-bottom: 2em !important;
-}
+
 
 .filter-form {
   display: flex;
@@ -30,8 +26,23 @@
   border-radius: var(--br);
   background-color: var(--clr-primary);
   color: var(--clr-secondary-headline);
+  
 }
 
 .search::placeholder {
   color: var(--clr-secondary-headline);
+}
+.tag input{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+
+}
+.btnalergico{
+  margin:auto; 
+  width: 200px;
+}
+.btnalergico button{
+  margin: 6px;
 }
