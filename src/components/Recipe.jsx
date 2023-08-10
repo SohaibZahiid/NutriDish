@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import '../styles/Recipe.css'
-import likefoto from '/imgs/dislike.png'
+import likefoto from '/imgs/like.png'
 import dislike from '/imgs/dislike.png'
 import SinglePage from '../pages/SinglePage'
 
@@ -20,7 +20,7 @@ function Recipe({image, type, title, creator}) {
       <div className="recipe">
         <div className="recipe-container">
           <img src="imgs/veggieNoodles.webp" />
-          <div  >
+          <div>
             <img className='dislike' onClick={likefood} src={dislike} alt="Dislike"/>
             <img onClick={dislikefood} className={like?"like":"hid"} src={likefoto} alt="like" />
           </div>

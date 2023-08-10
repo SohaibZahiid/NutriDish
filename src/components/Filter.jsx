@@ -22,23 +22,23 @@ const Filter = () => {
             <div className="tags-container">
               <div className="tag">
                 <input className="chek1" type="checkbox" name="tag" value="vegan" />
-                <label>Vegan</label>
+                <label>Frutos secos</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="vegetarian" />
-                <label>Vegeterian</label>
+                <label>Huevo</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Non-Vegeterian</label>
+                <label>Mariscos</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Paleto</label>
+                <label>Pescado</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Pescadian</label>
+                <label>Leche</label>
               </div>
             </div>
           </div>

@@ -141,7 +141,8 @@
   width: 40px;
   height: 40px;
   position: relative;
-  top: -250px;
+  top: -270px;
+  left: 10px;
 }
 .like{
   margin-left: -40px; 

@@ -43,6 +43,15 @@
   margin:auto; 
   width: 200px;
 }
+.btnalergico h3{
+  margin:6px ;
+ 
+}
 .btnalergico button{
   margin: 6px;
+  width: 55px;
+  height: 55px;
+}
+.tag label{
+  margin-top: 4px;
 }
