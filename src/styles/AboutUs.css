@@ -3,8 +3,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2em;
-  background-color: var(--clr-card-bg);
-  color: var(--clr-card-headline);
+  background-color: #e8e4e6;
+  color: var(--clr-btn-hover);
 }
 
 .about-us-text {
@@ -22,7 +22,7 @@
 }
 
 .team-section h2, .mission-section h2 {
-  color: var(--clr-primary);
+  color: var(--clr-btn-hover);
   font-weight: 700;
   flex-basis: 100%;
 }

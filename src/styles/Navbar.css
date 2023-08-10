@@ -14,7 +14,7 @@
 }
 
 .logo {
-  color: var(--clr-primary-headline);
+  color: var(--clr-white);
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
@@ -31,10 +31,19 @@
   font-weight: 500;
 }
 
-.auth .link{
+.link{
+  border: none;
+  outline: none;
+  padding: .6em 1em;
+  border-radius: var(--br);
+  background-color: var(--clr-btn);
   color: var(--clr-btn-text);
+  font-size: var(--fz-header);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.submit:hover{
+.link:hover{
   background-color: var(--clr-btn-hover);
+  color: white;
 }

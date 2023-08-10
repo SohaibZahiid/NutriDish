@@ -6,23 +6,23 @@
   
   .terms-title {
     font-size: var(--fz-title);
-    color: var(--clr-primary);
+    color: var(--clr-btn-hover);
     text-align: center;
     margin-bottom: 1em;
   }
   
   .terms-content {
     font-size: var(--fz-header);
-    color: var(--clr-secondary-text);
+    color: var(--clr-black);
     line-height: 1.6;
     padding: 1em;
-    background-color: var(--clr-card-bg);
+    background-color: #e8e4e6;
     border-radius: var(--br);
   }
   
   .terms-content h2 {
     font-size: var(--fz-title);
-    color: var(--clr-primary);
+    color: var(--clr-btn-hover);
     margin-top: 1em;
   }
   
