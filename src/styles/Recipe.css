@@ -6,6 +6,7 @@
     transition: var(--ts);
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 }
 
 .recipe:hover {
@@ -15,7 +16,20 @@
 .recipe img {
     object-fit: cover;
     border-start-start-radius: var(--br);
+    display: block;
 }
+
+.recipe .heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+    transition: var(--tr);
+  }
+
+  .recipe .heart:hover {
+    color: red;
+  }
 
 .recipe-description {
     padding: .5em;
