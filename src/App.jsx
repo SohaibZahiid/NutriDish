@@ -10,6 +10,7 @@ import Dinner from "./pages/Dinner";
 import TermsAndConditions from "./pages/TerminosyCondiciones";
 import About from "./pages/AboutUs";
 import Footer from "./components/Footer";
+import Single from "./pages/Single"
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/breakfast" element={ <Breakfast /> } />
+        <Route path="/recipe/id" element={ <Single /> } />
         <Route path="/lunch" element={ <Lunch /> } />
         <Route path="/dinner" element={ <Dinner /> } />
         <Route path="/login" element={ 
