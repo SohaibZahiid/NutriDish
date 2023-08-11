@@ -1,8 +1,29 @@
+import { Link, useNavigate } from "react-router-dom";
 import Recipe from "../components/Recipe";
 import Testimonial from "../components/Testimonial";
 import "../styles/Home.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 function Home() {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    const getRecipes = async () => {
+      const API = import.meta.env.VITE_API;
+
+      try {
+        const res = await axios.get(`${API}/recipes/featured`);
+        setRecipes(res.data);
+        console.log(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getRecipes();
+  }, []);
+
   return (
     <div id="main">
       <section id="hero" className="section-x2">
@@ -10,7 +31,11 @@ function Home() {
         <div id="hero-content">
           <h1>Comienza Tu Viaje hacia una Vida Más Saludable Hoy</h1>
           <p>Descubre recetas deliciosas y saludables que te encantarán.</p>
-          <button>Explora Recetas</button>
+          <Link to="lunch">
+            <span className="btn">
+              Explora recetas
+            </span>
+          </Link>
         </div>
       </section>
 
@@ -29,10 +54,15 @@ function Home() {
       <section id="recipes" className="section-x2">
         <h2>Nuestras Recetas Mas Populares</h2>
         <div className="recipe-container container ">
-          <Recipe title="test" />
-          <Recipe />
-          <Recipe />
-          <Recipe />
+          {recipes.map((recipe) => (
+            <Recipe
+              key={recipe.id}
+              image={recipe.image}
+              type={recipe.mealType}
+              title={recipe.name}
+              creator={recipe.createdBy}
+            />
+          ))}
         </div>
         {/* Agrega más recetas aquí */}
       </section>
@@ -48,7 +78,7 @@ function Home() {
           />
           <Testimonial
             className="testimonial"
-            desc="Delicoso y saludable!!"
+            desc="Delicoso y saludable la mejor pag de recetas sin duda!!"
             name="Sohaib Z"
           />
           <Testimonial
@@ -63,7 +93,11 @@ function Home() {
       {/* CTA Final */}
       <section id="final-cta" className="section-x2">
         <h2>Únete a Nosotros Hoy y Transforma Tu Salud</h2>
-        <button>Regístrate Ahora</button>
+        <Link to="/register">
+          <span className="btn">
+            Register Here
+          </span>
+        </Link>
       </section>
     </div>
   );

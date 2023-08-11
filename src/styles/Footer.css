@@ -3,15 +3,15 @@
 }
 
 .footer {
-  background-color: var(--clr-footer-bg);
-  padding: 20px;
+  background-color: var(--clr-primary-navbar);
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; /* Permite ajustar el contenido en pantallas pequeñas */
 }
 
 .footer .links, .footer .social-media, .footer .newsletter {
-  width: 33%;
+  width: fit-content;
   height: 98%;
   color: var(--clr-primary-text);
   padding: 15px;
@@ -19,20 +19,32 @@
 }
 
 .footer h2 {
-  color: var(--clr-black);
+  color: var(--clr-white);
   font-weight: 500; /* Peso de fuente para los títulos */
+  margin-bottom: 10px;
 }
 
 .footer a {
-  color: White;
+  color: var(--clr-primary);
   font-weight: 400; /* Peso de fuente para los enlaces */
   transition: color 0.3s ease;
   text-decoration: none; /* Elimina la subraya en los enlaces */
-  margin-top: 30px;
 }
 
 .footer a:hover {
-  color: black;
+  color: var(--clr-btn);
+}
+
+
+.ods-image {
+  margin: 30px 0; /* Agrega un margen arriba y abajo si lo necesitas */
+  padding-right: 20px;
+}
+
+.ods-image img {
+  width: 120px; /* Ajusta el ancho según tus preferencias */
+  height: auto;
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
 }
 
 .footer input[type="email"] {
@@ -43,14 +55,18 @@
 }
 
 .footer button {
+  border: none;
+  outline: none;
+  padding: .6em 1em;
+  border-radius: var(--br);
   background-color: var(--clr-btn);
   color: var(--clr-btn-text);
-  cursor: pointer;
   font-size: var(--fz-header);
-  transition: background-color 0.3s ease;
-  width: 100%; /* Hace que el botón ocupe todo el ancho */
   margin-top: 10px;
-  border-radius: var(--br); /* Agrega borde redondeado */
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
 }
 
 .footer button:hover {

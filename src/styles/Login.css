@@ -1,7 +1,7 @@
 .login {
   width: 100%;
   min-height: 80vh;
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,6 @@
   gap: 1em;
 
 }
-
 
 .login-container {
   width: 100%;
@@ -37,7 +36,7 @@
   gap: 1.5em;
 
   border-radius: var(--br);
-  background: var(--clr-primary);
+  background: var(--clr-receipe-box);
   color: var(--clr-card-headline);
   padding: 4em;
   width: min(400px, 95%);
@@ -59,7 +58,7 @@
 }
 
 .login-form input::placeholder {
-  color: var(--clr-primary);
+  color: var(--clr-black);
 }
 
 
@@ -71,6 +70,8 @@
 .login p a {
   color: inherit;
 }
+
+
 
 
 @media (max-width: 900px) {

@@ -13,8 +13,20 @@
   justify-content: space-between;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height:50px; /* Puedes ajustar esto según el tamaño que desees */
+  width: 50px; /* Puedes ajustar esto según el tamaño que desees */
+  margin-right: 16px; /* Espacio entre la imagen y el texto */
+}
+
 .logo {
-  color: var(--clr-primary-headline);
+  color: var(--clr-white);
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
@@ -23,18 +35,27 @@
 .nav-links {
   display: flex;
   gap: 2em;
+  font-size: 1.4rem;
 }
 
 .nav-links a {
-  color: var(--clr-btn-navbar);
-  font-size: var(--fz-header);
-  font-weight: 500;
+  position: relative;
+  text-decoration: none; /* Elimina cualquier subrayado por defecto */
+  color: var(--clr-btn-navbar); /* Usa el color de tu tema */
+  transition: all 0.3s ease; /* Transición suave para el hover */
 }
 
-.auth .link{
-  color: var(--clr-btn-text);
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Posición debajo del texto, puedes ajustar */
+  left: 0;
+  width: 0; /* Inicialmente oculto */
+  height: 2px; /* Altura de la barra */
+  background-color: var(--clr-hover-text); /* Color de la barra, puedes ajustar */
+  /*transition: width 0.3s ease; /* Transición suave para el hover */
 }
 
-.submit:hover{
-  background-color: var(--clr-btn-hover);
+.nav-links a:hover::after {
+  width: 100%; /* Aparece bajo el texto al hacer hover */
 }

@@ -3,8 +3,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2em;
-  background-color: var(--clr-card-bg);
-  color: var(--clr-card-headline);
+  background-color: #e8e4e6;
+  color: var(--clr-btn-hover);
 }
 
 .about-us-text {
@@ -22,31 +22,58 @@
 }
 
 .team-section h2, .mission-section h2 {
-  color: var(--clr-primary);
+  color: var(--clr-btn-hover);
   font-weight: 700;
   flex-basis: 100%;
 }
 
-.team-members, .mission-content {
+.team-members {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  align-items: flex-start;
+  padding: 30px;
 }
 
-.team-members div, .mission-content p {
-  flex-basis: 48%;
-  background: var(--clr-white);
-  padding: 1em;
+.team-members div {
+  text-align: center;
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: var(--br);
-  margin-bottom: 1em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: var(--ts);
+  padding: 50px;
+  background-color: var(--clr-box-bg);
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos al centro */
 }
 
 .team-members img {
-  max-width: 100%;
-  border-radius: var(--br);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
+.team-members a {
+  text-align: center; /* Centra el texto del enlace */
+  display: block; /* Hace que el enlace ocupe toda la línea */
+}
+
+
+.team-members a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--clr-primary-navbar);
+  font-weight: 600;
+  transition: color var(--ts);
+}
+
+.team-members a:hover {
+  color: var(--clr-btn);
+}
+
 
 .mission-section p {
   color: var(--clr-black);
