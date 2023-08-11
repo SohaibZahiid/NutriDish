@@ -11,10 +11,10 @@ const Filter = () => {
       <div className="btnalergico">
         <h3>Tienes alguna alergia?</h3>
         <div className="btnYn">
-          <button className="Ybtn" onClick={() => setAlergico(true)}>
+          <button className="Ybtn btn" onClick={() => setAlergico(true)}>
             Yes
           </button>
-          <button className="Ybtn" onClick={() => setAlergico(false)}>
+          <button className="Ybtn btn" onClick={() => setAlergico(false)}>
             No
           </button>
         </div>

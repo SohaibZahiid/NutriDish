@@ -49,7 +49,7 @@
   justify-content: center;
 }
 .btnalergico h3{
-  margin:6px ;
+  color: var(--clr-btn-hover);
 }
 
 .Ybtn{
@@ -61,7 +61,7 @@
 .btnalergico button{
   margin: 6px;
   width: 220px;
-  height: 24px;
+  height: 32px;
 }
 
 .allergy-checkbox-group {
