@@ -1,8 +1,7 @@
 .dropdown {
-  display: flex;
-  flex-direction: column;
+  display: none;
   position: absolute;
-  top: 4em;
+  /* top: 4em; */
   right: -5px;
   width: 120px;
   padding: .8em;
@@ -10,6 +9,11 @@
   border-radius: var(--br);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   z-index: 99;
+}
+
+.dropdown:hover {
+  display: flex;
+  flex-direction: column;
 }
 
 

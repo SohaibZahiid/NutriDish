@@ -9,30 +9,16 @@ const Navbar = () => {
 
   const [openProfile, setOpenProfile] = useState(false);
 
-  //Dropdown
-  const menuRef = useRef();
-  const imgRef = useRef();
-
-  useEffect(() => {
-    const handleClick = (e) => {
-      if(e.target !== menuRef.current && e.target !== imgRef.current) {
-        setOpenProfile(false)
-      }
-    };
-
-    window.addEventListener("click", handleClick);
-
-    return () => {
-      window.addEventListener("click", handleClick);
-    };
-  }, []);
-
   return (
     <>
       <div className="navbar">
         <div className="container navbar-container">
           <Link to="/" className="logo-container">
-            <img src="imgs/LogoProyectoDefinitivo.png" alt="Logo" className="logo-image" />
+            <img
+              src="imgs/LogoProyectoDefinitivo.png"
+              alt="Logo"
+              className="logo-image"
+            />
             <div className="logo">NutriDish</div>
           </Link>
           <div>
@@ -51,18 +37,17 @@ const Navbar = () => {
           <div className="auth">
             {currentUser ? (
               <>
-                <p onClick={() => setOpenProfile((prev) => !prev)} ref={imgRef}>
+                <p
+                  className="user-dropdown"
+                  onClick={() => setOpenProfile((prev) => !prev)}
+                >
                   {currentUser.username}
                 </p>
-                {openProfile && (
-                  <DropdownProfile logout={logout} dropRef={menuRef} />
-                )}
+                {<DropdownProfile logout={logout}/>}
               </>
             ) : (
               <Link to="/login">
-                <span className="btn">
-                  Login
-                </span>
+                <span className="btn">Login</span>
               </Link>
             )}
           </div>

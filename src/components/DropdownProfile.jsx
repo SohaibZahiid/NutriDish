@@ -1,15 +1,21 @@
 import "../styles/DropdownProfile.css";
-import { FaUserLarge, FaArrowRightFromBracket } from "react-icons/fa6";
+import { FaUserLarge, FaArrowRightFromBracket, FaHeart } from "react-icons/fa6";
 
-function DropdownProfile({ logout, dropRef }) {
+function DropdownProfile({ logout }) {
   return (
-    <div className="dropdown" ref={dropRef}>
+    <div className="dropdown">
       <ul>
         <li>
           <FaUserLarge
             className="icon"
           />
           <p>Profile</p>
+        </li>
+        <li>
+          <FaHeart
+            className="icon"
+          />
+          <p>Favorites</p>
         </li>
         <li onClick={logout}>
           <FaArrowRightFromBracket
