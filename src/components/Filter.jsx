@@ -1,50 +1,89 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "../styles/Filter.css";
 
 const Filter = () => {
-  const [alergico, setAlergico] = useState(false)
+  const [alergico, setAlergico] = useState(false);
 
   return (
     <>
-    <div className="btnalergico">
-        <h3>Are you allergic?</h3>
-      <div className="btnYn">
-        <button className="Ybtn" onClick={()=>setAlergico(true)}>Yes</button>
-        <button className="Ybtn" onClick={()=>setAlergico(false)}>No</button>
+      <div className="btnalergico">
+        <h3>Tienes alguna alergia?</h3>
+        <div className="btnYn">
+          <button className="Ybtn" onClick={() => setAlergico(true)}>
+            Yes
+          </button>
+          <button className="Ybtn" onClick={() => setAlergico(false)}>
+            No
+          </button>
+        </div>
       </div>
-    </div>
-  
-      <div className="container ">
+
+      <div className="allergy-filter-container">
+        <form className="allergy-filter-form">
+          {alergico ? (
+            <div className="allergy-checkbox-group">
+              <div className="allergy-checkbox-list">
+                <div className="allergy-checkbox-item">
+                  <input
+                    className="allergy-check"
+                    type="checkbox"
+                    name="tag"
+                    value="vegan"
+                  />
+                  <label>Frutos secos</label>
+                </div>
+                <div className="allergy-checkbox-item">
+                  <input type="checkbox" name="tag" value="vegetarian" />
+                  <label>Huevo</label>
+                </div>
+                <div className="allergy-checkbox-item">
+                  <input type="checkbox" name="tag" value="non-vegeterian" />
+                  <label>Mariscos</label>
+                </div>
+                <div className="allergy-checkbox-item">
+                  <input type="checkbox" name="tag" value="non-vegeterian" />
+                  <label>Pescado</label>
+                </div>
+                <div className="allergy-checkbox-item">
+                  <input type="checkbox" name="tag" value="non-vegeterian" />
+                  <label>Leche</label>
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+        </form>
+      </div>
+      <div className="filter container">
         <form className="filter-form">
           <div className="form-group">
             <input type="text" className="search" placeholder="Search..." />
           </div>
-{alergico?
           <div className="form-group">
             <div className="tags-container">
               <div className="tag">
-                <input className="chek1" type="checkbox" name="tag" value="vegan" />
-                <label>Frutos secos</label>
+                <input type="checkbox" name="tag" value="vegan" />
+                <label>Vegan</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="vegetarian" />
-                <label>Huevo</label>
+                <label>Vegeterian</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Mariscos</label>
+                <label>Non-Vegeterian</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Pescado</label>
+                <label>Paleto</label>
               </div>
               <div className="tag">
                 <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Leche</label>
+                <label>Pescadian</label>
               </div>
             </div>
           </div>
-          :""}
         </form>
       </div>
     </>

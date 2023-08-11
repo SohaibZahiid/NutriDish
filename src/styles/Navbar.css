@@ -20,8 +20,8 @@
 }
 
 .logo-image {
-  height:50px; /* Puedes ajustar esto según el tamaño que desees */
-  width: 50px; /* Puedes ajustar esto según el tamaño que desees */
+  height:43px; /* Puedes ajustar esto según el tamaño que desees */
+  width: auto; /* Puedes ajustar esto según el tamaño que desees */
   margin-right: 16px; /* Espacio entre la imagen y el texto */
 }
 
