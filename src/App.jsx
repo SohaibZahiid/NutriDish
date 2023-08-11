@@ -1,3 +1,5 @@
+import React,{useState,useEffect} from "react";
+import axios from "axios";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
@@ -14,15 +16,43 @@ import Single from "./pages/Single"
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
 function App() {
+  var API = import.meta.env.VITE_API;
+  const [recipes, setRecipes] = useState([]);
+ 
+
+
+  useEffect(() => {
+    const getRecipes = async () => {
+
+      try {
+        const res = await axios.get(`${API}/recipes/dinner`);
+          for(let i = 0; i<20; i++){
+    
+    setRecipes(recipes=> [...recipes,res.data[i].id])
+   
+    }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getRecipes();
+  }, []);
+console.log(recipes)
+
+
+
   return (
+    <>
+  
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/breakfast" element={ <Breakfast /> } />
-        <Route path="/recipe/id" element={ <Single /> } />
+        
+        <Route path={`/recipe/id/${recipes}`} element={ <Single /> } />
         <Route path="/lunch" element={ <Lunch /> } />
-        <Route path="/dinner" element={ <Dinner /> } />
+        <Route path="/dinner" element={ <Dinner/> } />
         <Route path="/login" element={ 
             requireLoggedOut() ? (
               <Login />
@@ -37,6 +67,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </>
   );
 }
 

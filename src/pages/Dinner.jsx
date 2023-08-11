@@ -4,10 +4,13 @@ import "../styles/Dinner.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Filter from "../components/Filter";
+import { Link } from "react-router-dom";
 
 function Dinner() {
   var API = import.meta.env.VITE_API;
   const [recipes, setRecipes] = useState([]);
+ 
+
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -24,18 +27,23 @@ function Dinner() {
 
   return (
     <>
-      <div className="dinner section-x2">
+   <div className="dinner section-x2">
       <Filter />
         <div className="dinner-container container">
+     
           {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.id}
-              image={recipe.image}
-              type={recipe.mealType}
-              title={recipe.name}
-              creator={recipe.createdBy}
-            />
+            <Link to={`/recipe/id/${recipe.id}`}><Recipe
+            key={recipe.id}
+            image={recipe.image}
+            type={recipe.mealType}
+            title={recipe.name}
+            creator={recipe.createdBy}></Recipe></Link>
+            
+
           ))}
+          
+          
+       
         </div>
       </div>
     </>

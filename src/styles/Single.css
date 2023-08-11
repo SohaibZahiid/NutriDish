@@ -1,0 +1,42 @@
+.firstimg{
+    width: 400px;
+    height: 400px;
+}
+.div-single{
+  
+    display: flex;
+   
+}
+.div-single button{
+    width: 80px;
+    height: 50px;
+    margin: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #97d789;
+    font-size: 15px;
+    color: black;
+   
+    
+}
+.div-single button:hover{
+    background-color: #79cb67;
+    color: white;
+
+}
+.text{
+    width: 380px;
+    height: 250px;
+    margin-left: 30px;
+
+
+}
+.text-s{
+    display: none;
+}
+.text-f{
+    display: none;
+
+}
