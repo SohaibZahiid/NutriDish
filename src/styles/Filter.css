@@ -28,10 +28,10 @@
   border: none;
   padding: 0.5em;
   border-radius: var(--br);
-  background-color: var(--clr-primary);
-  color: var(--clr-secondary-headline);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
 }
 
 .search::placeholder {
-  color: var(--clr-secondary-headline);
+  color: var(--clr-black);
 }
