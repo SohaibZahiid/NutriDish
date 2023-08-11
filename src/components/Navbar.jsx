@@ -59,7 +59,9 @@ const Navbar = () => {
               </>
             ) : (
               <Link to="/login">
-                <span className="btn">Login</span>
+                <span className="btn">
+                  Login
+                </span>
               </Link>
             )}
           </div>

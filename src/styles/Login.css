@@ -58,7 +58,7 @@
 }
 
 .login-form input::placeholder {
-  color: var(--clr-primary);
+  color: var(--clr-black);
 }
 
 
