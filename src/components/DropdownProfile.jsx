@@ -1,26 +1,25 @@
+import { Link } from "react-router-dom";
 import "../styles/DropdownProfile.css";
 import { FaUserLarge, FaArrowRightFromBracket, FaHeart } from "react-icons/fa6";
 
+
 function DropdownProfile({ logout }) {
+
   return (
     <div className="dropdown">
       <ul>
         <li>
-          <FaUserLarge
-            className="icon"
-          />
+          <FaUserLarge className="icon" />
           <p>Profile</p>
         </li>
-        <li>
-          <FaHeart
-            className="icon"
-          />
-          <p>Favorites</p>
-        </li>
+        <Link to={`/recipes/favorites`} >
+          <li>
+            <FaHeart className="icon" />
+            <p>Favorites</p>
+          </li>
+        </Link>
         <li onClick={logout}>
-          <FaArrowRightFromBracket
-            className="icon"
-          />
+          <FaArrowRightFromBracket className="icon" />
           <p>Logout</p>
         </li>
       </ul>

@@ -6,7 +6,7 @@ function Recipe({image, type, title, creator}) {
     <>
       <div className="recipe">
         <div className="recipe-container">
-          <img src="imgs/veggieNoodles.webp" />
+          <img src="/imgs/veggieNoodles.webp" />
           <FaHeart className="heart"/>
           <div className="recipe-description">
             <div className="small">{type}</div>

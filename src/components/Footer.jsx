@@ -76,7 +76,7 @@ function Footer() {
         </div>
         <div className="ods-image">
           <a href="https://www.un.org/sustainabledevelopment/es/" target="_blank">
-            <img src="imgs/ODS.png" alt="ODS" />
+            <img src="/imgs/ODS.png" alt="ODS" />
           </a>
         </div>
         </div>

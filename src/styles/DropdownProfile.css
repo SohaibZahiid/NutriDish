@@ -40,9 +40,16 @@
 
 .dropdown li:hover {
   background-color: var(--clr-primary);
-  color: white;
 }
 
 .dropdown li:hover .icon {
+  color: white;
+}
+
+.dropdown li p {
+  color: black;
+}
+
+.dropdown li p:hover {
   color: white;
 }

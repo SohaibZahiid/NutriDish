@@ -12,6 +12,7 @@ import About from "./pages/AboutUs";
 import Footer from "./components/Footer";
 import Single from "./pages/Single"
 import { requireLoggedOut } from "./Guards/RouteGuard";
+import Favorite from "./pages/Favorite";
 
 function App() {
   return (
@@ -19,10 +20,17 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={ <Home /> } />
-        <Route path="/breakfast" element={ <Breakfast /> } />
         <Route path="/recipe/id" element={ <Single /> } />
+        <Route path="/breakfast" element={ <Breakfast /> } />
         <Route path="/lunch" element={ <Lunch /> } />
         <Route path="/dinner" element={ <Dinner /> } />
+        <Route path="/recipes/favorites" element={ 
+          !requireLoggedOut() ? (
+            <Favorite />
+          ) : (
+            <Navigate to="/login" />
+          )
+         } />
         <Route path="/login" element={ 
             requireLoggedOut() ? (
               <Login />
