@@ -30,6 +30,7 @@ function Dinner() {
           {recipes.map((recipe) => (
             <Recipe
               key={recipe.id}
+              id={recipe.id}
               image={recipe.image}
               type={recipe.mealType}
               title={recipe.name}
