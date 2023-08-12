@@ -50,6 +50,6 @@
   color: black;
 }
 
-.dropdown li p:hover {
+.dropdown li:hover p {
   color: white;
 }

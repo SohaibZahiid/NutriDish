@@ -27,9 +27,10 @@
     transition: var(--tr);
   }
 
-  .recipe .heart:hover {
+  .recipe .heart:hover, .recipe .heart.filled {
     color: red;
   }
+  
 
 .recipe-description {
     padding: .5em;

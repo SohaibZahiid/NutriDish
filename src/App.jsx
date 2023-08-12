@@ -24,7 +24,7 @@ function App() {
         <Route path="/breakfast" element={ <Breakfast /> } />
         <Route path="/lunch" element={ <Lunch /> } />
         <Route path="/dinner" element={ <Dinner /> } />
-        <Route path="/recipes/favorites" element={ 
+        <Route path="/favorites" element={ 
           !requireLoggedOut() ? (
             <Favorite />
           ) : (

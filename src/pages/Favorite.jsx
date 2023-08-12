@@ -19,6 +19,7 @@ function Favorite() {
       try {
         const res = await axios.get(`${API}/recipes/favorite/${currentUser.id}`);
         setRecipes(res.data);
+        console.log(res)
       } catch (err) {
         console.log(err);
       }
