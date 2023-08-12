@@ -1,46 +1,16 @@
-import Recipe from "../components/Recipe";
-import "../styles/Lunch.css";
-
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Filter from "../components/Filter";
+import React from "react";
+import MealComponent from "../components/Meal";
+import { AuthContext } from "../contexts/AuthContext";
+import { useContext } from "react";
 
 function Lunch() {
-  var API = import.meta.env.VITE_API;
-  const [recipes, setRecipes] = useState([]);
+  const { currentUser } = useContext(AuthContext);
 
-  useEffect(() => {
-    const getRecipes = async () => {
+  const APIEndpoint = !currentUser
+    ? "/recipes/lunch"
+    : `/recipes/favorites/${currentUser.id}`;
 
-      try {
-        const res = await axios.get(`${API}/recipes/lunch`);
-        setRecipes(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getRecipes();
-  }, []);
-
-  return (
-    <>
-      <div className="lunch section-x2">
-      <Filter />
-        <div className="lunch-container container">
-          {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.id}
-              id={recipe.id}
-              image={recipe.image}
-              type={recipe.mealType}
-              title={recipe.name}
-              creator={recipe.createdBy}
-            />
-          ))}
-        </div>
-      </div>
-    </>
-  );
+  return <MealComponent APIEndpoint={APIEndpoint} />;
 }
 
 export default Lunch;

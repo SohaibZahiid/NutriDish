@@ -1,46 +1,16 @@
-import Recipe from "../components/Recipe";
-import "../styles/Dinner.css";
-
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Filter from "../components/Filter";
+import React from "react";
+import MealComponent from "../components/Meal";
+import { AuthContext } from "../contexts/AuthContext";
+import { useContext } from "react";
 
 function Dinner() {
-  var API = import.meta.env.VITE_API;
-  const [recipes, setRecipes] = useState([]);
+  const { currentUser } = useContext(AuthContext);
 
-  useEffect(() => {
-    const getRecipes = async () => {
+  const APIEndpoint = !currentUser
+    ? "/recipes/dinner"
+    : `/recipes/favorites/${currentUser.id}`;
 
-      try {
-        const res = await axios.get(`${API}/recipes/dinner`);
-        setRecipes(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getRecipes();
-  }, []);
-
-  return (
-    <>
-      <div className="dinner section-x2">
-      <Filter />
-        <div className="dinner-container container">
-          {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.id}
-              id={recipe.id}
-              image={recipe.image}
-              type={recipe.mealType}
-              title={recipe.name}
-              creator={recipe.createdBy}
-            />
-          ))}
-        </div>
-      </div>
-    </>
-  );
+  return <MealComponent APIEndpoint={APIEndpoint} />;
 }
 
 export default Dinner;
