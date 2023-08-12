@@ -8,7 +8,7 @@ function Breakfast() {
 
   const APIEndpoint = !currentUser
     ? "/recipes/breakfast"
-    : `/recipes/favorites/${currentUser.id}`;
+    : `/recipes/breakfast/favorites/${currentUser.id}`;
 
   return <MealComponent APIEndpoint={APIEndpoint} />;
 }
