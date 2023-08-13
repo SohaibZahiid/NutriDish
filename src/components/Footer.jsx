@@ -34,7 +34,7 @@ function Footer() {
           <br></br>
         </div>
         <div className="links">
-          <h2>Devs who have worked on this project</h2>
+          <h2>Developers</h2>
           <a
             href="https://www.linkedin.com/in/mirjan-kapxhiu-ba742527b"
             target="_blank"
