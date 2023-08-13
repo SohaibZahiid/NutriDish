@@ -24,6 +24,14 @@ function Home() {
     getRecipes();
   }, []);
 
+  const updateFavoriteStatus = (recipeId, isFavorite) => {
+    setRecipes((prevRecipes) =>
+      prevRecipes.map((recipe) =>
+        recipe.id === recipeId ? { ...recipe, favorite: isFavorite } : recipe
+      )
+    );
+  };
+
   return (
     <div id="main">
       <section id="hero" className="section-x2">
@@ -57,10 +65,12 @@ function Home() {
           {recipes.map((recipe) => (
             <Recipe
               key={recipe.id}
+              id={recipe.id}
               image={recipe.image}
               type={recipe.mealType}
               title={recipe.name}
               creator={recipe.createdBy}
+              updateFavoriteStatus={updateFavoriteStatus}
             />
           ))}
         </div>

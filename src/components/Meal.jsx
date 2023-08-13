@@ -16,7 +16,6 @@ function Meal({ APIEndpoint }) {
       try {
         const res = await axios.get(`${API}${APIEndpoint}`);
         setRecipes(res.data);
-        console.log(res)
       } catch (err) {
         console.log(err);
       }

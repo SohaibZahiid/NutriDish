@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Single from "./pages/Single"
 import { requireLoggedOut } from "./Guards/RouteGuard";
 import Favorite from "./pages/Favorite";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/About" element={ <About/>}/>
       </Routes>
       <Footer />
+      <ToastContainer />
     </Router>
   );
 }
