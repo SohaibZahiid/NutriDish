@@ -8,20 +8,26 @@ import "../styles/Meal.css";
 function Meal({ APIEndpoint }) {
   const [recipes, setRecipes] = useState([]);
   const { currentUser } = useContext(AuthContext);
+  const [searchTerm, setSearchTerm] = useState("");
+
 
   useEffect(() => {
     const getRecipes = async () => {
       const API = import.meta.env.VITE_API;
 
       try {
-        const res = await axios.get(`${API}${APIEndpoint}`);
+        const res = await axios.get(`${API}${APIEndpoint}`, {
+          params: {
+            searchKey: searchTerm
+          }
+        });
         setRecipes(res.data);
       } catch (err) {
         console.log(err);
       }
     };
     getRecipes();
-  }, [currentUser, APIEndpoint]);
+  }, [currentUser, APIEndpoint, searchTerm]);
 
   const updateFavoriteStatus = (recipeId, isFavorite) => {
     setRecipes((prevRecipes) =>
@@ -34,7 +40,7 @@ function Meal({ APIEndpoint }) {
   return (
     <>
       <div className={`meal section-x2`}>
-        <Filter />
+        <Filter onSearch={(term) => setSearchTerm(term)}/>
         <div className={`meal-container container`}>
           {recipes.map(({ id, image, mealType, name, createdBy, favorite }) => (
             <Recipe
