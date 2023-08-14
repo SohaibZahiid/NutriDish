@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+# NutriDish 🥗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a NutriDish, la plataforma definitiva para aquellos que buscan una alimentación más saludable y deliciosa.
 
-Currently, two official plugins are available:
+## Acerca de NutriDish
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+NutriDish es una aplicación web diseñada para ofrecerte recetas saludables personalizadas. Ya sea que estés buscando perder peso, ganar músculo, o simplemente disfrutar de comidas deliciosas que sean buenas para ti, ¡NutriDish tiene algo para todos!
 
-## Expanding the ESLint configuration
+### Características ✨
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Recetas Personalizadas**: Regístrate de manera gratuita y recibe recetas adaptadas a tus preferencias y necesidades nutricionales.
+- **Variedad de Recetas**: Desayunos, almuerzos, cenas y snacks, todo en un solo lugar.
+- **Comunidad Activa**: Únete a una comunidad de amantes de la comida saludable y comparte tus recetas favoritas.
+- **Soporte Nutricional**: Guias y tips nutricionales para ayudarte en tu viaje hacia una vida más saludable.
 
-- Configure the top-level `parserOptions` property like this:
+## ¿Cómo comenzar? 🚀
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+1. **Regístrate**: Es completamente gratuito.
+2. **Completa tu Perfil**: Cuéntanos un poco sobre tus preferencias y objetivos.
+3. **Explora y Disfruta**: Comienza a explorar y disfrutar de nuestras deliciosas recetas.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tecnologías Utilizadas 💻
+
+- React
+- TypeScript
+- CSS
+- Node.js
+- ... y más!
+
+## Contribuir
+
+Este proyecto es parte de nuestro bootcamp y agradecemos cualquier feedback o contribución. Siéntete libre de abrir issues o hacer pull requests.
+
+## Equipo 👥
+
+- [Mirjam](https://github.com/mirjankapxhiu)
+- [Sohaib](https://github.com/SohaibZahiid)
+- [Santiago](https://github.com/scartage)
+- [Marc](https://www.linkedin.com/in/marc-adell-fern%C3%A1ndez-46b30017a)
+
+---
+
+¡Únete a nosotros en NutriDish y comienza tu viaje hacia una vida más saludable y sabrosa hoy! 🌱
