@@ -37,13 +37,16 @@ const Navbar = () => {
           <div className="auth">
             {currentUser ? (
               <>
-                <p
+              <div className="user-dropdown-container">
+              <p
                   className="user-dropdown"
                   onClick={() => setOpenProfile((prev) => !prev)}
                 >
                   {currentUser.username}
                 </p>
+
                 {<DropdownProfile logout={logout}/>}
+              </div>
               </>
             ) : (
               <Link to="/login">
