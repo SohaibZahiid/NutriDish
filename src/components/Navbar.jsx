@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import { useContext, useState, useRef, useEffect } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import DropdownProfile from "./DropdownProfile";
 
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
 
-  const [openProfile, setOpenProfile] = useState(false);
 
   return (
     <>
@@ -40,7 +39,6 @@ const Navbar = () => {
               <div className="user-dropdown-container">
               <p
                   className="user-dropdown"
-                  onClick={() => setOpenProfile((prev) => !prev)}
                 >
                   {currentUser.username}
                 </p>

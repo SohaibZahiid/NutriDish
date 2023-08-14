@@ -14,6 +14,7 @@ import Single from "./pages/Single"
 import { requireLoggedOut } from "./Guards/RouteGuard";
 import Favorite from "./pages/Favorite";
 import { ToastContainer } from "react-toastify";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -40,6 +41,13 @@ function App() {
             )
           } 
         />
+        <Route path="/profile/:userId" element={ 
+          !requireLoggedOut() ? (
+            <Profile />
+          ) : (
+            <Navigate to="/login" />
+          )
+         } />
         <Route path="/register" element={ <Register /> } />
         <Route path="/TermsAndConditions" element={ <TermsAndConditions/>}/>
         <Route path="/About" element={ <About/>}/>
