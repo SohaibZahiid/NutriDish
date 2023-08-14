@@ -46,7 +46,7 @@ function Recipe({
     <>
       <div className="recipe">
         <div className="recipe-container">
-          <img src="/imgs/veggieNoodles.webp" />
+        <img src={image} />
           <FaHeart
             className={`heart ${fillHeart}`}
             onClick={() => addFavorite(id)}

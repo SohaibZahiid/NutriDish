@@ -40,7 +40,7 @@ function Meal({ APIEndpoint }) {
             <Recipe
               key={id}
               id={id}
-              image={image}
+              image={`imgs/ImagenesRecetasPlatos/${image}`}
               type={mealType}
               title={name}
               creator={createdBy}

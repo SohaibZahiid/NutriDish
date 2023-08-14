@@ -66,7 +66,7 @@ function Home() {
             <Recipe
               key={recipe.id}
               id={recipe.id}
-              image={recipe.image}
+              image={`imgs/ImagenesRecetasPlatos/${recipe.image}`}
               type={recipe.mealType}
               title={recipe.name}
               creator={recipe.createdBy}
