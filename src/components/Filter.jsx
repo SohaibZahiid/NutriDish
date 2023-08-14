@@ -9,7 +9,7 @@ const Filter = () => {
   return (
     <>
       <div className="btnalergico">
-        <h3>Tienes alguna alergia?</h3>
+        <h3>Do you have any allergies?</h3>
         <div className="btnYn">
           <button className="Ybtn btn" onClick={() => setAlergico(true)}>
             Yes
