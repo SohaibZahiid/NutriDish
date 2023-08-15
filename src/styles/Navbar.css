@@ -11,6 +11,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%; 
+  margin: auto;
+  position: relative;
 }
 
 .logo-container {
@@ -36,6 +39,10 @@
   display: flex;
   gap: 2em;
   font-size: 1.4rem;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding-right: 141px;
 }
 
 .nav-links a {
@@ -43,6 +50,7 @@
   text-decoration: none; /* Elimina cualquier subrayado por defecto */
   color: var(--clr-btn-navbar); /* Usa el color de tu tema */
   transition: all 0.3s ease; /* Transición suave para el hover */
+  margin: 0 10px;
 }
 
 .nav-links a::after {
