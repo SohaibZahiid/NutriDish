@@ -12,7 +12,7 @@ const Filter = ({ onSearch }) => {
 
   return (
     <>
-      <div className="btnalergico">
+      {/* <div className="btnalergico">
         <h3>Do you have any allergies?</h3>
         <div className="btnYn">
           <button className="Ybtn btn" onClick={() => setAlergico(true)}>
@@ -61,7 +61,7 @@ const Filter = ({ onSearch }) => {
             ""
           )}
         </form>
-      </div>
+      </div> */}
       <div className="filter container">
         <form className="filter-form">
           <div className="form-group">

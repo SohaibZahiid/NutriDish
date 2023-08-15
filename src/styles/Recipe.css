@@ -17,7 +17,7 @@
     object-fit: cover;
     border-start-start-radius: var(--br);
     display: block;
-    width: 276px; /* Ajusta según tu necesidad */
+    width: 100%; /* Ajusta según tu necesidad */
     height: 230px; /* Ajusta según tu necesidad */
 }
 
