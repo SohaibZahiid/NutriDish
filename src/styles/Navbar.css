@@ -90,19 +90,21 @@
 }
 
 .user-dropdown {
+  background-color: var(--clr-btn);
+  color: var(--clr-btn-text);
+  font-size: var(--fz-header);
   font-size: 18px; /* Tamaño de la fuente */
-  color: #333; /* Color del texto */
   font-weight: bold; /* Grosor del texto */
   padding: 10px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-  background-color: var(--clr-white); /* Color de fondo */
   text-align: center; /* Alineación del texto */
-  transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
 }
 
 .user-dropdown:hover {
-  background-color: #e0e0e0; /* Color de fondo al pasar el mouse */
+  background-color: var(--clr-btn-hover);
+  color: white; /* Color de fondo al pasar el mouse */
 }
 
 /*.user-dropdown:hover + .dropdown {
