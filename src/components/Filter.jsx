@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/Filter.css";
 
 /*Hay que hacer que cuando se de click en el texto se active la box!!*/
-const Filter = ({ onSearch }) => {
+const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
   const [alergico, setAlergico] = useState(false);
 
   const handleSearchChange = (e) => {
@@ -75,23 +75,58 @@ const Filter = ({ onSearch }) => {
           <div className="form-group">
             <div className="tags-container">
               <div className="tag">
-                <input type="checkbox" name="tag" value="vegan" id="veganCheckbox" />
+                <input
+                  type="checkbox"
+                  name="tag"
+                  value="vegan"
+                  id="veganCheckbox"
+                  checked={selectedTags.includes("vegan")}
+                  onChange={() => onTagCheckboxChange("vegan")}
+                />
                 <label htmlFor="veganCheckbox">Vegan</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="vegetarian" id="vegeCheckbox" />
+                <input
+                  type="checkbox"
+                  name="tag"
+                  value="vegetarian"
+                  id="vegeCheckbox"
+                  checked={selectedTags.includes("vegetarian")}
+                  onChange={() => onTagCheckboxChange("vegetarian")}
+                />
                 <label htmlFor="vegeCheckbox">Vegeterian</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="non-vegeterian" id="non-vegeBox" />
+                <input
+                  type="checkbox"
+                  name="tag"
+                  value="non-vegeterian"
+                  id="non-vegeBox"
+                  checked={selectedTags.includes("nonVegetarian")}
+                  onChange={() => onTagCheckboxChange("nonVegetarian")}
+                />
                 <label htmlFor="non-vegeBox">Non-Vegeterian</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="paleto" id="paletoBox"/>
+                <input
+                  type="checkbox"
+                  name="tag"
+                  value="paleto"
+                  id="paletoBox"
+                  checked={selectedTags.includes("paleto")}
+                  onChange={() => onTagCheckboxChange("paleto")}
+                />
                 <label htmlFor="paletoBox">Paleto</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="pescadian" id="pescadianBox"/>
+                <input
+                  type="checkbox"
+                  name="tag"
+                  value="pescadian"
+                  id="pescadianBox"
+                  checked={selectedTags.includes("pescadian")}
+                  onChange={() => onTagCheckboxChange("pescadian")}
+                />
                 <label htmlFor="pescadianBox">Pescadian</label>
               </div>
             </div>

@@ -9,7 +9,7 @@ function Meal({ APIEndpoint }) {
   const [recipes, setRecipes] = useState([]);
   const { currentUser } = useContext(AuthContext);
   const [searchTerm, setSearchTerm] = useState("");
-
+  const [selectedTags, setSelectedTags] = useState([]);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -18,8 +18,9 @@ function Meal({ APIEndpoint }) {
       try {
         const res = await axios.get(`${API}${APIEndpoint}`, {
           params: {
-            searchKey: searchTerm
-          }
+            searchKey: searchTerm,
+            tags: selectedTags.join(","),
+          },
         });
         setRecipes(res.data);
       } catch (err) {
@@ -27,7 +28,7 @@ function Meal({ APIEndpoint }) {
       }
     };
     getRecipes();
-  }, [currentUser, APIEndpoint, searchTerm]);
+  }, [currentUser, APIEndpoint, searchTerm, selectedTags]);
 
   const updateFavoriteStatus = (recipeId, isFavorite) => {
     setRecipes((prevRecipes) =>
@@ -37,10 +38,24 @@ function Meal({ APIEndpoint }) {
     );
   };
 
+  const handleTagCheckboxChange = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(
+        selectedTags.filter((selectedTag) => selectedTag !== tag)
+      );
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
+  };
+
   return (
     <>
       <div className={`meal section-x2`}>
-        <Filter onSearch={(term) => setSearchTerm(term)}/>
+        <Filter
+          onSearch={(term) => setSearchTerm(term)}
+          onTagCheckboxChange={handleTagCheckboxChange}
+          selectedTags={selectedTags}
+        />
         <div className={`meal-container container`}>
           {recipes.map(({ id, image, mealType, name, createdBy, favorite }) => (
             <Recipe
