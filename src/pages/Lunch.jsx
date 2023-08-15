@@ -1,8 +1,5 @@
-import Recipe from "../components/Recipe";
 import "../styles/Lunch.css";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import Filter from "../components/Filter";
 
 function Lunch({recipesLunch}) {
@@ -28,11 +25,11 @@ function Lunch({recipesLunch}) {
       <div className="lunch section-x2">
       <Filter />
         <div className="lunch-container container">
-        {recipesLunch.map((recipelunch) => (
-            <Link to={`/singlelunch/${recipelunch.id}`}>
+        {recipesLunch.map((recipelunch,index) => (
+            <Link to={`/singlelunch/${recipelunch.id}` }>
                   <div className="recipe">
         <div className="recipe-container">
-          <img src="imgs/veggieNoodles.webp" />
+          <img src={`${recipelunch.image}`} />
           <div className="recipe-description">
             <div className="small">{recipelunch.mealType}</div>
             <div className="title">{recipelunch.mealType}</div>

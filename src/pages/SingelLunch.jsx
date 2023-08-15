@@ -7,13 +7,14 @@ function SinglLunch({recipesLunch}) {
   const { id} = useParams();
 
   const reclunch = recipesLunch.find((recipe) => recipe.id.toString() === id);
+  console.log(reclunch)
 
 
   return (
     <>
     <h2>{reclunch.name}</h2>
         <div className="div-single container section-x2">
-      <img className="firstimg" src="" alt="firstimg" />
+      <img className="firstimg" src={`${reclunch.image}`} alt="firstimg" />
       <div>
         
       

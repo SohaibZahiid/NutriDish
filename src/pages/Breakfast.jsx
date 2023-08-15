@@ -31,9 +31,9 @@ function Breakfast({recipesBrakfast}) {
         <Filter />
         <div className="breakfast-container container">
           
-        {recipesBrakfast.map((recipe) => (
+        {recipesBrakfast.map((recipe,index) => (
             <Link to={`/singelbreakfast/${recipe.id}`}>
-                  <div className="recipe">
+                  <div key={index} className="recipe">
         <div className="recipe-container">
           <img src="imgs/veggieNoodles.webp" />
           <div className="recipe-description">

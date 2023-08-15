@@ -16,12 +16,36 @@ import Single from "./pages/Single"
 import { requireLoggedOut } from "./Guards/RouteGuard";
 import SinglLunch from "./pages/SingelLunch";
 import SingelBreakfast from "./pages/SingelBreakfast";
+import img1 from '../public/imgs/dieta.png'
+import img2 from '../public/imgs/login.jpg'
+import img3 from '../public/imgs/158-h0.webp'
+import img4 from '../public/imgs/LogoProyectoDefinitivo.png'
+import img5 from '../public/imgs/mac.jpg'
+import img6 from '../public/imgs/mir.jpg'
+import img7 from '../public/imgs/ODS.png'
+import img8 from '../public/imgs/sac.jpg'
+import img9 from '../public/imgs/dieta.png'
+import img10 from '../public/imgs/dieta.png'
+import img11 from '../public/imgs/dieta.png'
+import img12 from '../public/imgs/dieta.png'
+import img13 from '../public/imgs/dieta.png'
+import img14 from '../public/imgs/dieta.png'
+import img15 from '../public/imgs/dieta.png'
+import img16 from '../public/imgs/dieta.png'
+import img17 from '../public/imgs/dieta.png'
+import img18 from '../public/imgs/dieta.png'
+import img19 from '../public/imgs/dieta.png'
+import img20 from '../public/imgs/dieta.png'
+
+
 
 function App() {
   var API = import.meta.env.VITE_API;
   const [recipes, setRecipes] = useState([]);
   const [recipesLunch, setRecipesLunch] = useState([]);
   const [recipesBrakfast, setRecipesBrakfast] = useState([])
+  
+let imglunch = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20]
 
 
   useEffect(() => {
@@ -63,12 +87,13 @@ function App() {
         const res = await axios.get(`${API}/recipes/lunch`);
         for(let i = 0; i<20; i++){
           const lunch = res.data[i]
+          const image = imglunch[i]
           const RecetaLunch={
             createdBy:lunch.createdBy,
             description:lunch.description,
             dietaryType:lunch.dietaryType,
             id:lunch.id,
-            image:lunch.image,
+            image:image,
             ingredients:lunch.ingredients,
             mealType:lunch.mealType,
             name:lunch.name,
@@ -119,6 +144,7 @@ function App() {
     };
     getRecipes();
   }, []);
+
 
 
 

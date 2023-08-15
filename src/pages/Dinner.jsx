@@ -35,7 +35,7 @@ function Dinner({recipes}) {
      
           {recipes.map((recipe) => (
             <Link to={`/recipe/${recipe.id}`}>
-                  <div className="recipe">
+                  <div  className="recipe">
         <div className="recipe-container">
           <img src="imgs/veggieNoodles.webp" />
           <div className="recipe-description">
