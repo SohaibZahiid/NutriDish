@@ -16,7 +16,7 @@ function Home() {
       try {
         const res = await axios.get(`${API}/recipes/featured`);
         setRecipes(res.data);
-        console.log(res);
+       // console.log(res);
       } catch (err) {
         console.log(err);
       }

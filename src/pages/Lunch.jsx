@@ -1,12 +1,12 @@
 import Recipe from "../components/Recipe";
 import "../styles/Lunch.css";
-
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Filter from "../components/Filter";
 
-function Lunch() {
-  var API = import.meta.env.VITE_API;
+function Lunch({recipesLunch}) {
+  /*var API = import.meta.env.VITE_API;
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -20,21 +20,28 @@ function Lunch() {
       }
     };
     getRecipes();
-  }, []);
+  }, []);*/
+
 
   return (
     <>
       <div className="lunch section-x2">
       <Filter />
         <div className="lunch-container container">
-          {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.id}
-              image={recipe.image}
-              type={recipe.mealType}
-              title={recipe.name}
-              creator={recipe.createdBy}
-            />
+        {recipesLunch.map((recipelunch) => (
+            <Link to={`/singlelunch/${recipelunch.id}`}>
+                  <div className="recipe">
+        <div className="recipe-container">
+          <img src="imgs/veggieNoodles.webp" />
+          <div className="recipe-description">
+            <div className="small">{recipelunch.mealType}</div>
+            <div className="title">{recipelunch.mealType}</div>
+            <div className="creator">{recipelunch.createdBy}</div>
+          </div>
+        </div>
+      </div></Link>
+            
+
           ))}
         </div>
       </div>

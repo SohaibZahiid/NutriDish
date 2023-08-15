@@ -4,9 +4,10 @@ import "../styles/Breakfast.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Filter from "../components/Filter";
+import { Link } from "react-router-dom";
 
-function Breakfast() {
-  const [recipes, setRecipes] = useState([]);
+function Breakfast({recipesBrakfast}) {
+ /* const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -22,20 +23,28 @@ function Breakfast() {
     };
     getRecipes();
   }, []);
+*/
 
   return (
     <>
       <div className="breakfast section-x2">
         <Filter />
         <div className="breakfast-container container">
-          {recipes.map((recipe) => (
-            <Recipe
-              key={recipe.id}
-              image={recipe.image}
-              type={recipe.mealType}
-              title={recipe.name}
-              creator={recipe.createdBy}
-            />
+          
+        {recipesBrakfast.map((recipe) => (
+            <Link to={`/singelbreakfast/${recipe.id}`}>
+                  <div className="recipe">
+        <div className="recipe-container">
+          <img src="imgs/veggieNoodles.webp" />
+          <div className="recipe-description">
+            <div className="small">{recipe.mealType}</div>
+            <div className="title">{recipe.mealType}</div>
+            <div className="creator">{recipe.createdBy}</div>
+          </div>
+        </div>
+      </div></Link>
+            
+
           ))}
         </div>
       </div>

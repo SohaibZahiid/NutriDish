@@ -2,16 +2,16 @@ import React, { useState } from "react"
 import "../styles/Single.css"
 import imgfirst from '../../public/imgs/dieta.png'
 import { useParams } from "react-router"
-function Single({recipes}) {
+function SinglLunch({recipesLunch}) {
   const [receta, setReceta] = useState(false)
   const { id} = useParams();
 
-  const rec = recipes.find((recipe) => recipe.id.toString() === id);
+  const reclunch = recipesLunch.find((recipe) => recipe.id.toString() === id);
 
 
   return (
     <>
-    <h2>{rec.name}</h2>
+    <h2>{reclunch.name}</h2>
         <div className="div-single container section-x2">
       <img className="firstimg" src="" alt="firstimg" />
       <div>
@@ -23,7 +23,7 @@ function Single({recipes}) {
         <button onClick={() => setReceta(true)}>Descripcion</button>       
         <div className="text">
           <div className={receta ? "" : "text-f"}>
-            <p>{rec.description}</p>
+            <p>{reclunch.description}</p>
           </div>
           <div className={receta ? "text-s" : ""}>
             <div>
@@ -47,4 +47,4 @@ function Single({recipes}) {
   )
 }
 
-export default Single
+export default SinglLunch
