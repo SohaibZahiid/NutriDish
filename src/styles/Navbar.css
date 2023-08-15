@@ -51,6 +51,10 @@
   display: none;
 }
 
+.nav-links-container .icon {
+  display: none;
+}
+
 .nav-links {
   display: flex;
   gap: 1em;
@@ -137,6 +141,12 @@
   .navbar .nav-links-container .bars {
     display: block;
   }
+
+  .nav-links-container .icon {
+    display: block;
+  }
+  
+
 
   .navbar .nav-links{
     position: absolute;
