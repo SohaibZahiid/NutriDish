@@ -2,20 +2,26 @@ import { Link, useNavigate } from "react-router-dom";
 import Recipe from "../components/Recipe";
 import Testimonial from "../components/Testimonial";
 import "../styles/Home.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
+import { AuthContext } from "../contexts/AuthContext";
 
 
 function Home() {
   const [recipes, setRecipes] = useState([]);
+  const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
     const getRecipes = async () => {
       const API = import.meta.env.VITE_API;
 
+      const APIEndpoint = !currentUser
+        ? "/recipes/featured"
+        : `/recipes/featured/favorites/${currentUser.id}`;
+
       try {
-        const res = await axios.get(`${API}/recipes/featured`);
-        setRecipes(res.data);
+        const res = await axios.get(`${API}${APIEndpoint}`);
+        setRecipes(res.data.data);
         console.log(res);
       } catch (err) {
         console.log(err);
@@ -40,9 +46,7 @@ function Home() {
           <h1>Comienza Tu Viaje hacia una Vida Más Saludable Hoy</h1>
           <p>Descubre recetas deliciosas y saludables que te encantarán.</p>
           <Link to="lunch">
-            <span className="btn">
-              Explora recetas
-            </span>
+            <span className="btn">Explora recetas</span>
           </Link>
         </div>
       </section>
@@ -104,9 +108,7 @@ function Home() {
       <section id="final-cta" className="section-x2">
         <h2>Únete a Nosotros Hoy y Transforma Tu Salud</h2>
         <Link to="/register">
-          <span className="btn">
-            Register Here
-          </span>
+          <span className="btn">Register Here</span>
         </Link>
       </section>
     </div>

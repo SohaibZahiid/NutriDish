@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Filter.css";
 
-
 /*Hay que hacer que cuando se de click en el texto se active la box!!*/
-const Filter = () => {
+const Filter = ({ onSearch }) => {
   const [alergico, setAlergico] = useState(false);
+
+  const handleSearchChange = (e) => {
+    const searchTerm = e.target.value;
+    onSearch(searchTerm);
+  };
 
   return (
     <>
@@ -60,7 +64,12 @@ const Filter = () => {
       <div className="filter container">
         <form className="filter-form">
           <div className="form-group">
-            <input type="text" className="search" placeholder="Search..." />
+            <input
+              type="text"
+              onChange={handleSearchChange}
+              className="search"
+              placeholder="Search..."
+            />
           </div>
           <div className="form-group">
             <div className="tags-container">
