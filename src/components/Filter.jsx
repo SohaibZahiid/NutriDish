@@ -35,24 +35,25 @@ const Filter = ({ onSearch }) => {
                     type="checkbox"
                     name="tag"
                     value="vegan"
+                    id="frutosCheckbox"
                   />
-                  <label>Frutos secos</label>
+                  <label htmlFor="frutosCheckbox">Frutos secos</label>
                 </div>
                 <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="vegetarian" />
-                  <label>Huevo</label>
+                  <input type="checkbox" name="tag" value="vegetarian" id="huevoCheckbox"/>
+                  <label htmlFor="huevoCheckbox">Huevo</label>
                 </div>
                 <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="non-vegeterian" />
-                  <label>Mariscos</label>
+                  <input type="checkbox" name="tag" value="non-vegeterian" id="marsicosCheckbox"/>
+                  <label htmlFor="marsicosCheckbox">Mariscos</label>
                 </div>
                 <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="non-vegeterian" />
-                  <label>Pescado</label>
+                  <input type="checkbox" name="tag" value="non-vegeterian" id="pescadoCheckbox"/>
+                  <label htmlFor="pescadoCheckbox">Pescado</label>
                 </div>
                 <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="non-vegeterian" />
-                  <label>Leche</label>
+                  <input type="checkbox" name="tag" value="non-vegeterian" id="lecheCheckbox"/>
+                  <label htmlFor="lecheCheckbox">Leche</label>
                 </div>
               </div>
             </div>
@@ -74,24 +75,24 @@ const Filter = ({ onSearch }) => {
           <div className="form-group">
             <div className="tags-container">
               <div className="tag">
-                <input type="checkbox" name="tag" value="vegan" />
-                <label>Vegan</label>
+                <input type="checkbox" name="tag" value="vegan" id="veganCheckbox" />
+                <label htmlFor="veganCheckbox">Vegan</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="vegetarian" />
-                <label>Vegeterian</label>
+                <input type="checkbox" name="tag" value="vegetarian" id="vegeCheckbox" />
+                <label htmlFor="vegeCheckbox">Vegeterian</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Non-Vegeterian</label>
+                <input type="checkbox" name="tag" value="non-vegeterian" id="non-vegeBox" />
+                <label htmlFor="non-vegeBox">Non-Vegeterian</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Paleto</label>
+                <input type="checkbox" name="tag" value="paleto" id="paletoBox"/>
+                <label htmlFor="paletoBox">Paleto</label>
               </div>
               <div className="tag">
-                <input type="checkbox" name="tag" value="non-vegeterian" />
-                <label>Pescadian</label>
+                <input type="checkbox" name="tag" value="pescadian" id="pescadianBox"/>
+                <label htmlFor="pescadianBox">Pescadian</label>
               </div>
             </div>
           </div>
