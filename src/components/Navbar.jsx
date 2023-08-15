@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import DropdownProfile from "./DropdownProfile";
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
-
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -20,8 +21,8 @@ const Navbar = () => {
             />
             <div className="logo">NutriDish</div>
           </Link>
-          <div>
-            <ul className="nav-links">
+          <div className="nav-links-container">
+            <ul className={`nav-links ${open ? "open" : ""}`}>
               <li>
                 <Link to="breakfast">Breakfast</Link>
               </li>
@@ -32,24 +33,25 @@ const Navbar = () => {
                 <Link to="dinner">Dinner</Link>
               </li>
             </ul>
-          </div>
-          <div className="auth">
-            {currentUser ? (
-              <>
-              <div className="user-dropdown-container">
-              <p
-                  className="user-dropdown"
-                >
-                  {currentUser.username}
-                </p>
+            <div className="auth">
+              {currentUser ? (
+                <>
+                  <div className="user-dropdown-container">
+                    <p className="user-dropdown">{currentUser.username}</p>
 
-                {<DropdownProfile logout={logout}/>}
-              </div>
-              </>
+                    {<DropdownProfile logout={logout} />}
+                  </div>
+                </>
+              ) : (
+                <Link to="/login">
+                  <span className="btn">Login</span>
+                </Link>
+              )}
+            </div>
+            {!open ? (
+              <FaBars className="bars icon" onClick={() => setOpen(!open)} />
             ) : (
-              <Link to="/login">
-                <span className="btn">Login</span>
-              </Link>
+              <FaXmark className="close icon" onClick={() => setOpen(false)}/>
             )}
           </div>
         </div>
