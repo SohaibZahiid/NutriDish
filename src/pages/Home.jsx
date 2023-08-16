@@ -21,7 +21,7 @@ function Home() {
 
       try {
         const res = await axios.get(`${API}${APIEndpoint}`);
-        setRecipes(res.data.data);
+        setRecipes(res.data);
         console.log(res);
       } catch (err) {
         console.log(err);
