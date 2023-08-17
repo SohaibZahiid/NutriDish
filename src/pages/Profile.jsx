@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../contexts/AuthContext";
 import { toast } from "react-toastify";
-
+import "../styles/profile.css"
 function Profile() {
   const API = import.meta.env.VITE_API;
 
@@ -37,50 +37,49 @@ function Profile() {
     }
   };
 
-  return (
-    <>
-      <div className="register">
-        <div
-          className="register-container"
-          style={{ gridTemplateColumns: "1fr" }}
-        >
-          <div className="form-container">
-            <form className="register-form">
-              <label>Name</label>
-              <input
-                type="text"
-                placeholder="Name"
-                name="name"
-                onChange={handleChange}
-                value={formData.name}
-              />
-
-              <label>Username</label>
-              <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                onChange={handleChange}
-                value={formData.username}
-              />
-
-              <label>Password</label>
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-                value={formData.password}
-              />
-              <button className="submit btn" onClick={handleClick}>
-                Update
-              </button>
-            </form>
+  
+return (
+      <>
+        <div className="profile-root">
+          <div className="profile-wrapper">
+            <h2 className="profile-header">Here you can update your information</h2>
+            <div className="profile-form-section">
+              <form className="profile-form">
+                <label>Name</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  onChange={handleChange}
+                  value={formData.name}
+                />
+    
+                <label>Username</label>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  onChange={handleChange}
+                  value={formData.username}
+                />
+    
+                <label>Password</label>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  onChange={handleChange}
+                  value={formData.password}
+                />
+                <button className="btn" onClick={handleClick}>
+                  Update
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );    
 }
 
 export default Profile;

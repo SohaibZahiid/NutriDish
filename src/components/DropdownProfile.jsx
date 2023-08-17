@@ -15,18 +15,18 @@ function DropdownProfile({ logout }) {
       <ul>
         <Link to={`/profile/${currentUser.id}`}>
           <li>
-            <FaUserLarge className="icon" />
+            <FaUserLarge className="icons" />
             <p>Profile</p>
           </li>
         </Link>
         <Link to={`/favorites`}>
           <li>
-            <FaHeart className="icon" />
+            <FaHeart className="icons" />
             <p>Favorite</p>
           </li>
         </Link>
         <li onClick={logout}>
-          <FaArrowRightFromBracket className="icon" />
+          <FaArrowRightFromBracket className="icons" />
           <p>Logout</p>
         </li>
       </ul>

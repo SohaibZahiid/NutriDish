@@ -34,7 +34,7 @@
   transition: var(--ts);
 }
 
-.dropdown .icon {
+.dropdown .icons {
   color: var(--clr-primary);
 }
 
@@ -42,7 +42,7 @@
   background-color: var(--clr-primary);
 }
 
-.dropdown li:hover .icon {
+.dropdown li:hover .icons {
   color: white;
 }
 

@@ -12,58 +12,9 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
 
   return (
     <>
-      {/* <div className="btnalergico">
-        <h3>Do you have any allergies?</h3>
-        <div className="btnYn">
-          <button className="Ybtn btn" onClick={() => setAlergico(true)}>
-            Yes
-          </button>
-          <button className="Ybtn btn" onClick={() => setAlergico(false)}>
-            No
-          </button>
-        </div>
-      </div>
+      <div className="filter container allergy-filter-container">
+        <form className="filter-form allergy-filter-form">
 
-      <div className="allergy-filter-container">
-        <form className="allergy-filter-form">
-          {alergico ? (
-            <div className="allergy-checkbox-group">
-              <div className="allergy-checkbox-list">
-                <div className="allergy-checkbox-item">
-                  <input
-                    className="allergy-check"
-                    type="checkbox"
-                    name="tag"
-                    value="vegan"
-                    id="frutosCheckbox"
-                  />
-                  <label htmlFor="frutosCheckbox">Frutos secos</label>
-                </div>
-                <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="vegetarian" id="huevoCheckbox"/>
-                  <label htmlFor="huevoCheckbox">Huevo</label>
-                </div>
-                <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="non-vegeterian" id="marsicosCheckbox"/>
-                  <label htmlFor="marsicosCheckbox">Mariscos</label>
-                </div>
-                <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="non-vegeterian" id="pescadoCheckbox"/>
-                  <label htmlFor="pescadoCheckbox">Pescado</label>
-                </div>
-                <div className="allergy-checkbox-item">
-                  <input type="checkbox" name="tag" value="non-vegeterian" id="lecheCheckbox"/>
-                  <label htmlFor="lecheCheckbox">Leche</label>
-                </div>
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
-        </form>
-      </div> */}
-      <div className="filter container">
-        <form className="filter-form">
           <div className="form-group">
             <input
               type="text"
@@ -72,9 +23,11 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
               placeholder="Search..."
             />
           </div>
-          <div className="form-group">
-            <div className="tags-container">
-              <div className="tag">
+
+          <div className="form-group allergy-checkbox-group">
+            <div className="tags-container allergy-checkbox-list">
+
+              <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
                   name="tag"
@@ -85,7 +38,8 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                 />
                 <label htmlFor="veganCheckbox">Vegan</label>
               </div>
-              <div className="tag">
+
+              <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
                   name="tag"
@@ -94,9 +48,10 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   checked={selectedTags.includes("vegetarian")}
                   onChange={() => onTagCheckboxChange("vegetarian")}
                 />
-                <label htmlFor="vegeCheckbox">Vegeterian</label>
+                <label htmlFor="vegeCheckbox">Vegetarian</label>
               </div>
-              <div className="tag">
+
+              <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
                   name="tag"
@@ -105,29 +60,31 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   checked={selectedTags.includes("non vegetarian")}
                   onChange={() => onTagCheckboxChange("non vegetarian")}
                 />
-                <label htmlFor="non-vegeBox">Non-Vegeterian</label>
+                <label htmlFor="non-vegeBox">Non-Vegetarian</label>
               </div>
-              <div className="tag">
+
+              <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
                   name="tag"
                   value="paleo"
-                  id="paletoBox"
-                  checked={selectedTags.includes("paleo")}
-                  onChange={() => onTagCheckboxChange("paleo")}
+                  id="paleoBox"
+                checked={selectedTags.includes("paleo")}
+                onChange={() => onTagCheckboxChange("paleo")}
                 />
-                <label htmlFor="paletoBox">Paleto</label>
+                <label htmlFor="paleoBox">Paleo</label>
               </div>
-              <div className="tag">
+
+              <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
                   name="tag"
                   value="pescatarian"
-                  id="pescadianBox"
-                  checked={selectedTags.includes("pescatarian")}
-                  onChange={() => onTagCheckboxChange("pescatarian")}
-                />
-                <label htmlFor="pescadianBox">Pescatarian</label>
+                  id="pescatarianBox"
+                checked={selectedTags.includes("pescatarian")}
+                onChange={() => onTagCheckboxChange("pescatarian")}
+          />
+                <label htmlFor="pescatarianBox">Pescatarian</label>
               </div>
             </div>
           </div>
