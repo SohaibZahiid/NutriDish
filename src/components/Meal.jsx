@@ -4,6 +4,7 @@ import Recipe from "../components/Recipe";
 import Filter from "../components/Filter";
 import { AuthContext } from "../contexts/AuthContext";
 import "../styles/Meal.css";
+import { Link } from "react-router-dom";
 
 function Meal({ APIEndpoint }) {
   const [recipes, setRecipes] = useState([]);
@@ -58,16 +59,20 @@ function Meal({ APIEndpoint }) {
         />
         <div className={`meal-container container`}>
           {recipes.map(({ id, image, mealType, name, createdBy, favorite }) => (
-            <Recipe
-              key={id}
-              id={id}
-              image={`imgs/ImagenesRecetasPlatos/${image}`}
-              type={mealType}
-              title={name}
-              creator={createdBy}
-              favorite={favorite}
-              updateFavoriteStatus={updateFavoriteStatus}
-            />
+            <>
+              <Link to={`/recipe/${id}`}> 
+              <Recipe
+                key={id}
+                id={id}
+                image={`imgs/ImagenesRecetasPlatos/${image}`}
+                type={mealType}
+                title={name}
+                creator={createdBy}
+                favorite={favorite}
+                updateFavoriteStatus={updateFavoriteStatus}
+              />
+              </Link>
+            </>
           ))}
         </div>
       </div>
