@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Single.css";
+import "../styles/Single.css"; 
 import { useParams } from "react-router";
 import axios from "axios";
 
-function Single() {
-  const [receta, setReceta] = useState(false);
+function SingleRecipe() {
+  const [receta, setReceta] = useState(true); // Cambio aquí: true para mostrar ingredientes por defecto
   const [recipe, setRecipe] = useState({});
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -26,21 +25,25 @@ function Single() {
 
   return (
     <>
-      <h2>{recipe.name}</h2>
-      <div className="div-single container section-x2">
-        <img className="recipe-img" src={`/imgs/ImagenesRecetasPlatos/${recipe.image}`} alt="recipe image" />
-        <div>
-          <button onClick={() => setReceta(false)}>Receta</button>
-          <button onClick={() => setReceta(true)}>Descripcion</button>
-          <div className="text">
-            <div className={receta ? "" : "text-f"}>
-              <p>{recipe.description}</p>
+      <div className="r-header">
+        <h2>{recipe.name}</h2>
+      </div>
+      <div className="r-container">
+        <img className="r-image" src={`/imgs/ImagenesRecetasPlatos/${recipe.image}`} alt="recipe image" />
+        <div className="r-content">
+          <div className="cont-btn">
+            <button className="btn" onClick={() => setReceta(true)}>Receta</button> 
+            <button className="btn" onClick={() => setReceta(false)}>Descripcion</button> 
+          </div>
+          <div className="recipe-text-section">
+            <div className={receta ? "hidden" : "r-description"}>
+              <p>{ recipe.description}</p>
             </div>
-            <div className={receta ? "text-s" : ""}>
-            {recipe.ingredients?.map((ingredient) => (
-                <p key={ingredient.id}>{ingredient.name}</p>
+            <ul className={receta ? "r-ingredients" : "hidden"}>
+              {recipe.ingredients?.map((ingredient) => (
+                <li key={ingredient.id}>{receta && ingredient.name}</li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
@@ -48,4 +51,4 @@ function Single() {
   );
 }
 
-export default Single;
+export default SingleRecipe;
