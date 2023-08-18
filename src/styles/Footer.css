@@ -3,7 +3,7 @@
   background-color: var(--clr-primary-navbar);
   padding: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap; /* Permite ajustar el contenido en pantallas pequeñas */
 }
 
