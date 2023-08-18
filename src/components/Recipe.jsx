@@ -2,7 +2,7 @@ import axios from "axios";
 import "../styles/Recipe.css";
 import { FaHeart } from "react-icons/fa6";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./../contexts/AuthContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -43,7 +43,7 @@ function Recipe({
   const fillHeart = favorite ? "filled" : "";
 
   return (
-    <>
+    <Link to={`/recipe/${id}`}>
       <div className="recipe">
         <div className="recipe-container">
         <img src={image} />
@@ -59,7 +59,7 @@ function Recipe({
           </div>
         </div>
       </div>
-    </>
+    </Link>
   );
 }
 

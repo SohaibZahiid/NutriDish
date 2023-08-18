@@ -7,20 +7,17 @@
     --placeholder-color: #A4AAB3;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('/imgs/fondoUpdate.jpg'); /* Reemplaza con tu imagen */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .profile-root {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/imgs/fondoUpdate.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
 
