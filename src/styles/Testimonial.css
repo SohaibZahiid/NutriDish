@@ -2,7 +2,8 @@
   padding: 2rem;
   position: relative;
   background-color: #e8e4e6; 
-  transition: var(--ts)
+  transition: var(--ts);
+  border-radius: 15px;
 }
 
 .testimonial:hover {
