@@ -1,59 +1,63 @@
-import Navbar from "./components/Navbar";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Home from "./pages/Home";
-import Breakfast from "./pages/Breakfast";
-import Lunch from "./pages/Lunch";
-import Dinner from "./pages/Dinner";
-import TermsAndConditions from "./pages/TerminosyCondiciones";
-import About from "./pages/AboutUs";
-import Footer from "./components/Footer";
-import Single from "./pages/Single"
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { lazy, Suspense } from "react";
+
+const Navbar = lazy(() => import("./components/Navbar"));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
+const Home = lazy(() => import("./pages/Home"));
+const Breakfast = lazy(() => import("./pages/Breakfast"));
+const Lunch = lazy(() => import("./pages/Lunch"));
+const Dinner = lazy(() => import("./pages/Dinner"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const About = lazy(() => import("./pages/AboutUs"));
+const Footer = lazy(() => import("./components/Footer"));
+const Single = lazy(() => import("./pages/Single"));
+const Favorite = lazy(() => import("./pages/Favorite"));
+const Profile = lazy(() => import("./pages/Profile"));
+
 import { requireLoggedOut } from "./Guards/RouteGuard";
-import Favorite from "./pages/Favorite";
+
 import { ToastContainer } from "react-toastify";
-import Profile from "./pages/Profile";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/recipe/:id" element={ <Single /> } />
-        <Route path="/breakfast" element={ <Breakfast /> } />
-        <Route path="/lunch" element={ <Lunch /> } />
-        <Route path="/dinner" element={ <Dinner /> } />
-        <Route path="/favorites" element={ 
-          !requireLoggedOut() ? (
-            <Favorite />
-          ) : (
-            <Navigate to="/login" />
-          )
-         } />
-        <Route path="/login" element={ 
-            requireLoggedOut() ? (
-              <Login />
-            ) : (
-              <Navigate to="/" />
-            )
-          } 
-        />
-        <Route path="/profile/:userId" element={ 
-          !requireLoggedOut() ? (
-            <Profile />
-          ) : (
-            <Navigate to="/login" />
-          )
-         } />
-        <Route path="/register" element={ <Register /> } />
-        <Route path="/TermsAndConditions" element={ <TermsAndConditions/>}/>
-        <Route path="/About" element={ <About/>}/>
-      </Routes>
-      <Footer />
-      <ToastContainer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/recipe/:id" element={<Single />} />
+          <Route path="/breakfast" element={<Breakfast />} />
+          <Route path="/lunch" element={<Lunch />} />
+          <Route path="/dinner" element={<Dinner />} />
+          <Route
+            path="/favorites"
+            element={
+              !requireLoggedOut() ? <Favorite /> : <Navigate to="/login" />
+            }
+          />
+          <Route
+            path="/login"
+            element={requireLoggedOut() ? <Login /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/profile/:userId"
+            element={
+              !requireLoggedOut() ? <Profile /> : <Navigate to="/login" />
+            }
+          />
+          <Route path="/register" element={<Register />} />
+          <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+          <Route path="/About" element={<About />} />
+        </Routes>
+        <Footer />
+        <ToastContainer />
+      </Suspense>
     </Router>
   );
 }
