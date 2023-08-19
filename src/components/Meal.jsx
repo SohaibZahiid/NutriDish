@@ -36,6 +36,12 @@ function Meal({ APIEndpoint }) {
         recipe.id === recipeId ? { ...recipe, favorite: isFavorite } : recipe
       )
     );
+
+    if (!isFavorite) {
+      setRecipes((prevRecipes) =>
+        prevRecipes.filter((recipe) => recipe.id !== recipeId)
+      );
+    }
   };
 
   const handleTagCheckboxChange = (tag) => {
