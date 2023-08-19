@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-import Loading from "./components/Loading";
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Login = lazy(() => import("./pages/Login"));
@@ -30,7 +29,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <Router>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
