@@ -1,7 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Register.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 
 function Register() {
@@ -13,14 +14,6 @@ function Register() {
     username: "",
     password: "",
   });
-
-  const [errMsg, setErrMsg] = useState({
-    name: "",
-    username: "",
-    password: ""
-  })
-
-  const [sccMsg, setSccMsg] = useState("")
 
   const navigate = useNavigate()
 
@@ -34,10 +27,11 @@ function Register() {
       const res = await axios.post(`${API}/register`, formData);
       if(res.data.status == 200) {
         navigate("/login")
+        toast.success(res.data.message)
       }
-      setSccMsg(res.data.message)
+      toast.error(res.data.message)
     } catch (err) {
-      setErrMsg(err.response.data);
+      toast.error(err.response.data);
     }
   };
 
@@ -48,16 +42,12 @@ function Register() {
           <img src="/imgs/login.jpg"/>
           <div className="form-container">
           <form className="register-form">
-            {sccMsg && <small>{sccMsg}</small>}
             <label>Name</label>
             <input type="text" placeholder="Name" name="name" onChange={handleChange}/>
-            {errMsg.name && <small>{errMsg.name}</small>}
             <label>Username</label>
             <input type="text" placeholder="Username" name="username" onChange={handleChange}/>
-            {errMsg.username && <small>{errMsg.username}</small>}
             <label>Password</label>
             <input type="password" placeholder="Password" name="password" onChange={handleChange}/>
-            {errMsg.password && <small>{errMsg.password}</small>}
             <button className="submit btn" onClick={handleClick}>Register</button>
           </form>
           <p>

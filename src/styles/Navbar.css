@@ -155,9 +155,7 @@
     right: 0;
     width: 270px;
     height: 29vh;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
+    display: none;
     border-radius: var(--br);
     transition: var(--ts);
     z-index: 99;
@@ -174,6 +172,7 @@
     color: var(--clr-black);
   }
   .navbar .nav-links.open {
-    opacity: 1;
+    display: flex;
+    flex-direction: column;
   }
 }
