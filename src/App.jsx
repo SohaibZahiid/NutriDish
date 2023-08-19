@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
+import Loading from "./components/Loading";
+
 const Navbar = lazy(() => import("./components/Navbar"));
 const Login = lazy(() => import("./pages/Login"));
 const Register = lazy(() => import("./pages/Register"));
@@ -24,10 +26,11 @@ import { requireLoggedOut } from "./Guards/RouteGuard";
 
 import { ToastContainer } from "react-toastify";
 
+
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
