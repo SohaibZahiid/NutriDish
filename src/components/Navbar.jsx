@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
@@ -13,24 +13,24 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="navbar-container container">
-          <Link to="/" className="logo-container">
+          <NavLink to="/" className="logo-container">
             <img
               src="/imgs/LogoSinTexto.png"
               alt="Logo"
               className="logo-image"
             />
             <div className="logo">NutriDish</div>
-          </Link>
+          </NavLink>
           <div className="nav-links-container">
             <ul className={`nav-links ${open ? "open" : ""}`}>
               <li>
-                <Link to="breakfast">Breakfast</Link>
+                <NavLink to="breakfast">Breakfast</NavLink>
               </li>
               <li>
-                <Link to="lunch">Lunch</Link>
+                <NavLink to="lunch">Lunch</NavLink>
               </li>
               <li>
-                <Link to="dinner">Dinner</Link>
+                <NavLink to="dinner">Dinner</NavLink>
               </li>
             </ul>
             <div className="auth">
@@ -43,9 +43,9 @@ const Navbar = () => {
                   </div>
                 </>
               ) : (
-                <Link to="/login">
+                <NavLink to="/login">
                   <span className="btn">Login</span>
-                </Link>
+                </NavLink>
               )}
             </div>
             {!open ? (

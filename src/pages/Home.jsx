@@ -22,13 +22,12 @@ function Home() {
       try {
         const res = await axios.get(`${API}${APIEndpoint}`);
         setRecipes(res.data);
-        console.log(res);
       } catch (err) {
         console.log(err);
       }
     };
     getRecipes();
-  }, []);
+  }, [currentUser]);
 
   const updateFavoriteStatus = (recipeId, isFavorite) => {
     setRecipes((prevRecipes) =>
@@ -74,6 +73,7 @@ function Home() {
               type={recipe.mealType}
               title={recipe.name}
               creator={recipe.createdBy}
+              favorite={recipe.favorite}
               updateFavoriteStatus={updateFavoriteStatus}
             />
           ))}

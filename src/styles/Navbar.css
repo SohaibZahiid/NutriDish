@@ -5,14 +5,13 @@
   padding: 1em;
   background-color: var(--clr-primary-navbar);
   position: relative;
-  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
   margin: auto;
   position: relative;
 }
@@ -24,9 +23,9 @@
 }
 
 .logo-image {
-  height:60px; /* Puedes ajustar esto según el tamaño que desees */
-  width: auto; /* Puedes ajustar esto según el tamaño que desees */
-  margin-right: 16px; /* Espacio entre la imagen y el texto */
+  height: 60px;
+  width: auto;
+  margin-right: 16px;
 }
 
 .logo {
@@ -52,61 +51,62 @@
   display: none;
 }
 
-.nav-links-container .icon {
-  display: none;
-}
-
 .nav-links {
   display: flex;
   gap: 1em;
   font-size: 1.2rem;
   justify-content: center;
   align-items: center;
-  /* padding-right: 141px; */
 }
 
 .nav-links a {
   position: relative;
-  text-decoration: none; /* Elimina cualquier subrayado por defecto */
-  color: var(--clr-btn-navbar); /* Usa el color de tu tema */
-  transition: all 0.3s ease; /* Transición suave para el hover */
+  text-decoration: none;
+  color: var(--clr-btn-navbar);
+  transition: all 0.3s ease;
   margin: 0 10px;
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Posición debajo del texto, puedes ajustar */
+  bottom: -5px;
   left: 0;
-  width: 0; /* Inicialmente oculto */
-  height: 2px; /* Altura de la barra */
-  background-color: var(--clr-hover-text); /* Color de la barra, puedes ajustar */
-  /*transition: width 0.3s ease; /* Transición suave para el hover */
+  width: 0;
+  height: 2px;
+  background-color: var(--clr-hover-text);
 }
 
 .nav-links a:hover::after {
-  width: 100%; /* Aparece bajo el texto al hacer hover */
+  width: 100%;
 }
 
-
-/*CSS para el user name cuando hace login*/
+.nav-links .active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-hover-text);
+}
 
 .user-dropdown-container {
-  position: relative; /* Para que el posicionamiento absoluto del menú desplegable se base en este contenedor */
+  position: relative;
 }
+
 .user-dropdown-container:hover .dropdown {
   display: flex;
   flex-direction: column;
 }
 
-/*CSS para tener una zona invisible entre elementos*/
 .user-dropdown-container:hover::before {
   content: "";
   position: absolute;
-  bottom: -10px; /* Tamaño del espacio */
+  bottom: -10px;
   left: 0;
   width: 100%;
-  height: 10px; /* Tamaño del espacio */
+  height: 10px;
 }
 
 .user-dropdown {
@@ -114,27 +114,22 @@
   color: var(--clr-btn-text);
   font-size: var(--fz-header);
   font-size: 1.2rem;
-  font-weight: bold; /* Grosor del texto */
-  padding: 10px; /* Espaciado interno */
+  font-weight: bold;
+  padding: 10px;
   border-radius: var(--br);
-  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-  text-align: center; /* Alineación del texto */
-  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .user-dropdown:hover {
   background-color: var(--clr-btn-hover);
-  color: white; /* Color de fondo al pasar el mouse */
+  color: white;
 }
 
-/*.user-dropdown:hover + .dropdown {
-  display: flex;
-  flex-direction: column;
-}*/
 
 
 @media (max-width: 1090px) {
-
   .navbar .nav-links-container {
     flex-direction: row;
   }
@@ -146,26 +141,22 @@
   .nav-links-container .icon {
     display: block;
   }
-  
 
-
-  .navbar .nav-links{
+  .navbar .nav-links {
     position: absolute;
     top: 100%;
     right: 0;
     width: 270px;
     height: 29vh;
-    opacity: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     border-radius: var(--br);
     transition: var(--ts);
     z-index: 99;
-
     background-color: var(--clr-white);
     font-size: var(--fz-header);
     font-size: 1.2rem;
-    font-weight: bold; /* Grosor del texto */
+    font-weight: bold;
     border-radius: var(--br);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
@@ -173,7 +164,22 @@
   .nav-links a {
     color: var(--clr-black);
   }
+
   .navbar .nav-links.open {
-    opacity: 1;
+    display: flex;
   }
+}
+
+@media(max-width: 768px) {
+  .logo-image {
+    height: 30px;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .user-dropdown {
+    font-size: 1rem;
+  }
+  
 }
