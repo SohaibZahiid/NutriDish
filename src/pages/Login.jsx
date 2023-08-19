@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 import { useState, useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
 
@@ -9,13 +10,6 @@ const Login = () => {
     username: "",
     password: "",
   });
-
-  const [errMsg, setErrMsg] = useState({
-    username: "",
-    password: "",
-  });
-
-  const [sccMsg, setSccMsg] = useState("");
   
   const navigate = useNavigate();
 
@@ -32,10 +26,13 @@ const Login = () => {
       const res = await login(inputs)
       if (res.data.success) {
         navigate("/");
+        toast.success(res.data.message);
+      } else {
+        toast.error(res.data.message)
       }
-      setSccMsg(res.data.message);
     } catch (err) {
-      setErrMsg(err.response.data);
+      toast.error(err.response.data.username);
+      toast.error(err.response.data.password);
     }
   };
 
@@ -46,7 +43,6 @@ const Login = () => {
           <img src="/imgs/login.jpg" />
           <div className="form-container">
             <form className="login-form">
-              {sccMsg && <small>{sccMsg}</small>}
               <label>Username</label>
               <input
                 type="text"
@@ -54,7 +50,6 @@ const Login = () => {
                 name="username"
                 onChange={handleChange}
               />
-              {errMsg.username && <small>{errMsg.username}</small>}
               <label>Password</label>
               <input
                 type="password"
@@ -62,7 +57,6 @@ const Login = () => {
                 name="password"
                 onChange={handleChange}
               />
-              {errMsg.password && <small>{errMsg.password}</small>}
               <button className="submit btn" onClick={handleSubmit}>
                 Login
               </button>
