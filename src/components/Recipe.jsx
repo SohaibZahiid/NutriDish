@@ -42,14 +42,22 @@ function Recipe({
 
   const fillHeart = favorite ? "filled" : "";
 
+  const redirectToDetails = () => {
+    navigate(`/recipe/${id}`)
+  }
+
+  const handleFavorite = e => {
+    e.stopPropagation()
+    addFavorite(id)
+  }
+
   return (
-    <Link to={`/recipe/${id}`}>
-      <div className="recipe">
+      <div className="recipe" onClick={redirectToDetails}>
         <div className="recipe-container">
         <img src={image} />
           <FaHeart
             className={`heart ${fillHeart}`}
-            onClick={() => addFavorite(id)}
+            onClick={handleFavorite}
           />
 
           <div className="recipe-description">
@@ -59,7 +67,6 @@ function Recipe({
           </div>
         </div>
       </div>
-    </Link>
   );
 }
 
