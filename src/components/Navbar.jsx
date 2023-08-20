@@ -32,6 +32,9 @@ const Navbar = () => {
               <li>
                 <NavLink to="dinner">Dinner</NavLink>
               </li>
+              <li>
+                <NavLink to="planner">Planner</NavLink>
+              </li>
             </ul>
             <div className="auth">
               {currentUser ? (

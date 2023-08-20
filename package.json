@@ -22,6 +22,7 @@
     "react-toastify": "^9.1.3"
   },
   "devDependencies": {
+    "@types/react": "^18.2.20",
     "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",

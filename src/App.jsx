@@ -20,10 +20,12 @@ const Footer = lazy(() => import("./components/Footer"));
 const Single = lazy(() => import("./pages/Single"));
 const Favorite = lazy(() => import("./pages/Favorite"));
 const Profile = lazy(() => import("./pages/Profile"));
+const Planner = lazy(() => import("./pages/Planner"));
 
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
 import { ToastContainer } from "react-toastify";
+
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
           <Route path="/breakfast" element={<Breakfast />} />
           <Route path="/lunch" element={<Lunch />} />
           <Route path="/dinner" element={<Dinner />} />
+          <Route path="/planner" element={<Planner />} />
           <Route
             path="/favorites"
             element={
