@@ -37,46 +37,54 @@ function Tab({ recipe }) {
       </div>
       <div className="content-container">
         <div
-          className={`content ${
-            toggleState == "description" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "description" ? "active-content" : ""
+            }`}
         >
           <h2>Description</h2>
           <hr />
           <p>{recipe.description}</p>
+          <div className="time-servings-container">
+            <div className="time-container">
+              <h2>Total Time:</h2>
+              <p>{recipe.totalTime}</p>
+            </div>
+            <div className="servings-container">
+              <h2>Number of servings:</h2>
+              <p>{recipe.servings}</p>
+            </div>
+          </div>
+
         </div>
         <div
-          className={`content ${
-            toggleState == "ingredients" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "ingredients" ? "active-content" : ""
+            }`}
         >
           <h2>Ingredients</h2>
           <hr />
-          <p>
+
+          <ul className="ingredient-list">
             {recipe.ingredients?.map((ingredient) => (
-              <li key={ingredient.id}>{recipe && ingredient.name}</li>
+              <li key={ingredient.id}>{ingredient.name} {ingredient.quantity} {ingredient.unit}</li>
             ))}
-          </p>
+          </ul>
         </div>
         <div
-          className={`content ${
-            toggleState == "nutritions" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "nutritions" ? "active-content" : ""
+            }`}
         >
           <h2>Nutritions</h2>
           <hr />
           <p>
-            {recipe.nutrition?.calories}
-            {recipe.nutrition?.carbohydrates}
-            {recipe.nutrition?.fats}
-            {recipe.nutrition?.protein}
+            Calorias: {recipe.nutrition?.calories} <br />
+            Carbohydrates: {recipe.nutrition?.carbohydrates}<br />
+            Facts: {recipe.nutrition?.fats}<br />
+            Protein: {recipe.nutrition?.protein}<br />
           </p>
         </div>
 
         <div
-          className={`content ${
-            toggleState == "instructions" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "instructions" ? "active-content" : ""
+            }`}
         >
           <h2>Instructions</h2>
           <hr />

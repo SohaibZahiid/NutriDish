@@ -24,7 +24,7 @@ function SingleRecipe() {
   }, []);
 
   return (
-    <>
+    <div className="single">
       <div className="r-header">
         <h2>{recipe.name}</h2>
       </div>
@@ -35,10 +35,10 @@ function SingleRecipe() {
           alt="recipe image"
         />
         <div className="r-content">
-          <Tab recipe={recipe}/>
+          <Tab recipe={recipe} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

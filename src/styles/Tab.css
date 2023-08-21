@@ -4,6 +4,7 @@
     padding: 30px;
     box-shadow: 0 2px 16px rgba(0,0,0,.1);
     border-radius: 20px;
+    min-height: 567px;
 }
 
 .tabs{
@@ -54,3 +55,45 @@
 .content-container .content h2 {
     margin-bottom: 10px;
 }
+
+.ingredient-list {
+    padding-top: 10px;
+    padding-left: 20px;
+    list-style-type: none; /* Esto quitará los puntos predeterminados */
+  }
+  
+  .ingredient-list li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000; /* Texto en color negro */
+    position: relative; /* Esto permitirá posicionar el punto verde relativo al elemento li */
+  }
+  
+  .ingredient-list li:before {
+    content: ""; /* Esto es necesario para el pseudo-elemento */
+    width: 8px; /* Tamaño del punto */
+    height: 8px;
+    background-color: var(--clr-btn); /* Punto verde */
+    border-radius: 50%; /* Hace que el punto sea circular */
+    position: absolute; /* Absoluto relativo al li gracias al 'position: relative' anterior */
+    left: -15px; /* Posiciona el punto a la izquierda del texto */
+    top: 50%; /* Centra verticalmente el punto en el medio del texto */
+    transform: translateY(-50%); /* Ajuste final para centrar verticalmente */
+  }
+  
+  .time-servings-container {
+      display: flex;
+      justify-content: space-between;
+      /* Esto distribuirá equitativamente el espacio entre los hijos */
+      align-items: center;
+      /* Alineación vertical al centro */
+      margin-top: 10px;
+  }
+
+  .time-container,
+  .servings-container {
+      flex: 1;
+      /* Esto hará que ambos contenedores ocupen el mismo espacio */
+      text-align: center;
+      /* Centra el texto horizontalmente */
+  }

@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 
-body {
-    background-color: var(--clr-white);
-    color: var(--clr-primary-text);
-    margin: 0;
-    padding: 0;
+.single {
+    display: grid;
+    place-items: center;
 }
+
 
 .r-header {
     text-align: left;
