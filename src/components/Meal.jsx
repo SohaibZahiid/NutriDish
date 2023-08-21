@@ -37,11 +37,11 @@ function Meal({ APIEndpoint }) {
       )
     );
 
-    if (!isFavorite) {
-      setRecipes((prevRecipes) =>
-        prevRecipes.filter((recipe) => recipe.id !== recipeId)
-      );
-    }
+    // if (!isFavorite) {
+    //   setRecipes((prevRecipes) =>
+    //     prevRecipes.filter((recipe) => recipe.id !== recipeId)
+    //   );
+    // }
   };
 
   const handleTagCheckboxChange = (tag) => {
