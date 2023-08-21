@@ -2,10 +2,3 @@
   background-color: var(--clr-white);
   min-height: 80vh;
 }
-
-.lunch-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  justify-content: center;
-  gap: 2em;
-}

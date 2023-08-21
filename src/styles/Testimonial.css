@@ -3,40 +3,41 @@
   position: relative;
   background-color: #e8e4e6; 
   transition: var(--ts);
-  border-radius: 15px;
+  border-radius: var(--br);
 }
 
 .testimonial:hover {
   transform: translateY(-5px);
 }
 
-.testimonial div:before {
+.testimonial blockquote:before {
   content: '\201C';
-  font-size: 3rem;
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  color: var(--clr-primary-text);
+  font-size: 4rem;
+  position: relative;
+  color: var(--clr-btn);
+  line-height: 2rem;
+  bottom: -13px;
+  right: 5px;
 }
 
-.testimonial div:after {
+.testimonial blockquote:after {
   content: '\201D';
-  font-size: 3rem;
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  color: var(--clr-primary-text);
+  font-size: 4rem;
+  position: relative;
+  color: var(--clr-btn);
+  line-height: 1rem;
+  bottom: -17px;
+  left: 5px;
 }
 
 .testimonial p {
-  font-family: 'Montserrat', sans-serif;
   color: var(--clr-primary-text);
-  font-size: 1rem;
   line-height: 1.5;
 }
 
 .testimonial p:last-child {
   font-style: italic;
   text-align: right;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
 }

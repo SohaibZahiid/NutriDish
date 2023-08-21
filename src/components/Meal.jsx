@@ -63,7 +63,7 @@ function Meal({ APIEndpoint }) {
           selectedTags={selectedTags}
         />
         <div className={`meal-container container`}>
-          {recipes.map(({ id, image, mealType, name, createdBy, favorite, tags }) => (
+          {recipes.length > 0 ? recipes.map(({ id, image, mealType, name, createdBy, favorite, tags }) => (
             <Recipe
               key={id}
               id={id}
@@ -75,7 +75,9 @@ function Meal({ APIEndpoint }) {
               updateFavoriteStatus={updateFavoriteStatus}
               allergens={tags}
             />
-          ))}
+          )) : (
+            <p>0 Recipes Found</p>
+          )}
         </div>
       </div>
     </>

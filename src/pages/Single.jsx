@@ -24,9 +24,9 @@ function SingleRecipe() {
   }, []);
 
   return (
-    <div className="single">
+    <div className="single section-x2">
       <div className="r-header">
-        <h2>{recipe.name}</h2>
+        <h1>{recipe.name}</h1>
       </div>
       <div className="r-container">
         <img

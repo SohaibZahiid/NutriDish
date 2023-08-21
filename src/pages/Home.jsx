@@ -51,7 +51,7 @@ function Home() {
       </section>
 
       {/* Sección de Características */}
-      <section id="features" className="section-x2">
+      <section id="features" className="section-x2 container">
         <h2>Lo Que Ofrecemos</h2>
         <div className="feature">
           <h3>Recetas Personalizadas</h3>

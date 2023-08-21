@@ -1,7 +1,7 @@
 .dropdown {
   display: none;
   position: absolute;
-  top: 110%; /* Esto posiciona el menú desplegable 10px debajo del nombre de usuario */
+  top: 110%;
   right: -5px;
   width: 120px;
   padding: .8em;
@@ -31,6 +31,7 @@
   border-radius: var(--br);
   padding: .3em;
   cursor: pointer;
+  font-size: 1.4rem;
   transition: var(--ts);
 }
 
