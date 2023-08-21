@@ -28,9 +28,9 @@ function Recipe({
         );
         updateFavoriteStatus(recipeId, !favorite);
         if (res.data.status == 200) {
-          toast.success(res.data.message)
+          toast.success(res.data.message);
         } else {
-          toast.error(res.data.message)
+          toast.error(res.data.message);
         }
       } else {
         navigate("/login");
@@ -43,33 +43,34 @@ function Recipe({
   const fillHeart = favorite ? "filled" : "";
 
   const redirectToDetails = () => {
-    navigate(`/recipe/${id}`)
-  }
+    navigate(`/recipe/${id}`);
+  };
 
-  const handleFavorite = e => {
-    e.stopPropagation()
-    addFavorite(id)
-  }
-
-  const allergenImages = {
-    'Lácteos': '/imgs/allergens/Lacteos.svg',
-    'Gluten': '/imgs/allergens/Gluten.svg',
-    'Frutos secos': '/imgs/allergens/FrutosCascara.svg',
-    'Soja': '/imgs/allergens/Soja.svg',
-    'Huevos': '/imgs/allergens/huevo.svg',
-    'Cacahuetes': '/imgs/allergens/Cacahuete.svg'
+  const handleFavorite = (e) => {
+    e.stopPropagation();
+    addFavorite(id);
   };
 
   return (
     <div className="recipe" onClick={redirectToDetails}>
       <div className="recipe-container">
         <img src={image} />
-        <FaHeart
-          className={`heart ${fillHeart}`}
-          onClick={handleFavorite}
-        />
+        <FaHeart className={`heart ${fillHeart}`} onClick={handleFavorite} />
         <div className="recipe-description">
-          <div className="small">{type}</div>
+          <div className="small">
+            {type}
+            {allergens && (
+              <div className="allergens">
+                {allergens.map((allergen) => (
+                  <img
+                    key={allergen.id}
+                    src={`/imgs/allergens/${allergen.name}.svg`}
+                    alt=""
+                  />
+                ))}
+              </div>
+            )}
+          </div>
           <div className="title">{title}</div>
           <div className="creator">{creator}</div>
         </div>
@@ -85,5 +86,5 @@ function Recipe({
               alt={allergen.name}
             />
           ))}
-        </div>*/   //por si te sirve de algo, ahi te lo dejo
+        </div>*/ //por si te sirve de algo, ahi te lo dejo
 export default Recipe;

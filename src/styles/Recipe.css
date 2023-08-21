@@ -46,6 +46,20 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small .allergens {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.small img{
+ width: 25px;
+ height: 25px;
 }
 
 .title {

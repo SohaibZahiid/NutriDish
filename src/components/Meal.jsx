@@ -63,7 +63,7 @@ function Meal({ APIEndpoint }) {
           selectedTags={selectedTags}
         />
         <div className={`meal-container container`}>
-          {recipes.map(({ id, image, mealType, name, createdBy, favorite }) => (
+          {recipes.map(({ id, image, mealType, name, createdBy, favorite, tags }) => (
             <Recipe
               key={id}
               id={id}
@@ -73,6 +73,7 @@ function Meal({ APIEndpoint }) {
               creator={createdBy}
               favorite={favorite}
               updateFavoriteStatus={updateFavoriteStatus}
+              allergens={tags}
             />
           ))}
         </div>
