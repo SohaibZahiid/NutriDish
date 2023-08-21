@@ -15,11 +15,11 @@ function Recipe({
   creator,
   favorite,
   updateFavoriteStatus,
+  allergens,
 }) {
   const { currentUser } = useContext(AuthContext);
   const API = import.meta.env.VITE_API;
   const navigate = useNavigate();
-
   const addFavorite = async (recipeId) => {
     try {
       if (currentUser) {
@@ -27,7 +27,7 @@ function Recipe({
           `${API}/recipe/${currentUser.id}/favorites/${recipeId}`
         );
         updateFavoriteStatus(recipeId, !favorite);
-        if(res.data.status == 200) {
+        if (res.data.status == 200) {
           toast.success(res.data.message)
         } else {
           toast.error(res.data.message)
@@ -51,23 +51,39 @@ function Recipe({
     addFavorite(id)
   }
 
-  return (
-      <div className="recipe" onClick={redirectToDetails}>
-        <div className="recipe-container">
-        <img src={image} />
-          <FaHeart
-            className={`heart ${fillHeart}`}
-            onClick={handleFavorite}
-          />
+  const allergenImages = {
+    'Lácteos': '/imgs/allergens/Lacteos.svg',
+    'Gluten': '/imgs/allergens/Gluten.svg',
+    'Frutos secos': '/imgs/allergens/FrutosCascara.svg',
+    'Soja': '/imgs/allergens/Soja.svg',
+    'Huevos': '/imgs/allergens/huevo.svg',
+    'Cacahuetes': '/imgs/allergens/Cacahuete.svg'
+  };
 
-          <div className="recipe-description">
-            <div className="small">{type}</div>
-            <div className="title">{title}</div>
-            <div className="creator">{creator}</div>
-          </div>
+  return (
+    <div className="recipe" onClick={redirectToDetails}>
+      <div className="recipe-container">
+        <img src={image} />
+        <FaHeart
+          className={`heart ${fillHeart}`}
+          onClick={handleFavorite}
+        />
+        <div className="recipe-description">
+          <div className="small">{type}</div>
+          <div className="title">{title}</div>
+          <div className="creator">{creator}</div>
         </div>
       </div>
+    </div>
   );
 }
 
+/* <div>
+          {allergens.map(allergen => (
+            <img
+              src={allergenImages[allergen.name]}
+              alt={allergen.name}
+            />
+          ))}
+        </div>*/   //por si te sirve de algo, ahi te lo dejo
 export default Recipe;

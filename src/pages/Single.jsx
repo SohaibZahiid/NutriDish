@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Single.css"; 
+import "../styles/Single.css";
 import { useParams } from "react-router";
 import axios from "axios";
 
@@ -32,16 +32,18 @@ function SingleRecipe() {
         <img className="r-image" src={`/imgs/ImagenesRecetasPlatos/${recipe.image}`} alt="recipe image" />
         <div className="r-content">
           <div className="cont-btn">
-            <button className="btn" onClick={() => setReceta(true)}>Receta</button> 
-            <button className="btn" onClick={() => setReceta(false)}>Descripcion</button> 
+            <button className="btn" onClick={() => setReceta(true)}>Receta</button>
+            <button className="btn" onClick={() => setReceta(false)}>Descripcion</button>
           </div>
           <div className="recipe-text-section">
             <div className={receta ? "hidden" : "r-description"}>
-              <p>{ recipe.description}</p>
+              <p>{recipe.description}</p>
             </div>
             <ul className={receta ? "r-ingredients" : "hidden"}>
               {recipe.ingredients?.map((ingredient) => (
                 <li key={ingredient.id}>{receta && ingredient.name}</li>
+              
+
               ))}
             </ul>
           </div>
