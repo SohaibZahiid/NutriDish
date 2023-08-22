@@ -5,7 +5,6 @@
   }
   
   .terms-title {
-    font-size: var(--fz-title);
     color: var(--clr-btn-hover);
     text-align: center;
     margin-bottom: 1em;
@@ -21,7 +20,6 @@
   }
   
   .terms-content h2 {
-    font-size: var(--fz-title);
     color: var(--clr-btn-hover);
     margin-top: 1em;
   }

@@ -1,4 +1,3 @@
-/* Variables de diseño */
 :root {
     --primary-color: #5E72E4;
     --secondary-color: #32325D;
@@ -14,7 +13,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('/imgs/fondoUpdate.jpg'); /* Reemplaza con tu imagen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,70,67,0.7)), url('/imgs/fondoUpdate.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

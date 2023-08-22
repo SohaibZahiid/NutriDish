@@ -1,18 +1,13 @@
-/*#main {
-  background-color: var(--clr-box-bg);
-}*/
-
 #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,70,67,0.7)), url('/imgs/158-h0.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 95vh; /* Ajusta esto según tus necesidades */
+    height: 95vh;
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    color: #fffcfc; /* Color del texto, cámbialo si es necesario */
-    font-size: 700;
+    align-items: center;
+    justify-content: center; 
+    color: #fffcfc;
 }
   
 #hero-content {
@@ -21,17 +16,16 @@
     align-items: center;
     text-align: center;
     gap: 1em;
-    max-width: 600px; /* Puedes ajustar esto según tus necesidades */
+    max-width: 600px;
   }
 
   #hero-content h1 {
     color: var(--clr-secondary-headline);
-    font-size: 2.5rem;
   }
 
   #hero-content p {
     color: var(--clr-secondary-headline);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   #hero-content button {
@@ -53,40 +47,35 @@
 
 .recipe-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    justify-content: center;
+    gap: 2em;
 }
 
-/*Css para Seccion de caracteristicas*/
 #features {
-  text-align: center; /* Centra el texto */
+  text-align: center;
   background-color: var(--clr-white);
 }
 
 #features h2 {
   color: var(--clr-btn-hover);
-  font-size: 2.5rem; /* Tamaño del título principal */
-  margin-bottom: 1rem; /* Espacio debajo del título */
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 2rem; /* Espacio entre características */
-  text-align: center; /* Alineación del texto en la característica */
-  max-width: 800px; /* Ancho máximo */
-  margin: 0 auto; /* Centrado */
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: center;
+  margin: 0 auto; 
 }
 
 .feature h3 {
-  color: #555555; /* Color del título de la característica */
-  font-size: 1.5rem; /* Tamaño del título de la característica */
-}
-
-.feature p {
-  color: #666666; /* Color de la descripción */
-  font-size: 1rem; /* Tamaño de la descripción */
-  line-height: 1.5; /* Espacio entre líneas en la descripción */
+  color: #555555;
+  font-size: 1.5rem; 
 }
 
 /*Recipes*/
@@ -96,7 +85,6 @@
 
 #recipes h2 {
   color: var(--clr-btn-hover);
-  font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -120,7 +108,6 @@
 
 #testimonials h2 {
   color: var(--clr-btn-hover);
-  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
@@ -134,13 +121,12 @@
 
 #final-cta {
   background-color: var(--clr-white); 
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center; 
 }
 
 #final-cta h2 {
-  color: var(--clr-btn-hover); /* Color de texto oscuro */
-  font-size: 2.5rem; /* Tamaño del título */
-  margin-bottom: 1rem; /* Espacio debajo del título */
+  color: var(--clr-btn-hover);
+  margin-bottom: 1rem; 
 }
 
 #final-cta button {

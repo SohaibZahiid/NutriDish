@@ -8,7 +8,6 @@
 }
 
 .about-us-text {
-  font-size: var(--fz-title);
   margin-bottom: 1em;
   color: var(--clr-card-headline);
   line-height: 1.7;
@@ -23,7 +22,6 @@
 
 .team-section h2, .mission-section h2 {
   color: var(--clr-btn-hover);
-  font-weight: 700;
   flex-basis: 100%;
 }
 
@@ -45,7 +43,7 @@
   width: 199px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinea los elementos al centro */
+  align-items: center; 
 }
 
 .team-members img {
@@ -56,8 +54,8 @@
 }
 
 .team-members a {
-  text-align: center; /* Centra el texto del enlace */
-  display: block; /* Hace que el enlace ocupe toda la línea */
+  text-align: center;
+  display: block;
 }
 
 

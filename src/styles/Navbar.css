@@ -30,7 +30,7 @@
 
 .logo {
   color: var(--clr-white);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -54,9 +54,10 @@
 .nav-links {
   display: flex;
   gap: 1em;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .nav-links a {
@@ -113,7 +114,7 @@
   background-color: var(--clr-btn);
   color: var(--clr-btn-text);
   font-size: var(--fz-header);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   padding: 10px;
   border-radius: var(--br);
@@ -155,7 +156,7 @@
     z-index: 99;
     background-color: var(--clr-white);
     font-size: var(--fz-header);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     border-radius: var(--br);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -175,11 +176,11 @@
     height: 30px;
   }
   .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .user-dropdown {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   
 }

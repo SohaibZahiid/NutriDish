@@ -4,7 +4,7 @@ import '../styles/AboutUs.css';
 function AboutUs() {
   return (
     <div className="about-us-container">
-      <h1>About Us</h1>
+      <h2>About Us</h2>
       <p className="about-us-text">NutriDish is a dedicated platform for healthy food enthusiasts. Our mission is to provide personalized and healthy recipes to anyone looking to improve their diet and lifestyle.</p>
       <div className="team-section">
         <h2>Meet Our Team</h2>

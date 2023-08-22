@@ -3,8 +3,9 @@
     background-color: white;
     padding: 30px;
     box-shadow: 0 2px 16px rgba(0,0,0,.1);
-    border-radius: 20px;
-    min-height: 567px;
+    border-top-right-radius: var(--br);
+    border-bottom-right-radius: var(--br);
+    height: 100%;
 }
 
 .tabs{
@@ -18,7 +19,7 @@
 
 .tabs .tab{
     flex-grow: 1;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-weight: 600;
     background: white;
     padding: 18px;
@@ -56,8 +57,11 @@
     margin-bottom: 10px;
 }
 
+.content-desc {
+    padding-top: 1em;
+}
+
 .ingredient-list {
-    padding-top: 10px;
     padding-left: 20px;
     list-style-type: none; /* Esto quitará los puntos predeterminados */
   }
@@ -84,16 +88,12 @@
   .time-servings-container {
       display: flex;
       justify-content: space-between;
-      /* Esto distribuirá equitativamente el espacio entre los hijos */
       align-items: center;
-      /* Alineación vertical al centro */
       margin-top: 10px;
   }
 
   .time-container,
   .servings-container {
       flex: 1;
-      /* Esto hará que ambos contenedores ocupen el mismo espacio */
       text-align: center;
-      /* Centra el texto horizontalmente */
   }

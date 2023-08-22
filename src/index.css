@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
   font-weight: 400;
+  font-size: 62.5%;
 
   --clr-primary-navbar: #004643; 
   --clr-primary: #97d789; 
@@ -25,41 +27,24 @@
   --clr-hover-text: #fbdd74;
   --clr-receipe-box: #345e36de;
 
-  --fz-header: 1.1rem;
-  --fz-title: 1.3rem;
+  --fz-header: 1.4rem;
+  --fz-title: 2.4rem;
 
   --br: 5px;
-
   --ts: .2s;
 
   --clr-beige: #f5f5dc;
   --clr-white: white;
   --clr-black: #000;
 
+  --font-heading: 'Playfair Display', serif;
+
 }
 
 body {
   background-color: var(--clr-white);
+  font-size: 1.6rem;
 }
-
-/*--clr-primary-navbar: #337c22; 
---clr-primary: #97d789; 
---clr-secondary: #f8f7ed;
---clr-secondary-box: #f8f7ed;
---clr-primary-text: #0f3433;
---clr-secondary-text: #abd1c6;
---clr-btn: #79cb67;
---clr-btn-navbar: #fffffe;
---clr-btn-text: #001e1d;
---clr-btn-hover: #489c35;
---clr-primary-headline: #86d973;
---clr-secondary-headline: #fffffe;
---clr-card-headline: #001e1d;
---clr-card-bg: #e8e4e6;
---clr-box-bg: #fffffe;
---clr-footer-bg: #a1db95;*/
-
-
 
 * {
   margin: 0;
@@ -76,6 +61,18 @@ img {
 
 input {
   font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.6rem;
 }
 
 .container {
