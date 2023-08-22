@@ -30,8 +30,8 @@
 }
 
 .r-image {
-    width: 400px;
-    height: 400px;
+    width: 563px;
+    height: auto;
     object-fit: cover;
     border-radius: var(--br);
     margin-right: 1.5rem;
