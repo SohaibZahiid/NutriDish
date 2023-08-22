@@ -9,17 +9,35 @@
     margin-bottom: .5em;
 }
 
+
+
+.planner-container .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.top .input-container {
+  display: flex;
+  gap: 1em;
+}
+
 .planner input {
+  flex: 1;
   padding: 0.6em;
   border-radius: var(--br);
   border: 1px solid lightgray;
   outline: none;
 }
 
-.planner-container .top {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+.top .input-container select {
+  flex: 1;
+  padding: 0.6em;
+  border-radius: var(--br);
+  border: 1px solid lightgray;
+  outline: none;
 }
 
 .total-nutritions {
