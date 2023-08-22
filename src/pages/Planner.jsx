@@ -20,7 +20,7 @@ function Planner() {
         const res = await axios.get(`${API}/recipes/suggestions/${calories}`);
         if (res.data.success) {
           setRecipes(res.data.data);
-          console.log(res.data)
+          console.log(res.data);
         } else {
           toast.error(res.data?.message);
         }
@@ -35,24 +35,24 @@ function Planner() {
   return (
     <div className="planner section-x2">
       <div className="planner-container container">
+        <h2>Plan your meal today</h2>
         <div className="top">
           <input type="number" onChange={handleChange} />
           <button className="btn" onClick={getRecipes}>
             Get Plan
           </button>
         </div>
-        {
-            recipes.recipes && 
+        {recipes.recipes && (
+          <div className="total-nutritions">
+            <p>Total Calories: {recipes.combinedNutrition.calories}</p>
+            <p>Total Proteins: {recipes.combinedNutrition.protein}</p>
+            <p>
+              Total Carbohydrates: {recipes.combinedNutrition.carbohydrates}
+            </p>
+            <p>Total Fats: {recipes.combinedNutrition.fats}</p>
+          </div>
+        )}
 
-            <div className="total-nutritions">
-              <p>Total Calories: {recipes.combinedNutrition.calories}</p>
-              <p>Total Proteins: {recipes.combinedNutrition.protein}</p>
-              <p>Total Carbohydrates: {recipes.combinedNutrition.carbohydrates}</p>
-              <p>Total Fats: {recipes.combinedNutrition.fats}</p>
-            </div>
-            
-          }
-          
         <div className="planned-meals">
           {recipes.recipes &&
             recipes.recipes.map(
