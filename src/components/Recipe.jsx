@@ -79,12 +79,4 @@ function Recipe({
   );
 }
 
-/* <div>
-          {allergens.map(allergen => (
-            <img
-              src={allergenImages[allergen.name]}
-              alt={allergen.name}
-            />
-          ))}
-        </div>*/ //por si te sirve de algo, ahi te lo dejo
 export default Recipe;

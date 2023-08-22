@@ -29,7 +29,7 @@
 .search {
   outline: none;
   border: none;
-  padding: 0.5em;
+  padding: 9px;
   border-radius: var(--br);
   background-color: var(--clr-white);
   color: var(--clr-black);

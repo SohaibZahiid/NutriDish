@@ -1,21 +1,21 @@
 import React from 'react';
-import '../styles/Terminosycondiciones.css'; // Asegúrate de importar el CSS correspondiente
+import '../styles/Terminosycondiciones.css'; // Make sure to import the corresponding CSS
 
 function TermsAndConditions() {
   return (
     <div className="terms-container">
-      <h1 className="terms-title">Términos y Condiciones</h1>
+      <h1 className="terms-title">Terms and Conditions</h1>
       <div className="terms-content">
-        <h2>Aceptación de los Términos</h2>
-        <p>Al acceder y utilizar el sitio web NutriDish, aceptas cumplir con los siguientes términos y condiciones...</p>
-        {/* Continúa con el resto del contenido de los términos y condiciones aquí */}
-        <h2>Uso del Sitio Web</h2>
-        <p>Podrás utilizar este sitio web únicamente de conformidad con estos Términos...</p>
-        <h2>Privacidad</h2>
-        <p>Nuestra política de privacidad explica cómo tratamos tu información personal...</p>
-        <h2>Modificaciones</h2>
-        <p>Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento...</p>
-        {/* Puedes seguir agregando más secciones según tus necesidades */}
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing and using the NutriDish website, you agree to comply with the following terms and conditions...</p>
+        {/* Continue with the rest of the terms and conditions content here */}
+        <h2>Use of the Website</h2>
+        <p>You may use this website only in accordance with these Terms.</p>
+        <h2>Privacy</h2>
+        <p>Our privacy policy explains how we treat your personal information.</p>
+        <h2>Modifications</h2>
+        <p>We reserve the right to modify these Terms and Conditions at any time.</p>
+        {/* You can keep adding more sections as needed */}
       </div>
     </div>
   );

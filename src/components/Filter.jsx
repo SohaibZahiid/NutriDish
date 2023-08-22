@@ -62,19 +62,6 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                 />
                 <label htmlFor="non-vegeBox">Non-Vegetarian</label>
               </div>
-
-              <div className="tag allergy-checkbox-item">
-                <input
-                  type="checkbox"
-                  name="tag"
-                  value="paleo"
-                  id="paleoBox"
-                checked={selectedTags.includes("paleo")}
-                onChange={() => onTagCheckboxChange("paleo")}
-                />
-                <label htmlFor="paleoBox">Paleo</label>
-              </div>
-
               <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
