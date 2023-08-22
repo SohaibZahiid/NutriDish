@@ -46,11 +46,11 @@
     color: white;
   }
 
-.recipe-container {
+#recipes .recipe-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     justify-content: center;
-    column-gap: 2em;
+    gap: 2em;
 }
 
 #features {

@@ -40,9 +40,41 @@
   --font-heading: 'Playfair Display', serif;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background-color: var(--clr-white);
   font-size: 1.6rem;
+  margin: 0 0 260px;
+}
+
+@media (max-width: 1125px) {
+  body {
+    margin: 0 0 450px;
+  }
+}
+
+@media (max-width: 686px) {
+  body {
+    margin: 0 0 630px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 0 0 830px;
+  }
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 * {

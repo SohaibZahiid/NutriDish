@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import DropdownProfile from "./DropdownProfile";
 import { FaBars, FaXmark } from "react-icons/fa6";
@@ -8,6 +8,18 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
+
+  const menuRef = useRef()
+
+  useEffect(() => {
+    const handler = e => {
+      if(!menuRef.current.contains(e.target)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handler)
+  })
+  
 
   return (
     <>
@@ -21,7 +33,7 @@ const Navbar = () => {
             />
             <div className="logo">NutriDish</div>
           </NavLink>
-          <div className="nav-links-container">
+          <div className="nav-links-container" ref={menuRef}>
             <ul className={`nav-links ${open ? "open" : ""}`}>
               <li>
                 <NavLink to="breakfast">Breakfast</NavLink>

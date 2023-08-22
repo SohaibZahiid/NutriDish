@@ -53,7 +53,7 @@ function Recipe({
 
   return (
     <div className="recipe" onClick={redirectToDetails}>
-      <div className="recipe-container">
+      <div className="recipe-wrapper">
         <img src={image} />
         <FaHeart className={`heart ${fillHeart}`} onClick={handleFavorite} />
         <div className="recipe-description">

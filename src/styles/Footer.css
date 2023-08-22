@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap; /* Permite ajustar el contenido en pantallas pequeñas */
+
 }
 
 .footer .links, .footer .social-media, .footer .newsletter {
