@@ -17,6 +17,17 @@
   gap: 1em;
 }
 
+.total-nutritions {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.total-nutritions p {
+    font-weight: bold;
+}
+
 .planned-meals {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
