@@ -25,13 +25,14 @@ import Planner from "./pages/Planner";
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
 import { ToastContainer } from "react-toastify";
+import Spinner from "./components/Spinner";
 
 
 
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Spinner />}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -7,6 +7,7 @@ import Recipe from "../components/Recipe";
 function Planner() {
   const [recipes, setRecipes] = useState({});
   const [calories, setCalories] = useState(0);
+  const [dietary, setDietary] = useState("non-vegetarian");
 
   const handleChange = (e) => {
     setCalories(e.target.value);
@@ -17,10 +18,11 @@ function Planner() {
 
     if (calories) {
       try {
-        const res = await axios.get(`${API}/recipes/suggestions/${calories}`);
+        const res = await axios.get(
+          `${API}/recipes/suggestions/${calories}/${dietary}`
+        );
         if (res.data.success) {
           setRecipes(res.data.data);
-          console.log(res.data);
         } else {
           toast.error(res.data?.message);
         }
@@ -37,7 +39,17 @@ function Planner() {
       <div className="planner-container container">
         <h2>Plan your meal today</h2>
         <div className="top">
-          <input type="number" onChange={handleChange} />
+          <div className="input-container">
+            <input type="number" onChange={handleChange} />
+            <select name="dietary" onChange={(e) => setDietary(e.target.value)}>
+              <option value="non-vegetarian">
+                Non Vegetarian
+              </option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="pescatarian">Pescatarian</option>
+            </select>
+          </div>
           <button className="btn" onClick={getRecipes}>
             Get Plan
           </button>
