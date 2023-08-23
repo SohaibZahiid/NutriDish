@@ -37,10 +37,15 @@ function Planner() {
   return (
     <div className="planner section-x2">
       <div className="planner-container container">
-        <h2>Plan your meal today</h2>
+        <div className="container-explanation">
+          <h2>Planificador de Calorías</h2>
+          <p>Tu guía personalizada para alcanzar tus metas calóricas diarias. </p>
+          <p>Simplemente introduce la cantidad de calorías que deseas consumir y nuestro planificador seleccionará automáticamente las recetas que se ajusten a tu necesidad. </p>
+          <p>Disfruta de deliciosas comidas mientras te mantienes en el camino hacia tus metas nutricionales.</p>
+        </div>
         <div className="top">
           <div className="input-container">
-            <input type="number" onChange={handleChange} />
+            <input type="number" onChange={handleChange} placeholder="Ejemplo: 2000"/>
             <select name="dietary" onChange={(e) => setDietary(e.target.value)}>
               <option value="non-vegetarian">
                 Non Vegetarian

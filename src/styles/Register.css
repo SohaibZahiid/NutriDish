@@ -64,7 +64,8 @@
 }
 
 .register p a {
-  color: inherit;
+  color: var(--clr-btn-hover);
+  font-size: 2rem;
 }
 
 @media (max-width: 900px) {

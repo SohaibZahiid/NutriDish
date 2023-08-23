@@ -5,12 +5,14 @@
   padding: 2em;
   background-color: #e8e4e6;
   color: var(--clr-btn-hover);
+  margin-top: 20px;
 }
 
 .about-us-text {
   margin-bottom: 1em;
   color: var(--clr-card-headline);
   line-height: 1.7;
+  font-size: 2rem;
 }
 
 .team-section, .mission-section {

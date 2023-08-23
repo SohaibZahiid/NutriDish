@@ -23,7 +23,7 @@
 }
 
 .logo-image {
-  height: 100px;
+  height: 78px;
   width: auto;
   margin-right: 16px;
 }
@@ -112,9 +112,9 @@
 
 .user-dropdown {
   background-color: var(--clr-btn);
-  color: var(--clr-btn-text);
+  color: var(--clr-white);
   font-size: var(--fz-header);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   padding: 10px;
   border-radius: var(--br);

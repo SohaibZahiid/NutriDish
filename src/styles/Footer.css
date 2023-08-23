@@ -58,8 +58,8 @@
   padding: .6em 1em;
   border-radius: var(--br);
   background-color: var(--clr-btn);
-  color: var(--clr-btn-text);
-  font-size: var(--fz-header);
+  color: var(--clr-white);
+  font-size: 2rem;
   margin-top: 10px;
   width: 100%;
   cursor: pointer;

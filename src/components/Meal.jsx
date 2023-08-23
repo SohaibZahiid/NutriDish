@@ -62,6 +62,16 @@ function Meal({ APIEndpoint }) {
           onTagCheckboxChange={handleTagCheckboxChange}
           selectedTags={selectedTags}
         />
+        <div className="allergens-container container">
+          <h3>Allergens:</h3>
+          {/* Aquí puedes agregar los símbolos de los alérgenos que desees */}
+          <img src="/imgs/allergens/Cacahuetes.svg" alt="Cacahuetes" />
+          <img src="/imgs/allergens/Frutos secos.svg" alt="Frutos Secos" />
+          <img src="/imgs/allergens/Huevos.svg" alt="Huevos" />
+          <img src="/imgs/allergens/Gluten.svg" alt="Gluten" />
+          <img src="/imgs/allergens/Lácteos.svg" alt="Lacteos" />
+          <img src="/imgs/allergens/Soja.svg" alt="Soja" />
+        </div>
         <div className={`meal-container container`}>
           {recipes.length > 0 ? recipes.map(({ id, image, mealType, name, createdBy, favorite, tags }) => (
             <Recipe

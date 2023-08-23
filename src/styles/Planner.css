@@ -9,14 +9,13 @@
     margin-bottom: .5em;
 }
 
-
-
 .planner-container .top {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
+  padding-top: 30px;
 }
 
 .top .input-container {
@@ -57,4 +56,18 @@
   justify-content: center;
   gap: 2em;
   padding-top: 20px;
+}
+
+.container-explanation {
+  padding: 1.5em;
+  border: 1px solid #e0e0e0;  /* Borde sutil */
+  border-radius: var(--br);   /* Usando una variable para el borde redondeado que ya tienes definido */
+  background-color: #e8e4e6;
+  margin-top: 2em;            /* Espacio superior */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para dar profundidad */
+  
+  /* Estilo para el texto */
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--clr-black);
 }

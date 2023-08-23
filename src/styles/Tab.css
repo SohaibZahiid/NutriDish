@@ -68,7 +68,6 @@
   
   .ingredient-list li {
     margin-bottom: 10px;
-    font-weight: bold;
     color: #000; /* Texto en color negro */
     position: relative; /* Esto permitirá posicionar el punto verde relativo al elemento li */
   }
@@ -110,4 +109,42 @@
     }
     
   }
-  
+
+  /* Estilo para el diseño general de la etiqueta nutricional */
+.nutrition-label {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    width: 300px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Título de la etiqueta */
+.nutrition-label h2 {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 5px;
+}
+
+/* Estilo para cada fila de datos nutricionales */
+.nutrition-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #dcdcdc;
+}
+
+/* Estilo para la etiqueta y el valor en cada fila */
+.nutrition-row span {
+    flex: 1;
+}
+
+.nutrition-row span.label {
+    font-weight: bold;
+}
+
+/* Estilo para el valor en cada fila */
+.nutrition-row span.value {
+    text-align: right;
+}

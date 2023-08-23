@@ -10,3 +10,26 @@
   gap: 2em;
   padding-top: 20px;
 }
+
+.allergens-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.allergens-container h3 {
+  margin-right: 10px;
+}
+
+.allergens-container img{
+    display: inline-block; /* Esto es necesario para dar dimensiones al span */
+    width: auto; /* Ancho de la imagen */
+    height: 45px; /* Alto de la imagen */
+    background-image: url('path_to_your_image.jpg');
+    background-size: cover; /* Esto hará que la imagen cubra todo el espacio del span */
+    background-position: center; /* Esto centrará la imagen */
+}
+
+

@@ -45,6 +45,7 @@
 
 .login-form label {
   color: var(--clr-secondary);
+  font-size: 2rem;
 }
 
 .login-form input {
@@ -67,7 +68,8 @@
 }
 
 .login p a {
-  color: inherit;
+  color: var(--clr-btn-hover);
+  font-size: 2rem;
 }
 
 
