@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
+import "../styles/Planner.css";
 import { toast } from "react-toastify";
+import Recipe from "../components/Recipe";
 
 function Planner() {
   const [recipes, setRecipes] = useState({});
@@ -16,10 +18,11 @@ function Planner() {
     if (calories) {
       try {
         const res = await axios.get(`${API}/recipes/suggestions/${calories}`);
-        if(res.data.success) {
-          setRecipes(res.data.data)
+        if (res.data.success) {
+          setRecipes(res.data.data);
+          console.log(res.data)
         } else {
-          toast.error(res.data?.message)
+          toast.error(res.data?.message);
         }
       } catch (err) {
         console.log(err);
@@ -30,17 +33,45 @@ function Planner() {
   };
 
   return (
-    <>
-      <input type="number" onChange={handleChange} />
-      <button onClick={getRecipes}>Get Plan</button>
-      {/* Display recipes */}
-      <ul>
-        {recipes.recipes &&
-          recipes.recipes.map((recipe) => (
-            <li key={recipe.id}>{recipe.name}</li>
-          ))}
-      </ul>
-    </>
+    <div className="planner section-x2">
+      <div className="planner-container container">
+        <div className="top">
+          <input type="number" onChange={handleChange} />
+          <button className="btn" onClick={getRecipes}>
+            Get Plan
+          </button>
+        </div>
+        {
+            recipes.recipes && 
+
+            <div className="total-nutritions">
+              <p>Total Calories: {recipes.combinedNutrition.calories}</p>
+              <p>Total Proteins: {recipes.combinedNutrition.protein}</p>
+              <p>Total Carbohydrates: {recipes.combinedNutrition.carbohydrates}</p>
+              <p>Total Fats: {recipes.combinedNutrition.fats}</p>
+            </div>
+            
+          }
+          
+        <div className="planned-meals">
+          {recipes.recipes &&
+            recipes.recipes.map(
+              ({ id, image, mealType, name, createdBy, favorite, tags }) => (
+                <Recipe
+                  key={id}
+                  id={id}
+                  image={`imgs/ImagenesRecetasPlatos/${image}`}
+                  type={mealType}
+                  title={name}
+                  creator={createdBy}
+                  favorite={favorite}
+                  allergens={tags}
+                />
+              )
+            )}
+        </div>
+      </div>
+    </div>
   );
 }
 

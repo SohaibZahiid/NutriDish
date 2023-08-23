@@ -20,7 +20,7 @@ const Footer = lazy(() => import("./components/Footer"));
 const Single = lazy(() => import("./pages/Single"));
 const Favorite = lazy(() => import("./pages/Favorite"));
 const Profile = lazy(() => import("./pages/Profile"));
-const Planner = lazy(() => import("./pages/Planner"));
+import Planner from "./pages/Planner";
 
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
