@@ -97,18 +97,7 @@
       text-align: center;
   }
 
-  @media (max-width: 686px) {
-    body {
-      margin: 0 0 630px;
-    }
-  }
-
-  @media (max-width: 610px) {
-    .tab-container {
-        width: 100%;
-    }
-    
-  }
+ 
 
   /* Estilo para el diseño general de la etiqueta nutricional */
 .nutrition-label {

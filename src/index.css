@@ -40,10 +40,6 @@
 }
 
 /* --font-heading: 'Playfair Display', serif; */
-html {
-  position: relative;
-  min-height: 100%;
-}
 
 body {
   background-color: var(--clr-white);
