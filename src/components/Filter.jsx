@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../styles/Filter.css";
 
-/*Hay que hacer que cuando se de click en el texto se active la box!!*/
 const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
-  const [alergico, setAlergico] = useState(false);
-
   const handleSearchChange = (e) => {
     const searchTerm = e.target.value;
     onSearch(searchTerm);
@@ -14,7 +11,6 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
     <>
       <div className="filter container allergy-filter-container">
         <form className="filter-form allergy-filter-form">
-
           <div className="form-group">
             <input
               type="text"
@@ -26,7 +22,6 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
 
           <div className="form-group allergy-checkbox-group">
             <div className="tags-container allergy-checkbox-list">
-
               <div className="tag allergy-checkbox-item">
                 <input
                   type="checkbox"
@@ -36,7 +31,9 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   checked={selectedTags.includes("vegan")}
                   onChange={() => onTagCheckboxChange("vegan")}
                 />
-                <label htmlFor="veganCheckbox">Vegan</label>
+                <label htmlFor="veganCheckbox">
+                  <img src="/imgs/diete/icons8-vegan-94.png" />
+                </label>
               </div>
 
               <div className="tag allergy-checkbox-item">
@@ -48,7 +45,9 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   checked={selectedTags.includes("vegetarian")}
                   onChange={() => onTagCheckboxChange("vegetarian")}
                 />
-                <label htmlFor="vegeCheckbox">Vegetarian</label>
+                <label htmlFor="vegeCheckbox">
+                  <img src="/imgs/diete/icons8-vegetarian-94.png" />
+                </label>
               </div>
 
               <div className="tag allergy-checkbox-item">
@@ -60,7 +59,7 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   checked={selectedTags.includes("non vegetarian")}
                   onChange={() => onTagCheckboxChange("non vegetarian")}
                 />
-                <label htmlFor="non-vegeBox">Non-Vegetarian</label>
+                <label htmlFor="non-vegeBox"><img src="/imgs/diete/icons8-meat-94.png" /></label>
               </div>
               <div className="tag allergy-checkbox-item">
                 <input
@@ -68,10 +67,10 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   name="tag"
                   value="pescatarian"
                   id="pescatarianBox"
-                checked={selectedTags.includes("pescatarian")}
-                onChange={() => onTagCheckboxChange("pescatarian")}
-          />
-                <label htmlFor="pescatarianBox">Pescatarian</label>
+                  checked={selectedTags.includes("pescatarian")}
+                  onChange={() => onTagCheckboxChange("pescatarian")}
+                />
+                <label htmlFor="pescatarianBox"><img src="/imgs/diete/icons8-fish-94.png" /></label>
               </div>
             </div>
           </div>

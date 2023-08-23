@@ -8,6 +8,7 @@ function Planner() {
   const [recipes, setRecipes] = useState({});
   const [calories, setCalories] = useState(0);
   const [dietary, setDietary] = useState("non-vegetarian");
+  const [open, setOpen] = useState(false);
 
   const handleChange = (e) => {
     setCalories(e.target.value);
@@ -39,21 +40,48 @@ function Planner() {
       <div className="planner-container container">
         <div className="container-explanation">
           <h2>Planificador de Calorías</h2>
-          <p>Tu guía personalizada para alcanzar tus metas calóricas diarias. </p>
-          <p>Simplemente introduce la cantidad de calorías que deseas consumir y nuestro planificador seleccionará automáticamente las recetas que se ajusten a tu necesidad. </p>
-          <p>Disfruta de deliciosas comidas mientras te mantienes en el camino hacia tus metas nutricionales.</p>
+          <p>
+            Tu guía personalizada para alcanzar tus metas calóricas diarias.{" "}
+          </p>
+          <p>
+            Simplemente introduce la cantidad de calorías que deseas consumir y
+            nuestro planificador seleccionará automáticamente las recetas que se
+            ajusten a tu necesidad.{" "}
+          </p>
+          <p>
+            Disfruta de deliciosas comidas mientras te mantienes en el camino
+            hacia tus metas nutricionales.
+          </p>
         </div>
         <div className="top">
           <div className="input-container">
-            <input type="number" onChange={handleChange} placeholder="Ejemplo: 2000"/>
-            <select name="dietary" onChange={(e) => setDietary(e.target.value)}>
-              <option value="non-vegetarian">
-                Non Vegetarian
-              </option>
-              <option value="vegetarian">Vegetarian</option>
-              <option value="vegan">Vegan</option>
-              <option value="pescatarian">Pescatarian</option>
-            </select>
+            <div className="input-box">
+              <label>Calories</label>
+              <input
+                type="number"
+                onChange={handleChange}
+                placeholder="Ejemplo: 2000"
+              />
+            </div>
+            <div className="input-box">
+              <label>Diet</label>
+              <div
+                onClick={() => setOpen(!open)}
+                className={`select ${open && "active"}`}
+              >
+                <input type="text" className="text-box" placeholder={dietary} />
+                <div className="option">
+                  <div onClick={() => setDietary("non-vegetarian")}>
+                    Non-Vegetarian
+                  </div>
+                  <div onClick={() => setDietary("vegetarian")}>Vegetarian</div>
+                  <div onClick={() => setDietary("vegan")}>Vegan</div>
+                  <div onClick={() => setDietary("pescatarian")}>
+                    Pescatarian
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <button className="btn" onClick={getRecipes}>
             Get Plan

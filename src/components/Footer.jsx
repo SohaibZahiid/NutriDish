@@ -70,6 +70,7 @@ function Footer() {
               placeholder="Enter your email"
               value={email}
               onChange={handleInput}
+              required
             />
             <button>Subscribe</button>
           </form>

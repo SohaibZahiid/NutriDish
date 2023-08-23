@@ -62,10 +62,9 @@ function Meal({ APIEndpoint }) {
           onTagCheckboxChange={handleTagCheckboxChange}
           selectedTags={selectedTags}
         />
-        <div className="allergens-container container">
+        <div className="allergens">
           {/* Aquí puedes agregar los símbolos de los alérgenos que desees */}
           <div className="allergens-container container">
-            <h3>Allergens:</h3>
             <div className="tooltip">
               <img src="/imgs/allergens/Cacahuetes.svg" alt="Cacahuetes" />
               <span className="tooltiptext">Cacahuetes</span>

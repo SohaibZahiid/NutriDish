@@ -6,7 +6,6 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../contexts/AuthContext";
 
-
 function Home() {
   const [recipes, setRecipes] = useState([]);
   const { currentUser } = useContext(AuthContext);
@@ -54,9 +53,18 @@ function Home() {
       <section id="features" className="section-x2 container">
         <h2>What We Offer</h2>
         <div className="feature">
-          <h3>Personalized Recipes</h3>
-          <h3>Nutritional Guides</h3>
-          <h3>Community Support</h3>
+          <div className="card">
+            <img src="/imgs/fondoUpdate.jpg" alt="" />
+            <h3>Personalized Recipes</h3>
+          </div>
+          <div className="card">
+            <img src="/imgs/fondoUpdate.jpg" alt="" />
+            <h3>Personalized Recipes</h3>
+          </div>
+          <div className="card">
+            <img src="/imgs/fondoUpdate.jpg" alt="" />
+            <h3>Personalized Recipes</h3>
+          </div>
         </div>
         {/* Add more features here */}
       </section>

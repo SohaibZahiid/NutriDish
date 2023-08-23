@@ -25,6 +25,7 @@
   top: 5px;
   right: 5px;
   font-size: 25px;
+  color: var(--clr-btn-hover);
   transition: var(--tr);
 }
 

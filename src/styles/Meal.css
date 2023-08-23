@@ -16,7 +16,6 @@
   align-items: center;
   justify-content: flex-end;  /* Cambiado a flex-start para alinear al inicio */
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .allergens-container h3 {

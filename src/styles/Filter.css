@@ -26,6 +26,10 @@
   color: var(--clr-primary-text);
 }
 
+.tag img {
+  width: 50px;
+}
+
 .search {
   outline: none;
   border: none;
@@ -78,8 +82,8 @@
   display: flex;
   align-items: center;
   margin: 10px;
-  padding: 10px;
-  background-color: #f5f5f5;
+  padding-inline: 10px;
+  /* background-color: #f5f5f5; */
   border-radius: var(--br);
 }
 
