@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  background-color: var(--clr-white);
+  background-color: #f9f5f0;
   font-size: 1.6rem;
   margin: 0 0 260px;
 }

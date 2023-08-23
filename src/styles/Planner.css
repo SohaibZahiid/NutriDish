@@ -24,7 +24,7 @@
 }
 
 .planner input {
-  flex: 1;
+  max-width: 100px;
   padding: 0.6em;
   border-radius: var(--br);
   border: 1px solid lightgray;
@@ -34,9 +34,11 @@
 .top .input-container select {
   flex: 1;
   padding: 0.6em;
+  font-size: 1.6rem;
   border-radius: var(--br);
   border: 1px solid lightgray;
   outline: none;
+  
 }
 
 .total-nutritions {

@@ -1,8 +1,10 @@
 
 .filter {
-  background-color: var(--clr-card-bg);
+  /* background-color: var(--clr-card-bg); */
+  background-color: white;
   border-radius: var(--br);
   margin-bottom: 2em;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);;
 }
 
 .filter-form {
