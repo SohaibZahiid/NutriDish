@@ -25,14 +25,30 @@ const Planner = lazy(() => import("./pages/Planner"));
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
 import { ToastContainer } from "react-toastify";
+import ScrollTop from "./pages/ScrollTop";
+
+
 
 
 
 function App() {
+
   return (
+    <> 
+  
+           
+    <ScrollTop/>
     <Router>
+        
+       
       <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
+   
+            
+
+        <Navbar/>
+    
+ 
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recipe/:id" element={<Single />} />
@@ -60,10 +76,14 @@ function App() {
           <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
           <Route path="/About" element={<About />} />
         </Routes>
+     
         <Footer />
         <ToastContainer />
-      </Suspense>
+      </Suspense>   
     </Router>
+ 
+ 
+    </>
   );
 }
 

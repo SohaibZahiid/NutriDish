@@ -36,6 +36,12 @@
   --clr-beige: #f5f5dc;
   --clr-white: white;
   --clr-black: #000;
+  --background: #ffffff;
+  --text-primary: #000;
+  --text-secondary: #8e05c2;
+  --accent: #8e05c2;
+  --border: #333;
+  --form-bg: #fff;
 
   --font-heading: 'Playfair Display', serif;
 
@@ -46,13 +52,20 @@ body {
   font-size: 1.6rem;
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  text-decoration: none;
+  text-decoration: none; 
 }
+
+
+
+
+
+
 
 img {
   width: 100%;

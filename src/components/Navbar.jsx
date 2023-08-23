@@ -5,12 +5,15 @@ import { AuthContext } from "../contexts/AuthContext";
 import DropdownProfile from "./DropdownProfile";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
+
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
 
+
   return (
     <>
+    <div >  
       <div className="navbar">
         <div className="navbar-container container">
           <NavLink to="/" className="logo-container">
@@ -58,7 +61,10 @@ const Navbar = () => {
             )}
           </div>
         </div>
+
       </div>
+      
+        </div>
     </>
   );
 };
