@@ -42,28 +42,27 @@ function Home() {
       <section id="hero" className="section-x2">
         {/* Hero Section */}
         <div id="hero-content">
-          <h1>Comienza Tu Viaje hacia una Vida Más Saludable Hoy</h1>
-          <p>Descubre recetas deliciosas y saludables que te encantarán.</p>
+          <h1>Start Your Journey to a Healthier Life Today</h1>
+          <p>Discover delicious and healthy recipes that you'll love.</p>
           <Link to="lunch">
-            <span className="btn">Explora recetas</span>
+            <span className="btn">Explore recipes</span>
           </Link>
         </div>
       </section>
 
-      {/* Sección de Características */}
+      {/* Features Section */}
       <section id="features" className="section-x2 container">
-        <h2>Lo Que Ofrecemos</h2>
+        <h2>What We Offer</h2>
         <div className="feature">
-          <h3>Recetas Personalizadas</h3>
-          <h3>Guias nutricionales</h3>
-          <h3>Soporte a la Comunidad</h3>
+          <h3>Personalized Recipes</h3>
+          <h3>Nutritional Guides</h3>
+          <h3>Community Support</h3>
         </div>
-        {/* Agrega más características aquí */}
+        {/* Add more features here */}
       </section>
-
       {/* Sección de Recetas Destacadas */}
       <section id="recipes" className="section-x2">
-        <h2>Nuestras Recetas Mas Populares</h2>
+        <h2>Our most popular recipes</h2>
         <div className="recipe-container container ">
           {recipes.map((recipe) => (
             <Recipe
@@ -83,7 +82,7 @@ function Home() {
 
       {/* Sección de Testimonios */}
       <section id="testimonials" className="section-x2">
-        <h2>Lo Que Nuestros Miembros Dicen</h2>
+        <h2>What Our Members Say</h2>
         <div className="testimonial-container container">
           <Testimonial
             className="testimonial"
@@ -106,7 +105,7 @@ function Home() {
 
       {/* CTA Final */}
       <section id="final-cta" className="section-x2">
-        <h2>Únete a Nosotros Hoy y Transforma Tu Salud</h2>
+        <h2>Become a part of our community and revolutionize your life!</h2>
         <Link to="/register">
           <span className="btn">Register Here</span>
         </Link>

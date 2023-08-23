@@ -21,11 +21,12 @@
 
   #hero-content h1 {
     color: var(--clr-secondary-headline);
+    FONT-SIZE: 5.8REM;
   }
 
   #hero-content p {
     color: var(--clr-secondary-headline);
-    font-size: 1.8rem;
+    font-size: 2.8rem;
   }
 
   #hero-content button {
@@ -49,7 +50,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     justify-content: center;
-    gap: 2em;
+    column-gap: 2em;
 }
 
 #features {
@@ -75,7 +76,7 @@
 
 .feature h3 {
   color: #555555;
-  font-size: 1.5rem; 
+  font-size: 2.5rem; 
 }
 
 /*Recipes*/
