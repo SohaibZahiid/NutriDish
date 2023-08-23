@@ -84,3 +84,9 @@
     border-bottom-left-radius: var(--br);
   }
 }
+
+@media (max-width: 610px) {
+  .r-image {
+    width: 100%;
+  }
+}

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 :root {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.4;
   font-weight: 400;
   font-size: 62.5%;
@@ -36,10 +37,9 @@
   --clr-beige: #f5f5dc;
   --clr-white: white;
   --clr-black: #000;
-
-  --font-heading: 'Playfair Display', serif;
 }
 
+/* --font-heading: 'Playfair Display', serif; */
 html {
   position: relative;
   min-height: 100%;
@@ -54,6 +54,12 @@ body {
 @media (max-width: 1125px) {
   body {
     margin: 0 0 450px;
+  }
+}
+
+@media (max-width: 745px) {
+  body {
+    margin: 0 0 630px;
   }
 }
 

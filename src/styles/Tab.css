@@ -97,3 +97,17 @@
       flex: 1;
       text-align: center;
   }
+
+  @media (max-width: 686px) {
+    body {
+      margin: 0 0 630px;
+    }
+  }
+
+  @media (max-width: 610px) {
+    .tab-container {
+        width: 100%;
+    }
+    
+  }
+  
