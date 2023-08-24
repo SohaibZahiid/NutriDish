@@ -59,11 +59,11 @@ function Home() {
           </div>
           <div className="card">
             <img src="/imgs/fondoUpdate.jpg" alt="" />
-            <h3>Personalized Recipes</h3>
+            <h3>Nutritional Guides</h3>
           </div>
           <div className="card">
             <img src="/imgs/fondoUpdate.jpg" alt="" />
-            <h3>Personalized Recipes</h3>
+            <h3>Community Support</h3>
           </div>
         </div>
         {/* Add more features here */}

@@ -21,7 +21,7 @@
 .profile-wrapper {
   background-color: white;
   border-radius: var(--br);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs);
   padding: 20px;
   width: 450px;
   max-width: 90%;
@@ -80,7 +80,7 @@
 }
 
 .profile-header {
-  color: var(--text-color);
+  color: var(--clr-btn-hover);
   font-size: 24px;
   font-weight: bold;
   text-align: center;

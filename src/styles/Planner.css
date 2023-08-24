@@ -59,7 +59,7 @@
 
 .top .input-container input[type="number"] {
   background-color: white;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs);
   padding: 12px 20px;
   border-radius: var(--br);
   border: none;
@@ -79,7 +79,7 @@
   background-color: white;
   border: none;
   outline: none;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs);
   padding: 12px 20px;
   border-radius: var(--br);
 }
@@ -93,7 +93,7 @@
   top: 60px;
   width: 100%;
   background-color: white;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bs);
   border-radius: var(--br);
   overflow: hidden;
   display: none;
