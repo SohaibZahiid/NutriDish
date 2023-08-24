@@ -1,8 +1,9 @@
 
 .filter {
-  background-color: var(--clr-card-bg);
+  background-color: var(--clr-white);
   border-radius: var(--br);
   margin-bottom: 2em;
+  box-shadow: var(--bs);
 }
 
 .filter-form {

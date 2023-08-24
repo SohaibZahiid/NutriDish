@@ -26,23 +26,26 @@
   --clr-footer-bg: #a1db95;
 
   --clr-hover-text: #fbdd74;
-  --clr-receipe-box: #345e36de;
+  --clr-recipe-box: #345e36de;
 
   --fz-header: 1.4rem;
   --fz-title: 2.4rem;
 
   --br: 5px;
   --ts: .2s;
+  --bs: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   --clr-beige: #f5f5dc;
   --clr-white: white;
   --clr-black: #000;
+
+  --clr-bg: #f9f5f0;
 }
 
 /* --font-heading: 'Playfair Display', serif; */
 
 body {
-  background-color: var(--clr-white);
+  background-color: var(--clr-bg);
   font-size: 1.6rem;
 }
 
