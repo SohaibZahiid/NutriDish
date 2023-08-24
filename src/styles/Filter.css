@@ -33,11 +33,12 @@
 
 .search {
   outline: none;
-  border: none;
+  border: 1px solid var(--clr-btn-hover);
   padding: 9px;
   border-radius: var(--br);
   background-color: var(--clr-white);
   color: var(--clr-black);
+  font-size: 1.4rem;
 }
 
 .search::placeholder {
