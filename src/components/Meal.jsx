@@ -56,30 +56,30 @@ function Meal({ APIEndpoint }) {
           onTagCheckboxChange={handleTagCheckboxChange}
           selectedTags={selectedTags}
         />
-        <div className="allergens-container container">
+        <div className="allergens">
           <div className="allergens-container container">
             <div className="tooltip">
-              <img src="/imgs/AlergenosTopSinTexto/Cacahuetes.svg" alt="Cacahuetes" />
+              <img src="/imgs/allergens/Cacahuetes.svg" alt="Cacahuetes" />
               <span className="tooltiptext">Cacahuetes</span>
             </div>
             <div className="tooltip">
-              <img src="/imgs/AlergenosTopSinTexto/Frutos secos.svg" alt="Frutos Secos" />
+              <img src="/imgs/allergens/Frutos secos.svg" alt="Frutos Secos" />
               <span className="tooltiptext">Frutos Secos</span>
             </div>
             <div className="tooltip">
-              <img src="/imgs/AlergenosTopSinTexto/Huevos.svg" alt="Huevos" />
+              <img src="/imgs/allergens/Huevos.svg" alt="Huevos" />
               <span className="tooltiptext">Huevos</span>
             </div>
             <div className="tooltip">
-              <img src="/imgs/AlergenosTopSinTexto/Gluten.svg" alt="Gluten" />
+              <img src="/imgs/allergens/Gluten.svg" alt="Gluten" />
               <span className="tooltiptext">Gluten</span>
             </div>
             <div className="tooltip">
-              <img src="/imgs/AlergenosTopSinTexto/Lácteos.svg" alt="Lacteos" />
+              <img src="/imgs/allergens/Lácteos.svg" alt="Lacteos" />
               <span className="tooltiptext">Lácteos</span>
             </div>
             <div className="tooltip">
-              <img src="/imgs/AlergenosTopSinTexto/Soja.svg" alt="Soja" />
+              <img src="/imgs/allergens/Soja.svg" alt="Soja" />
               <span className="tooltiptext">Soja</span>
             </div>
           </div>

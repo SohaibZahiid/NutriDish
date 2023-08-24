@@ -32,7 +32,7 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   onChange={() => onTagCheckboxChange("vegan")}
                 />
                 <label htmlFor="veganCheckbox">
-                  <img src="/imgs/diete/icons8-vegan-94.png" />
+                  Vegan
                 </label>
               </div>
 
@@ -46,7 +46,7 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   onChange={() => onTagCheckboxChange("vegetarian")}
                 />
                 <label htmlFor="vegeCheckbox">
-                  <img src="/imgs/diete/icons8-vegetarian-94.png" />
+                  Vegetarian
                 </label>
               </div>
 
@@ -54,12 +54,12 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                 <input
                   type="checkbox"
                   name="tag"
-                  value="non vegetarian"
+                  value="non-vegetarian"
                   id="non-vegeBox"
-                  checked={selectedTags.includes("non vegetarian")}
-                  onChange={() => onTagCheckboxChange("non vegetarian")}
+                  checked={selectedTags.includes("non-vegetarian")}
+                  onChange={() => onTagCheckboxChange("non-vegetarian")}
                 />
-                <label htmlFor="non-vegeBox"><img src="/imgs/diete/icons8-meat-94.png" /></label>
+                <label htmlFor="non-vegeBox">Non Vegetarian</label>
               </div>
               <div className="tag allergy-checkbox-item">
                 <input
@@ -70,7 +70,7 @@ const Filter = ({ onSearch, onTagCheckboxChange, selectedTags }) => {
                   checked={selectedTags.includes("pescatarian")}
                   onChange={() => onTagCheckboxChange("pescatarian")}
                 />
-                <label htmlFor="pescatarianBox"><img src="/imgs/diete/icons8-fish-94.png" /></label>
+                <label htmlFor="pescatarianBox">Pescatarian</label>
               </div>
             </div>
           </div>
