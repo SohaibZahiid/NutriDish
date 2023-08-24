@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Calcula.css';
-import infocal from '/imgs/info.jpeg';
 
 const Calcula = () => {
     const initialState = {

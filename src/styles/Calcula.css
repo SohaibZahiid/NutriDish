@@ -4,7 +4,7 @@
     background-color: var(--clr-white);
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 4em;
     box-sizing: border-box;
 }
 

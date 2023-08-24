@@ -9,22 +9,25 @@
   }
   .icon-style{
     background-color: var(--clr-btn);
-    border: 2px solid #000;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    color: #000;
+    border: none;
+    height: 70px;
+    width: 70px;
+    color: var(--clr-white);
     cursor: pointer;
-    animation: movebtn 3s ease-in-out infinite;
-    transition: all .5s ease-in-out;
+    /* animation: movebtn 3s ease-in-out infinite; */
+    transition: var(--ts);
+  }
+
+  .icon-style .icon {
+    font-size: 3rem;
   }
   .icon-style:hover{
     animation: none;
-    background: #fff;
-    color: var(--clr-btn-hover);
-    border: 2px solid var(--clr-primary-navbar);
+    background: var(--clr-btn-hover);
   }
-  @keyframes movebtn {
+
+  /* @keyframes movebtn {
     0%{
       transform: translateY(0px);
     }
@@ -40,4 +43,4 @@
     100%{
       transform: translateY(0px);
     }
-  }
+  } */
