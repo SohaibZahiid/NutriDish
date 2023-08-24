@@ -1,0 +1,91 @@
+.calculadora{
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+}
+.cal-genero{
+    margin-top: 10px;
+    width: 240px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px rgb(59, 64, 59) solid;
+    font-size: 1em;
+    margin-left: 125px;
+    text-align: center;
+   
+}
+
+.cla-input input{
+    width: 240px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px rgb(59, 64, 59) solid;
+    font-size: 1em;
+
+}
+.button-cal{
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 10px;
+    border:none;
+    position: relative;
+    left: 200px;
+    border-radius: 5px;
+    font-size: 1.em;
+
+}
+.button-cal:hover{
+    background-color: rgb(33, 152, 69);
+}
+.cal-ul li{
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+    width: 500px;
+    height: 30px;
+    display: flex;
+
+    
+}
+
+.cal-ul li {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+   
+    font-size: 1em;
+   color: black;
+}
+.cal-resultado{
+    text-align: center;
+}
+.hid{
+    display: none;
+}
+.end-cal{
+    grid-column: 3 / span 2; /* Ocupará dos columnas completas */
+
+}
+.info-cal{
+    width: 500px;
+    height: 100px;
+    margin-top: 15px;
+    color:black;
+}
+.info-cal p{
+    background-color: yellow;
+}
+
+.info-cal img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 220px;
+    
+}

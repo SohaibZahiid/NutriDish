@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/Planner.css";
 import { toast } from "react-toastify";
 import Recipe from "../components/Recipe";
+import Calcula from "./Calcula";
 
 function Planner() {
   const [recipes, setRecipes] = useState({});
@@ -33,6 +34,9 @@ function Planner() {
   };
 
   return (
+    <>
+       <Calcula/>
+
     <div className="planner section-x2">
       <div className="planner-container container">
         <div className="top">
@@ -72,6 +76,7 @@ function Planner() {
         </div>
       </div>
     </div>
+       </>
   );
 }
 
