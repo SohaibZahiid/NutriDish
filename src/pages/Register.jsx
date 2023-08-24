@@ -44,8 +44,8 @@ function Register() {
   return (
     <div className="register section-x2">
       <div className="register-container container">
-        <img src="/imgs/login.jpg" />
-        <div className="form-container">
+        <div className="left"></div>
+        <div className="right">
           <h2>Register</h2>
           <form className="register-form" autoComplete="off">
             <div className="input-box">

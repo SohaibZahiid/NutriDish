@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import "../styles/Planner.css";
 import { toast } from "react-toastify";
@@ -9,6 +9,8 @@ function Planner() {
   const [calories, setCalories] = useState(0);
   const [dietary, setDietary] = useState("non-vegetarian");
   const [open, setOpen] = useState(false);
+
+  const dropRef = useRef();
 
   const handleChange = (e) => {
     setCalories(e.target.value);
@@ -34,6 +36,15 @@ function Planner() {
       toast.error("Please enter the calories");
     }
   };
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (!dropRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("click", handler);
+  }, []);
 
   return (
     <div className="planner section-x2">
@@ -66,8 +77,9 @@ function Planner() {
             <div className="input-box">
               <label>Diet</label>
               <div
+                ref={dropRef}
                 onClick={() => setOpen(!open)}
-                className={`select ${open && "active"}`}
+                className={`select ${open ? "active" : ""}`}
               >
                 <input type="text" className="text-box" placeholder={dietary} />
                 <div className="option">

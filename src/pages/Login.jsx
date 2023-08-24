@@ -38,8 +38,8 @@ const Login = () => {
     <>
       <div className="login section-x2">
         <div className="login-container container">
-          <img src="/imgs/login.jpg" />
-          <div className="form-container">
+          <div className="left"></div>
+          <div className="right">
             <h2>Login</h2>
             <form className="login-form" autoComplete="off">
               <div className="input-box">
