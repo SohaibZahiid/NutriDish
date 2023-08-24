@@ -1,207 +1,132 @@
-import React,{useState,useEffect} from 'react'
-import '../styles/Calcula.css'
-import infocal from '../../public/imgs/info.jpeg'
-
+import React, { useState, useEffect } from 'react';
+import '../styles/Calcula.css';
+import infocal from '/imgs/info.jpeg';
 
 const Calcula = () => {
-    const [edadd, setEdadd] = useState(""); 
-    const [peso, setPeso] = useState(""); 
-    const [altura, setAltura] = useState(""); 
-    const [resultado, setResultado] = useState([]); 
-    const [genero, setgGnero] = useState("")
-    const [exercicios, setExercicios] = useState(""); 
+    const initialState = {
+        edad: "",
+        peso: "",
+        altura: "",
+        genero: "",
+        ejercicios: "",
+        resultado: {}
+    };
 
-    const Entrarloclstorage=()=>{
-      let sesion = localStorage.getItem("modificarcalculadora")
-     if(sesion){
-      return JSON.parse(sesion)
-     }else{
-      return false;
-     }
-    }
-    const [modificarcalculadora, setModificarcalculadora] = useState(Entrarloclstorage)
-
+    const [data, setData] = useState(initialState);
+    const [modificarCalculadora, setModificarCalculadora] = useState(false);
 
     useEffect(() => {
-      
-
-      localStorage.setItem('modificarcalculadora', JSON.stringify(true));
-
-      const saveresultado = localStorage.getItem('resultado');
-      if (saveresultado) setResultado(saveresultado);      
-      const savedexercicios = localStorage.getItem('exercicios');
-      if (savedexercicios) setExercicios(savedexercicios);
-      const savedgenero = localStorage.getItem('genero');
-      if (savedgenero) setgGnero(savedgenero);
-      const savedValue = localStorage.getItem('edadd');
-      if (savedValue) setEdadd(savedValue);
-      const savedPeso = localStorage.getItem("peso");
-      if (savedPeso)setPeso(savedPeso);
-       const savedaltura = localStorage.getItem("altura");
-      if (savedaltura) setAltura(savedaltura)
+        const savedData = localStorage.getItem('data');
+        if (savedData) {
+            setData(JSON.parse(savedData));
+        }
+        setModificarCalculadora(localStorage.getItem("modificarcalculadora") === "true");
     }, []);
-    const handleInputChange = (e) => {
-      setEdadd(e.target.value);  
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setData(prevState => ({ ...prevState, [name]: value }));
     };
-    const handlepesoChange = (e) => {
-      
-        setPeso(e.target.value);
-      };
-      const handlalturaChange = (e) => {
-      
-        setAltura(e.target.value);
-      };
- 
+
+    const handleGenderChange = (value) => {
+        setData(prevData => ({ ...prevData, genero: value }));
+    };
+
     const calcularResultado = () => {
-      const valorNumerico = parseFloat(edadd);
-      const valorpeso = parseFloat(peso);
-      const valoraltura = parseFloat(altura);
-      const valorexercicio = parseFloat(exercicios);
+        const valorEdad = parseFloat(data.edad);
+        const valorPeso = parseFloat(data.peso);
+        const valorAltura = parseFloat(data.altura);
+        const valorEjercicio = parseFloat(data.ejercicios);
 
-      if(genero ==="hombre"){
-        if(!valorpeso||!valoraltura||!valorNumerico||!valorexercicio){
-          alert("Todos los campos son requeridos")
-   
-        }else{
-           let basal = Math.round( 66 + (13.7 * valorpeso) + (5 * valoraltura) - (6.8 * valorNumerico))
-        let mantener  = Math.round(basal*valorexercicio)
-        let adelgazar = Math.round((basal*valorexercicio)/1.17633517495)
-        let subir = Math.round((basal*valorexercicio)*1.15)
-        const calculamosHombre ={
-          basal:basal,
-          mantener:mantener,
-          adelgazar:adelgazar,
-          subir:subir
-         
-
-        }
-        localStorage.setItem('genero', genero);
-        localStorage.setItem('edadd', valorNumerico);
-        localStorage.setItem('peso', valorpeso);
-        localStorage.setItem('altura', valoraltura);
-        localStorage.setItem('exercicios', valorexercicio);
-        setResultado(calculamosHombre);
-        setModificarcalculadora(true)
-        localStorage.setItem("modificarcalculadora",false)
-  
-        }
-     
-     
-         
-      }else if(genero ==="mujer"){
-       let basal =  Math.round(655 + (9.6 * valorpeso) + (1.8 * valoraltura) -(4.7 * valorNumerico))
-       let mantener  = Math.round(basal*valorexercicio)
-       let adelgazar = Math.round((basal*valorexercicio)/1.17633517495)
-       let subir = Math.round((basal*valorexercicio)*1.15)
-       const calculamosMujer ={
-         basal:basal,
-         mantener:mantener,
-         adelgazar:adelgazar,
-         subir:subir
-        
-
-       }
-       localStorage.setItem('genero', genero);
-       localStorage.setItem('edadd', valorNumerico);
-       localStorage.setItem('peso', valorpeso);
-       localStorage.setItem('altura', valoraltura);
-       localStorage.setItem('exercicios', valorexercicio);
-        
-        setResultado([calculamosMujer]);
-        setModificarcalculadora(true)
-      
-        
-         } else {
-           alert("El Genero es Obligatorio");
-         }
+        if (!valorPeso || !valorAltura || !valorEdad || !valorEjercicio) {
+            alert("Todos los campos son requeridos");
+            return;
         }
 
-   const handleSelectChange = (event) => {
-    setExercicios(event.target.value);
-      };
-      const SelectChange=(e)=>{
-        setgGnero(e.target.value)
-      }
-      localStorage.setItem('resultado',resultado);
+        let basal, mantener, adelgazar, subir;
 
-     
-      console.log(resultado)
+        if (data.genero === "hombre") {
+            basal = Math.round(66 + (13.7 * valorPeso) + (5 * valorAltura) - (6.8 * valorEdad));
+        } else if (data.genero === "mujer") {
+            basal = Math.round(655 + (9.6 * valorPeso) + (1.8 * valorAltura) - (4.7 * valorEdad));
+        } else {
+            alert("El Genero es Obligatorio");
+            return;
+        }
+
+        mantener = Math.round(basal * valorEjercicio);
+        adelgazar = Math.round((basal * valorEjercicio) / 1.17633517495);
+        subir = Math.round((basal * valorEjercicio) * 1.15);
+
+        const resultadoCalculado = {
+            basal: basal,
+            mantener: mantener,
+            adelgazar: adelgazar,
+            subir: subir
+        };
+
+        setData(prevData => ({ ...prevData, resultado: resultadoCalculado }));
+
+        // Guardar datos en local storage
+        localStorage.setItem('data', JSON.stringify({ ...data, resultado: resultadoCalculado }));
+        localStorage.setItem("modificarcalculadora", "true");
+        setModificarCalculadora(true);
+    }
 
     return (
+        <>
+            <div>
+                <div className="planner-container container">
+                    <div className="container-explanation">
+                        <h2>Calculadora de Gasto Calórico</h2>
+                        <p>
+                            Esta herramienta te permite estimar la cantidad de calorías que tu cuerpo necesita en un día, basándose en factores como tu edad, peso, altura, género y nivel de actividad física.
+                        </p>
+                        <p>
+                            La calculadora te proporciona información sobre tu metabolismo basal, las calorías necesarias para mantener el peso, para adelgazar y para ganar peso.
+                        </p>
+                        <p>
+                            Usa esta información como referencia para tus objetivos nutricionales. Siempre es recomendable consultar con un profesional para recibir asesoramiento personalizado.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-      <div className='calculadora'>
-<div className='info-cal'>
-  <img src={infocal} alt="infocal" />
-<p>Estas ecuaciones están tabuladas para valores de peso entre25 y 124.9 kg, 
-      statura entre 151 y 200 cm, y edad entre 21 y 70 años.</p>
-      </div>
+            <div className='calculadora' >
+                <div className={modificarCalculadora ? "hid" : 'cla-input'}>
+                    <div className="gender-switch">
+                        <button className={data.genero === "hombre" ? "active" : ""} onClick={() => handleGenderChange("hombre")}>Masculino</button>
+                        <button className={data.genero === "mujer" ? "active" : ""} onClick={() => handleGenderChange("mujer")}>Femenino</button>
+                    </div>
+                    <input className="custom-input" name="edad" value={data.edad} onChange={handleChange} placeholder="Edad" required />
+                    <input className="custom-input" name="peso" value={data.peso} onChange={handleChange} placeholder="Peso" required />
+                    <input className="custom-input" name="altura" value={data.altura} onChange={handleChange} placeholder="Altura" required />
+                    <div>
+                        <select name="ejercicios" value={data.ejercicios} onChange={handleChange} className='cal-genero'>
+                            <option value="">Actividad fisica</option>
+                            <option value="1.2">Poco o ningún ejercicio</option>
+                            <option value="1.375">1-3 días a la semana</option>
+                            <option value="1.55">3-5 días a la semana</option>
+                            <option value="1.725">6-7 días a la semana</option>
+                            <option value="1.9">Dos veces al día, entrenamientos muy duros</option>
+                        </select>
+                    </div>
+                    <button onClick={calcularResultado} className='button-cal'>Calcular</button>
+                </div>
 
-
-
-<div className={modificarcalculadora ? "hid":'cla-input'}> 
-            <select value={genero} onChange={SelectChange} className='cal-genero'>
-        <option value=""> Eligete tu Genero</option>
-        <option value="hombre">Masculino</option>
-        <option value="mujer">Femenino</option>
-       
-
-      </select>
-   <input
-          type="number"
-          value={edadd}
-          onChange={handleInputChange}
-          placeholder="edad"required
-        />
-          <input
-          type="number"
-          value={peso}
-          onChange={handlepesoChange}
-          placeholder="peso"required
-        />
-
-<input
-          type="number"
-          value={altura}
-          onChange={handlalturaChange}
-          placeholder="altura" required
-        />
-       
-<div><select value={exercicios} onChange={handleSelectChange} className='cal-genero'>
-        <option value="">Selecciona una opción</option>
-        <option value="1.2">Poco o ningún ejercicio</option>
-        <option value="1.375">1-3 días a la semana</option>
-        <option value="1.55">3-5 días a la semana</option>
-        <option value="1.725">6-7 días a la semana</option>
-        <option value="1.9">dos veces al día, entrenamientos muy duros</option>
-
-      </select> </div>
-  <button onClick={calcularResultado} className='button-cal'>Calcular</button>
-
-</div>
-         
-    <div className={modificarcalculadora?"":'hid'}>
-    
-<h2 className='cal-resultado'>Calorias</h2>  
-<ul className='cal-ul'>
-  <li><span>Metabolismo basal: </span> <span className='end-cal'>{resultado.basal}</span></li>
-  <li> <span>Mantener el peso: </span><span  className='end-cal'>{resultado.mantener}</span></li>
-  <li><span>Calorías para adelgazar: </span><span  className='end-cal'>{resultado.adelgazar}</span></li>
-  <li><span>Calorías para subir de peso: </span><span  className='end-cal'>{resultado.subir}</span> </li>
-</ul>
-<button  className='button-cal' onClick={()=>setModificarcalculadora(false)}>Modificar</button>
-      </div>
-
-
-
-    
-
-
-      
- 
-
-      </div>
+                <div className={modificarCalculadora ? "" : 'hid'}>
+                    <h2 className='cal-resultado'>Calorías</h2>
+                    <ul className='cal-ul'>
+                        <li><span>Metabolismo basal:</span> <span className='end-cal'>{data.resultado.basal}</span></li>
+                        <li><span>Mantener el peso:</span> <span className='end-cal'>{data.resultado.mantener}</span></li>
+                        <li><span>Calorías para adelgazar:</span> <span className='end-cal'>{data.resultado.adelgazar}</span></li>
+                        <li><span>Calorías para subir de peso:</span> <span className='end-cal'>{data.resultado.subir}</span></li>
+                    </ul>
+                    <button className='button-cal' onClick={() => setModificarCalculadora(false)}>Modificar</button>
+                </div>
+            </div >
+        </>
     );
-  }
+}
 
-
-export default Calcula
+export default Calcula;

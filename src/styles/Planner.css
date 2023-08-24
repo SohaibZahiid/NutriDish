@@ -97,6 +97,7 @@
   border-radius: var(--br);
   overflow: hidden;
   display: none;
+  z-index: 999;
 }
 
 .top .input-container .select.active .option {

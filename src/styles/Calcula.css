@@ -1,91 +1,115 @@
-.calculadora{
-    margin: 0 auto;
+.calculadora {
+    margin: 20px auto;
     width: 500px;
-    height: 400px;
-}
-.cal-genero{
-    margin-top: 10px;
-    width: 240px;
-    height: 30px;
-    border: none;
-    border-bottom: 2px rgb(59, 64, 59) solid;
-    font-size: 1em;
-    margin-left: 125px;
-    text-align: center;
-   
+    background-color: var(--clr-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.cla-input input{
-    width: 240px;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    text-align: center;
-    border: none;
-    border-bottom: 2px rgb(59, 64, 59) solid;
-    font-size: 1em;
-
-}
-.button-cal{
-    width: 80px;
+.cal-genero, .cla-input input {
+    margin-top: 20px;
+    width: 100%;
     height: 40px;
-    margin: 0 auto;
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.cal-genero:focus, .cla-input input:focus {
+    border-color: #4caf50;
+}
+
+.button-cal {
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
     cursor: pointer;
-    margin-top: 10px;
-    border:none;
-    position: relative;
-    left: 200px;
-    border-radius: 5px;
-    font-size: 1.em;
-
-}
-.button-cal:hover{
-    background-color: rgb(33, 152, 69);
-}
-.cal-ul li{
     border: none;
-    border-bottom: 2px solid black;
-    margin-top: 10px;
-    width: 500px;
-    height: 30px;
-    display: flex;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
 
-    
+.button-cal:hover {
+    background-color: #45a049;
+}
+
+.cal-ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .cal-ul li {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-
-   
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
     font-size: 1em;
-   color: black;
+    color: black;
 }
-.cal-resultado{
+
+.cal-resultado {
     text-align: center;
-}
-.hid{
-    display: none;
-}
-.end-cal{
-    grid-column: 3 / span 2; /* Ocupará dos columnas completas */
-
-}
-.info-cal{
-    width: 500px;
-    height: 100px;
-    margin-top: 15px;
-    color:black;
-}
-.info-cal p{
-    background-color: yellow;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-.info-cal img{
+.info-cal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff8e1;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.info-cal img {
     width: 40px;
     height: 40px;
-    position: relative;
-    left: 220px;
-    
+}
+
+.info-cal p {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.hid {
+    display: none;
+}
+
+
+.gender-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.gender-switch button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+.gender-switch button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.gender-switch button:focus {
+    outline: none;
 }
