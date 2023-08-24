@@ -36,12 +36,6 @@ function Meal({ APIEndpoint }) {
         recipe.id === recipeId ? { ...recipe, favorite: isFavorite } : recipe
       )
     );
-
-    // if (!isFavorite) {
-    //   setRecipes((prevRecipes) =>
-    //     prevRecipes.filter((recipe) => recipe.id !== recipeId)
-    //   );
-    // }
   };
 
   const handleTagCheckboxChange = (tag) => {
@@ -62,6 +56,35 @@ function Meal({ APIEndpoint }) {
           onTagCheckboxChange={handleTagCheckboxChange}
           selectedTags={selectedTags}
         />
+        <div className="allergens-container container">
+          <div className="allergens-container container">
+            <div className="tooltip">
+              <img src="/imgs/AlergenosTopSinTexto/Cacahuetes.svg" alt="Cacahuetes" />
+              <span className="tooltiptext">Cacahuetes</span>
+            </div>
+            <div className="tooltip">
+              <img src="/imgs/AlergenosTopSinTexto/Frutos secos.svg" alt="Frutos Secos" />
+              <span className="tooltiptext">Frutos Secos</span>
+            </div>
+            <div className="tooltip">
+              <img src="/imgs/AlergenosTopSinTexto/Huevos.svg" alt="Huevos" />
+              <span className="tooltiptext">Huevos</span>
+            </div>
+            <div className="tooltip">
+              <img src="/imgs/AlergenosTopSinTexto/Gluten.svg" alt="Gluten" />
+              <span className="tooltiptext">Gluten</span>
+            </div>
+            <div className="tooltip">
+              <img src="/imgs/AlergenosTopSinTexto/Lácteos.svg" alt="Lacteos" />
+              <span className="tooltiptext">Lácteos</span>
+            </div>
+            <div className="tooltip">
+              <img src="/imgs/AlergenosTopSinTexto/Soja.svg" alt="Soja" />
+              <span className="tooltiptext">Soja</span>
+            </div>
+          </div>
+
+        </div>
         <div className={`meal-container container`}>
           {recipes.length > 0 ? recipes.map(({ id, image, mealType, name, createdBy, favorite, tags }) => (
             <Recipe

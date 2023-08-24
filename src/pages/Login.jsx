@@ -5,16 +5,14 @@ import { AuthContext } from "../contexts/AuthContext";
 import { toast } from "react-toastify";
 
 const Login = () => {
-
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
   });
-  
+
   const navigate = useNavigate();
 
   const { login } = useContext(AuthContext);
-
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -23,12 +21,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await login(inputs)
+      const res = await login(inputs);
       if (res.data.success) {
         navigate("/");
         toast.success(res.data.message);
       } else {
-        toast.error(res.data.message)
+        toast.error(res.data.message);
       }
     } catch (err) {
       toast.error(err.response.data.username);
@@ -38,25 +36,26 @@ const Login = () => {
 
   return (
     <>
-      <div className="login">
-        <div className="login-container">
+      <div className="login section-x2">
+        <div className="login-container container">
           <img src="/imgs/login.jpg" />
           <div className="form-container">
-            <form className="login-form">
-              <label>Username</label>
-              <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                onChange={handleChange}
-              />
-              <label>Password</label>
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-              />
+            <h2>Login</h2>
+            <form className="login-form" autoComplete="off">
+              <div className="input-box">
+                <input type="text" name="username" onChange={handleChange} required/>
+                <label>Username</label>
+              </div>
+              <div className="input-box">
+                <input
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  required
+                />
+                <label>Password</label>
+              </div>
+              
               <button className="submit btn" onClick={handleSubmit}>
                 Login
               </button>

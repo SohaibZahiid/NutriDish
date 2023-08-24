@@ -21,9 +21,8 @@
 }
 
 .r-image {
-  flex: 1;
-  height: 500px;
-  max-width: 600px;
+  height: 600px;
+  width: 600px;
   border-top-left-radius: var(--br);
   border-bottom-left-radius: var(--br);
   object-fit: cover;
@@ -76,11 +75,18 @@
     border-top-left-radius: var(--br);
     border-top-right-radius: var(--br);
     border-bottom-left-radius: 0;
+    height: 400px;
   }
 
   .tab-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: var(--br);
     border-bottom-left-radius: var(--br);
+  }
+}
+
+@media (max-width: 610px) {
+  .r-image {
+    width: 100%;
   }
 }

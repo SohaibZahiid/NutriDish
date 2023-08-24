@@ -19,20 +19,20 @@ const ScrollTop = () => {
             behavior: "smooth",
         });
     };
-  return (
-<>
-<div className="top-to-btm">
-            {" "}
-            {showTopBtn && (
-                <button   className="icon-position icon-style"
-                onClick={goToTop}>subir</button>
-               
-            )}{" "}
-        </div>
+    return (
+        <>
+            <div className="top-to-btm">
+                {" "}
+                {showTopBtn && (
+                    <button className="icon-position icon-style"
+                        onClick={goToTop}>subir</button>
+
+                )}{" "}
+            </div>
 
 
-</>
-  )
+        </>
+    )
 }
 
 export default ScrollTop

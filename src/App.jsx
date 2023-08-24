@@ -26,10 +26,7 @@ import { requireLoggedOut } from "./Guards/RouteGuard";
 
 import { ToastContainer } from "react-toastify";
 import ScrollTop from "./pages/ScrollTop";
-
-
-
-
+import Spinner from "./components/Spinner";
 
 function App() {
 
@@ -39,16 +36,8 @@ function App() {
            
     <ScrollTop/>
     <Router>
-        
-       
-      <Suspense fallback={<div>Loading...</div>}>
-   
-            
-
-        <Navbar/>
-    
- 
-       
+      <Suspense fallback={<Spinner />}>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recipe/:id" element={<Single />} />

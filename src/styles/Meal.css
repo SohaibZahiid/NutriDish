@@ -10,3 +10,48 @@
   gap: 2em;
   padding-top: 20px;
 }
+
+.allergens-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* Cambiado a flex-start para alinear al inicio */
+  gap: 10px;
+}
+
+.allergens-container h3 {
+  margin-right: 10px;
+}
+
+.allergens-container img {
+  display: inline-block;
+  width: auto;
+  height: 45px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #f9f9f9; /* Color de fondo más claro */
+  color: #333;  /* Color de texto oscuro */
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;  /* Borde sutil alrededor del tooltip */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+  width: 120px;
+  top: 110%;  /* Ajustado para agregar espacio entre la imagen y el tooltip */
+  left: 50%;
+  margin-left: -60px; /* Centrar el tooltip */
+  position: absolute;
+  z-index: 1000;  /* Asegurar que el tooltip se muestre por encima de otros elementos */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+

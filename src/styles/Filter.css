@@ -1,4 +1,3 @@
-
 .filter {
   background-color: var(--clr-card-bg);
   border-radius: var(--br);
@@ -10,7 +9,10 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: .5em;
+  padding: 0.5em;
+  background-color: var(--clr-receipe-box);
+  border-radius: var(--br);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .tags-container {
@@ -24,6 +26,10 @@
   align-items: center;
   gap: .5em;
   color: var(--clr-primary-text);
+}
+
+.tag img {
+  width: 50px;
 }
 
 .search {
@@ -75,12 +81,12 @@
 }
 
 .allergy-checkbox-item {
+  justify-content: center;
   display: flex;
   align-items: center;
-  margin: 10px;
   padding: 10px;
-  background-color: #f5f5f5;
   border-radius: var(--br);
+  cursor: pointer;
 }
 
 .allergy-checkbox-item input[type="checkbox"] {
@@ -93,7 +99,6 @@
   cursor: pointer;
   position: relative;
   outline: none;
-  margin-right: 10px;
 }
 
 .allergy-checkbox-item input[type="checkbox"]:checked {
@@ -113,7 +118,8 @@
 }
 
 .allergy-checkbox-item label {
-  color: #555;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
   font-size: 1.4rem;
 }
-

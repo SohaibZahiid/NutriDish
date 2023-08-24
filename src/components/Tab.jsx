@@ -73,25 +73,31 @@ function Tab({ recipe }) {
             ))}
           </ul>
         </div>
-        <div
-          className={`content ${
-            toggleState == "nutritions" ? "active-content" : ""
-          }`}
-        >
-          <h2>Nutritions</h2>
-          <hr />
-          <div className="content-desc">
-            <p>
-              Calorias: {recipe.nutrition?.calories} <br />
-              Carbohydrates: {recipe.nutrition?.carbohydrates}
-              <br />
-              Facts: {recipe.nutrition?.fats}
-              <br />
-              Protein: {recipe.nutrition?.protein}
-              <br />
-            </p>
-          </div>
+        <div className={`content ${toggleState == "nutritions" ? "active-content" : ""}`}>
+    <h2>Nutritions</h2>
+    <hr />
+    <div className="content-desc">
+        <div className="nutrition-label">
+            <div className="nutrition-row">
+                <span className="label">Calories:</span>
+                <span className="value">{recipe.nutrition?.calories}</span>
+            </div>
+            <div className="nutrition-row">
+                <span className="label">Carbohydrates:</span>
+                <span className="value">{recipe.nutrition?.carbohydrates}</span>
+            </div>
+            <div className="nutrition-row">
+                <span className="label">Fats:</span>
+                <span className="value">{recipe.nutrition?.fats}</span>
+            </div>
+            <div className="nutrition-row">
+                <span className="label">Protein:</span>
+                <span className="value">{recipe.nutrition?.protein}</span>
+            </div>
+            {/* Puedes seguir agregando más filas según sea necesario */}
         </div>
+    </div>
+</div>
 
         <div
           className={`content ${

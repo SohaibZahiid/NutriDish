@@ -53,7 +53,7 @@ function Recipe({
 
   return (
     <div className="recipe" onClick={redirectToDetails}>
-      <div className="recipe-container">
+      <div className="recipe-wrapper">
         <img src={image} />
         <FaHeart className={`heart ${fillHeart}`} onClick={handleFavorite} />
         <div className="recipe-description">
@@ -64,7 +64,7 @@ function Recipe({
                 {allergens.map((allergen) => (
                   <img
                     key={allergen.id}
-                    src={`/imgs/allergens/${allergen.name}.svg`}
+                    src={`/imgs/AlergenosTopSinTexto/${allergen.name}.svg`}
                     alt=""
                   />
                 ))}

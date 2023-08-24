@@ -25,7 +25,7 @@ function Footer() {
 
   return (
     <>
-      <div className="footer">
+      <footer className="footer">
         <div className="links">
           <h2>Quick Links</h2>
           <a href="/About">About Us</a>
@@ -70,6 +70,7 @@ function Footer() {
               placeholder="Enter your email"
               value={email}
               onChange={handleInput}
+              required
             />
             <button>Subscribe</button>
           </form>
@@ -79,7 +80,7 @@ function Footer() {
             <img src="/imgs/ODS.png" alt="ODS" />
           </a>
         </div>
-        </div>
+        </footer>
     </>
   );
 }
