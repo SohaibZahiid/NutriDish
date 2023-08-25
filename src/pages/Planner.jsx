@@ -15,7 +15,7 @@ function Planner() {
 
   const localStorageData = JSON.parse(localStorage.getItem("calories"));
 
-  const dropRef = useRef();
+  const dropRef = useRef(null);
 
   const handleChange = (e) => {
     setCalories(e.target.value);
@@ -44,7 +44,7 @@ function Planner() {
 
   useEffect(() => {
     const handler = (e) => {
-      if (!dropRef.current.contains(e.target)) {
+      if (!dropRef?.current.contains(e.target)) {
         setOpen(false);
       }
     };
