@@ -1,17 +1,20 @@
 import { useState } from "react";
 import "../styles/Modal.css";
 import { FaXmark } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 function Modal({ open, onClose }) {
   if (!open) return null;
 
+  const localStorageData = JSON.parse(localStorage.getItem("calories"))
+
   const [data, setData] = useState({
-    age: "",
-    weight: "",
-    height: "",
-    sex: "",
-    exercise: "",
-    resultado: {},
+    age: localStorageData?.age || "",
+    weight: localStorageData?.weight || "",
+    height: localStorageData?.height || "",
+    sex: localStorageData?.sex || "",
+    exercise: localStorageData?.exercise || "",
+    results: {},
   });
 
   const handleChange = (e) => {
@@ -24,43 +27,44 @@ function Modal({ open, onClose }) {
   };
 
   const calculateResult = (e) => {
-    e.preventDefault();
-    const valorEdad = parseFloat(data.age);
-        const valueWeight = parseFloat(data.weight);
-        const valueHeight = parseFloat(data.height);
-        const valueExercise = parseFloat(data.exercise);
+    const { age, weight, height, sex, exercise } = data;
 
-        if (!valueWeight || !valueHeight || !valorEdad || !valueExercise) {
-            alert("Todos los campos son requeridos");
-            return;
-        }
+    if (!age || !weight || !height || !sex || !exercise) {
+      toast.error("All fields are required");
+      return;
+    }
 
-        let basal, mantener, adelgazar, subir;
+    let bmr = 0,
+      maintain,
+      lose,
+      gain;
+    if (sex === "male") {
+      bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
+    } else if (sex === "female") {
+      bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
+    }
 
-        if (data.genero === "hombre") {
-            basal = Math.round(66 + (13.7 * valueWeight) + (5 * valueHeight) - (6.8 * valorEdad));
-        } else if (data.genero === "mujer") {
-            basal = Math.round(655 + (9.6 * valueWeight) + (1.8 * valueHeight) - (4.7 * valorEdad));
-        } else {
-            alert("El Genero es Obligatorio");
-            return;
-        }
+    bmr = parseFloat(bmr.toFixed(0))
 
-        mantener = Math.round(basal * valueExercise);
-        adelgazar = Math.round((basal * valueExercise) / 1.17633517495);
-        subir = Math.round((basal * valueExercise) * 1.15);
+    maintain = Math.round(bmr * exercise);
+    lose = Math.round((bmr * exercise) / 1.17633517495);
+    gain = Math.round(bmr * exercise * 1.15);
 
-        const resultadoCalculado = {
-            basal: basal,
-            mantener: mantener,
-            adelgazar: adelgazar,
-            subir: subir
-        };
+    const calculatedResults = {
+      bmr: bmr,
+      maintain: maintain,
+      lose: lose,
+      gain: gain,
+    };
 
-        setData(prevData => ({ ...prevData, resultado: resultadoCalculado }));
+    setData((prevData) => ({ ...prevData, results: calculatedResults }));
 
-        // Guardar datos en local storage
-        localStorage.setItem('data', JSON.stringify({ ...data, resultado: resultadoCalculado }));
+    localStorage.setItem('calories', JSON.stringify({ ...data, results: calculatedResults }));
+    
+    toast.success("Data created successfully")
+
+    onClose()
+
   };
 
   return (
@@ -91,9 +95,10 @@ function Modal({ open, onClose }) {
             <label>Age</label>
             <input
               onChange={handleChange}
-             
+              name="age"
               type="number"
               placeholder="23"
+              value={data.age}
               required
             />
           </div>
@@ -101,9 +106,10 @@ function Modal({ open, onClose }) {
             <label>Height</label>
             <input
               onChange={handleChange}
-        
+              name="height"
               type="number"
               placeholder="175 Cm"
+              value={data.height}
               required
             />
           </div>
@@ -111,9 +117,10 @@ function Modal({ open, onClose }) {
             <label>Weight</label>
             <input
               onChange={handleChange}
-      
+              name="weight"
               type="number"
               placeholder="82 Kg"
+              value={data.weight}
               required
             />
           </div>

@@ -13,6 +13,8 @@ function Planner() {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
+  const localStorageData = JSON.parse(localStorage.getItem("calories"));
+
   const handleChange = (e) => {
     setCalories(e.target.value);
   };
@@ -40,12 +42,18 @@ function Planner() {
 
   return (
     <>
-      <button onClick={() => setOpenModal(true)}>Open Modal</button>
-      <Modal open={openModal} onClose={() => setOpenModal(false)}/>
-      <Calcula />
-
       <div className="planner section-x2">
         <div className="planner-container container">
+          {!localStorageData && (
+            <button
+              className="btn-modal btn"
+              onClick={() => setOpenModal(true)}
+            >
+              Open Modal
+            </button>
+          )}
+          <Modal open={openModal} onClose={() => setOpenModal(false)} />
+          <Calcula />
           <div className="container-explanation">
             <h2>Planificador de Calorías</h2>
             <p>
