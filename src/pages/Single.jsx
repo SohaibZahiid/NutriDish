@@ -15,7 +15,6 @@ function SingleRecipe() {
       try {
         const res = await axios.get(`${API}/recipe/${id}`);
         setRecipe(res.data);
-        console.log(res.data);
       } catch (err) {
         console.log(err);
       }

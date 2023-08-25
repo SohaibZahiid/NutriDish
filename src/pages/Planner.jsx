@@ -7,7 +7,9 @@ import Calcula from "./Calcula";
 import Modal from "../components/Modal";
 
 function Planner() {
-  const [recipes, setRecipes] = useState({});
+  const [recipes, setRecipes] = useState(
+    JSON.parse(localStorage.getItem("meal")) || {}
+  );
   const [calories, setCalories] = useState(0);
   const [dietary, setDietary] = useState("non-vegetarian");
   const [open, setOpen] = useState(false);
@@ -31,6 +33,7 @@ function Planner() {
         );
         if (res.data.success) {
           setRecipes(res.data.data);
+          localStorage.setItem("meal", JSON.stringify(res.data.data));
         } else {
           toast.error(res.data?.message);
         }
@@ -48,7 +51,9 @@ function Planner() {
         setOpen(false);
       }
     };
-    document.addEventListener("click", handler);
+    if(open) {
+      document.addEventListener("click", handler);
+    }
   }, []);
 
   return (
@@ -120,17 +125,6 @@ function Planner() {
               Get Plan
             </button>
           </div>
-          {recipes.recipes && (
-            <div className="total-nutritions">
-              <p>Total Calories: {recipes.combinedNutrition.calories}</p>
-              <p>Total Proteins: {recipes.combinedNutrition.protein}</p>
-              <p>
-                Total Carbohydrates: {recipes.combinedNutrition.carbohydrates}
-              </p>
-              <p>Total Fats: {recipes.combinedNutrition.fats}</p>
-            </div>
-          )}
-
           <div className="planned-meals">
             {recipes.recipes &&
               recipes.recipes.map(
