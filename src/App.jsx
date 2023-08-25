@@ -25,12 +25,16 @@ import Planner from "./pages/Planner";
 import { requireLoggedOut } from "./Guards/RouteGuard";
 
 import { ToastContainer } from "react-toastify";
+import ScrollTop from "./pages/ScrollTop";
 import Spinner from "./components/Spinner";
 
-
-
 function App() {
+
   return (
+    <> 
+  
+           
+    <ScrollTop/>
     <Router>
       <Suspense fallback={<Spinner />}>
         <Navbar />
@@ -61,10 +65,14 @@ function App() {
           <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
           <Route path="/About" element={<About />} />
         </Routes>
+     
         <Footer />
         <ToastContainer />
-      </Suspense>
+      </Suspense>   
     </Router>
+ 
+ 
+    </>
   );
 }
 
