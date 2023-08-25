@@ -75,7 +75,7 @@ const Calcula = () => {
 
     return (
         <>
-            <div>
+            {/* <div>
                 <div className="planner-container container">
                     <div className="container-explanation">
                         <h2>Calculadora de Gasto Calórico</h2>
@@ -90,7 +90,7 @@ const Calcula = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className='calculadora' >
                 <div className={modificarCalculadora ? "hid" : 'cla-input'}>
