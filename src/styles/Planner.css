@@ -123,9 +123,7 @@
     gap: 2em;
 }
 
-.total-nutritions p {
-    font-weight: bold;
-}
+
 
 .planned-meals {
   display: grid;
