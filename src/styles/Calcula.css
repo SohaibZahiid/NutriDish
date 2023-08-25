@@ -1,0 +1,90 @@
+.calculadora {
+    margin: 20px auto;
+    width: 500px;
+    background-color: var(--clr-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cal-genero, .cla-input input {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.cal-genero:focus, .cla-input input:focus {
+    border-color: #4caf50;
+}
+
+.button-cal {
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button-cal:hover {
+    background-color: #45a049;
+}
+
+.cal-ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cal-ul li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 1em;
+    color: black;
+}
+
+.cal-resultado {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.info-cal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff8e1;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.info-cal img {
+    width: 40px;
+    height: 40px;
+}
+
+.info-cal p {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.hid {
+    display: none;
+}
+
+
