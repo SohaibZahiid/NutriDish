@@ -17,7 +17,7 @@ function Planner() {
 
   const localStorageData = JSON.parse(localStorage.getItem("calories"));
 
-  const dropRef = useRef(null);
+  const dropRef = useRef();
 
   const handleChange = (e) => {
     setCalories(e.target.value);
@@ -47,14 +47,14 @@ function Planner() {
 
   useEffect(() => {
     const handler = (e) => {
-      if (!dropRef?.current.contains(e.target)) {
+      if (!dropRef.current.contains(e.target)) {
         setOpen(false);
       }
     };
     if(open) {
       document.addEventListener("click", handler);
     }
-  }, []);
+  });
 
   return (
     <>
@@ -100,6 +100,7 @@ function Planner() {
                 <div
                   onClick={() => setOpen(!open)}
                   className={`select ${open && "active"}`}
+                  ref={dropRef}
                 >
                   <input
                     type="text"
