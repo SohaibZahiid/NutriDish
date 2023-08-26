@@ -65,7 +65,7 @@ function Planner() {
               className="btn-modal btn"
               onClick={() => setOpenModal(true)}
             >
-              Open Modal
+              Calculate Calories
             </button>
           )}
           <Modal open={openModal} onClose={() => setOpenModal(false)} />
@@ -126,6 +126,16 @@ function Planner() {
               Get Plan
             </button>
           </div>
+          {recipes.recipes && (
+            <div className="total-nutritions">
+              <p>Total Calories: {recipes.combinedNutrition.calories}</p>
+              <p>Total Proteins: {recipes.combinedNutrition.protein}</p>
+              <p>
+                Total Carbohydrates: {recipes.combinedNutrition.carbohydrates}
+              </p>
+              <p>Total Fats: {recipes.combinedNutrition.fats}</p>
+            </div>
+          )}
           <div className="planned-meals">
             {recipes.recipes &&
               recipes.recipes.map(
