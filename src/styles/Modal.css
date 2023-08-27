@@ -1,0 +1,91 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal {
+  width: 90%;
+  max-width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-white);
+  padding: 2em;
+  border-radius: var(--br);
+  z-index: 1000;
+}
+
+.modal .btn-close {
+    display: grid;
+    place-items: center;
+  position: absolute;
+  right: .6em;
+  top: .6em;
+  border: none;
+  outline: none;
+  padding: 0.2em .2em;
+  border-radius: var(--br);
+  background-color: var(--clr-btn);
+  color: var(--clr-white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal .form-nutrition {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.modal .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.modal .input-box input,.modal .input-box select {
+    border: 0;
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  border-radius: var(--br);
+  border: none;
+  outline: none;
+  height: 50px;
+}
+
+
+.gender-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.gender-switch button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+.gender-switch button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.gender-switch button:focus {
+    outline: none;
+}
