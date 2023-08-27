@@ -6,10 +6,7 @@ const Calcula = () => {
   const data = JSON.parse(localStorage.getItem("calories"));
   return (
     <>
-      {data && (
-        <div className="calculadora">
-          {/* <div>
-                  <div className="planner-container container">
+      <div className="planner-container container">
                       <div className="container-explanation">
                           <h2>Calculadora de Gasto Calórico</h2>
                           <p>
@@ -22,9 +19,9 @@ const Calcula = () => {
                               Usa esta información como referencia para tus objetivos nutricionales. Siempre es recomendable consultar con un profesional para recibir asesoramiento personalizado.
                           </p>
                       </div>
-                  </div>
-              </div> */}
-
+                  </div> 
+      {data && (
+        <div className="calculadora">
           <div>
             <h2 className="cal-resultado">Calorías</h2>
             <ul className="cal-ul">

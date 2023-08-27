@@ -140,7 +140,7 @@
   border: 1px solid #e0e0e0;  /* Borde sutil */
   border-radius: var(--br);   /* Usando una variable para el borde redondeado que ya tienes definido */
   background-color: #e8e4e6;
-  margin-top: 2em;            /* Espacio superior */
+  /*margin-top: 2em;             Espacio superior */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil para dar profundidad */
   
   /* Estilo para el texto */
