@@ -88,28 +88,3 @@
 }
 
 
-.gender-switch {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.gender-switch button {
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    background-color: #e0e0e0;
-    transition: background-color 0.3s;
-    font-size: 1em;
-    border-radius: 20px;
-    margin: 0 5px;
-}
-
-.gender-switch button.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.gender-switch button:focus {
-    outline: none;
-}
