@@ -147,3 +147,6 @@
   line-height: 1.5;
   color: var(--clr-black);
 }
+.container-explanation h2{
+  text-align: center;
+}

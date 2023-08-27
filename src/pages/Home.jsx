@@ -54,15 +54,15 @@ function Home() {
         <h2>What We Offer</h2>
         <div className="feature">
           <div className="card">
-            <img src="/imgs/fondoUpdate.jpg" alt="" />
+            <img src="/imgs/fotoUpdate2.jpg" alt="" />
             <h3>Personalized Recipes</h3>
           </div>
           <div className="card">
-            <img src="/imgs/fondoUpdate.jpg" alt="" />
+            <img src="/imgs/fotoUpdate2.jpg" alt="" />
             <h3>Nutritional Guides</h3>
           </div>
           <div className="card">
-            <img src="/imgs/fondoUpdate.jpg" alt="" />
+            <img src="/imgs/fotoUpdate2.jpg" alt="" />
             <h3>Community Support</h3>
           </div>
         </div>
@@ -82,6 +82,7 @@ function Home() {
               creator={recipe.createdBy}
               favorite={recipe.favorite}
               updateFavoriteStatus={updateFavoriteStatus}
+              allergens={recipe.tags}
             />
           ))}
         </div>

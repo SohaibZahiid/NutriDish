@@ -64,7 +64,7 @@ function Recipe({
                 {allergens.map((allergen) => (
                   <img
                     key={allergen.id}
-                    src={`/imgs/allergens/${allergen.name}.svg`}
+                    src={`/imgs/AlergenosSinTexto/${allergen.name}.svg`}
                     alt=""
                   />
                 ))}

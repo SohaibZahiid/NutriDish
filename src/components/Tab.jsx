@@ -37,9 +37,8 @@ function Tab({ recipe }) {
       </div>
       <div className="content-container">
         <div
-          className={`content ${
-            toggleState == "description" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "description" ? "active-content" : ""
+            }`}
         >
           <h2>Description</h2>
           <hr />
@@ -53,14 +52,25 @@ function Tab({ recipe }) {
               <div className="servings-container">
                 <h4>Number of servings:</h4>
                 <p>{recipe.servings}</p>
+                {console.log(recipe.tags)}
               </div>
             </div>
+            <div className="smallT">
+              <div className="allergensT">
+                {recipe.tags?.map((allergen) => (
+                  <img
+                    key={allergen.id}
+                    src={`/imgs/AlergenosSinTexto/${allergen.name}.svg`}
+                    alt=""
+                  />
+                ))}
+              </div>
+              </div>
           </div>
         </div>
         <div
-          className={`content ${
-            toggleState == "ingredients" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "ingredients" ? "active-content" : ""
+            }`}
         >
           <h2>Ingredients</h2>
           <hr />
@@ -74,35 +84,33 @@ function Tab({ recipe }) {
           </ul>
         </div>
         <div className={`content ${toggleState == "nutritions" ? "active-content" : ""}`}>
-    <h2>Nutritions</h2>
-    <hr />
-    <div className="content-desc">
-        <div className="nutrition-label">
-            <div className="nutrition-row">
+          <h2>Nutritions</h2>
+          <hr />
+          <div className="content-desc">
+            <div className="nutrition-label">
+              <div className="nutrition-row">
                 <span className="label">Calories:</span>
                 <span className="value">{recipe.nutrition?.calories}</span>
-            </div>
-            <div className="nutrition-row">
+              </div>
+              <div className="nutrition-row">
                 <span className="label">Carbohydrates:</span>
                 <span className="value">{recipe.nutrition?.carbohydrates}</span>
-            </div>
-            <div className="nutrition-row">
+              </div>
+              <div className="nutrition-row">
                 <span className="label">Fats:</span>
                 <span className="value">{recipe.nutrition?.fats}</span>
-            </div>
-            <div className="nutrition-row">
+              </div>
+              <div className="nutrition-row">
                 <span className="label">Protein:</span>
                 <span className="value">{recipe.nutrition?.protein}</span>
+              </div>
             </div>
-            {/* Puedes seguir agregando más filas según sea necesario */}
+          </div>
         </div>
-    </div>
-</div>
 
         <div
-          className={`content ${
-            toggleState == "instructions" ? "active-content" : ""
-          }`}
+          className={`content ${toggleState == "instructions" ? "active-content" : ""
+            }`}
         >
           <h2>Instructions</h2>
           <hr />

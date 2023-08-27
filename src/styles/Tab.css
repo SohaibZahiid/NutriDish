@@ -6,6 +6,7 @@
     border-top-right-radius: var(--br);
     border-bottom-right-radius: var(--br);
     height: 100%;
+    position: relative;
 }
 
 .tabs{
@@ -137,3 +138,27 @@
 .nutrition-row span.value {
     text-align: right;
 }
+
+
+.small {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .smallT .allergensT {
+    position: absolute;
+    bottom: 10px; /* Espaciado desde la parte inferior */
+    right: 10px; /* Espaciado desde la derecha */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .smallT img {
+    width: 50px;
+    height: auto;
+  }
