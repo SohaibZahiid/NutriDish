@@ -1,19 +1,19 @@
-
 .footer {
   background-color: var(--clr-primary-navbar);
   padding: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; /* Permite ajustar el contenido en pantallas pequeñas */
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
+  align-items: center;
 }
 
-.footer .links, .footer .social-media, .footer .newsletter {
+.footer .links,
+.footer .social-media,
+.footer .newsletter {
   width: fit-content;
   height: 98%;
   color: var(--clr-primary-text);
   padding: 15px;
-
 }
 
 .footer h2 {
@@ -33,10 +33,12 @@
   color: var(--clr-btn);
 }
 
-
 .ods-image {
   margin: 30px 0;
   padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ods-image img {
@@ -55,7 +57,7 @@
 .footer button {
   border: none;
   outline: none;
-  padding: .6em 1em;
+  padding: 0.6em 1em;
   border-radius: var(--br);
   background-color: var(--clr-btn);
   color: var(--clr-white);
@@ -64,7 +66,6 @@
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
 }
 
 .footer button:hover {

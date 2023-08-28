@@ -62,40 +62,46 @@ function Planner() {
         <div className="planner-container container">
           <div>
             <div className="container-explanation">
-                          <h2>Caloric Expenditure Calculator</h2>
-                          <p>
-                              This tool allows you to estimate the number of calories your body needs in a day, based on factors like your age, weight, height, gender, and level of physical activity.
-                          </p>
-                          <p>
-                              The calculator provides you with information about your basal metabolism, the calories needed to maintain, lose or gain weight.
-                          </p>
-                          <p>
-                              Use this information as a reference for your nutritional goals. It is always recommended to consult with a professional for personalized advice.
-                          </p>
-                      </div>
+              <h2>Caloric Expenditure Calculator</h2>
+              <p>
+                This tool allows you to estimate the number of calories your
+                body needs in a day, based on factors like your age, weight,
+                height, gender, and level of physical activity.
+              </p>
+              <p>
+                The calculator provides you with information about your basal
+                metabolism, the calories needed to maintain, lose or gain
+                weight.
+              </p>
+              <p>
+                Use this information as a reference for your nutritional goals.
+                It is always recommended to consult with a professional for
+                personalized advice.
+              </p>
+            </div>
           </div>
-          <div className="btn-calories-container">
-            {!localStorageData && (
+          {!localStorageData && (
+            <div className="btn-calories-container">
               <button
                 className="btn-modal btn"
                 onClick={() => setOpenModal(true)}
               >
                 Calculate Calories
               </button>
-            )}
-          </div>
+            </div>
+          )}
           <Modal open={openModal} onClose={() => setOpenModal(false)} />
           <Calcula />
           <div className="container-explanation">
             <h2>Meal Planner</h2>
+            <p>Your personalized guide to reach your daily caloric goals.</p>
             <p>
-              Your personalized guide to reach your daily caloric goals.
+              Simply enter the number of calories you wish to consume, and our
+              planner will automatically select the recipes that fit your needs.
             </p>
             <p>
-              Simply enter the number of calories you wish to consume, and our planner will automatically select the recipes that fit your needs.
-            </p>
-            <p>
-              Enjoy delicious meals while staying on track towards your nutritional goals.
+              Enjoy delicious meals while staying on track towards your
+              nutritional goals.
             </p>
           </div>
           <div className="top">
@@ -141,12 +147,10 @@ function Planner() {
           </div>
           {recipes.recipes && (
             <div className="total-nutritions">
-              <p>Total Calories: {recipes.combinedNutrition.calories}</p>
-              <p>Total Proteins: {recipes.combinedNutrition.protein}</p>
-              <p>
-                Total Carbohydrates: {recipes.combinedNutrition.carbohydrates}
-              </p>
-              <p>Total Fats: {recipes.combinedNutrition.fats}</p>
+              <p>Calories: {recipes.combinedNutrition.calories}</p>
+              <p>Proteins: {recipes.combinedNutrition.protein}</p>
+              <p>Carbohydrates: {recipes.combinedNutrition.carbohydrates}</p>
+              <p>Fats: {recipes.combinedNutrition.fats}</p>
             </div>
           )}
           <div className="planned-meals">

@@ -110,6 +110,10 @@
     height: 300px;
   }
 
+  .login-form {
+    padding: 1em !important;
+  }
+
   .login-container .right {
     width: 90%;
     margin: 0;

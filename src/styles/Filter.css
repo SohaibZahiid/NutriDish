@@ -77,7 +77,6 @@
 .allergy-checkbox-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .allergy-checkbox-item {

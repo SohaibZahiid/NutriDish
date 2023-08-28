@@ -24,8 +24,7 @@ function Footer() {
   };
 
   return (
-    <>
-      <footer className="footer">
+    <footer className="footer">
         <div className="links">
           <h2>Quick Links</h2>
           <a href="/About">About Us</a>
@@ -81,7 +80,6 @@ function Footer() {
           </a>
         </div>
         </footer>
-    </>
   );
 }
 

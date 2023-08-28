@@ -60,6 +60,7 @@
   position: absolute;
   left: 0;
   padding: 1em;
+  font-size: 1.4rem;
   pointer-events: none;
   text-transform: uppercase;
   color: lightgray;
@@ -95,6 +96,14 @@
 @media (max-width: 1100px) {
   .register-container {
     flex-direction: column;
+  }
+
+  .register-form {
+    padding: 1em !important;
+  }
+
+  .register-form label {
+    padding-top: 1.2em;
   }
 
   .register-container .left {
