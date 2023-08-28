@@ -85,18 +85,15 @@ function Planner() {
           <Modal open={openModal} onClose={() => setOpenModal(false)} />
           <Calcula />
           <div className="container-explanation">
-            <h2>Planificador de Calorías</h2>
+            <h2>Calorie Planner</h2>
             <p>
-              Tu guía personalizada para alcanzar tus metas calóricas diarias.{" "}
+              Your personalized guide to reach your daily caloric goals.
             </p>
             <p>
-              Simplemente introduce la cantidad de calorías que deseas consumir
-              y nuestro planificador seleccionará automáticamente las recetas
-              que se ajusten a tu necesidad.{" "}
+              Simply enter the number of calories you wish to consume, and our planner will automatically select the recipes that fit your needs.
             </p>
             <p>
-              Disfruta de deliciosas comidas mientras te mantienes en el camino
-              hacia tus metas nutricionales.
+              Enjoy delicious meals while staying on track towards your nutritional goals.
             </p>
           </div>
           <div className="top">
