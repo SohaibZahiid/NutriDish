@@ -149,8 +149,9 @@
   text-align: center;
 }
 
-.btn-container {
+.btn-calories-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;  /* Espaciado adicional en la parte superior, ajusta según tus necesidades */
+  align-items: center;
+  padding-block: 2em;
 }
