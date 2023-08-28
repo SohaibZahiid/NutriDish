@@ -62,23 +62,17 @@ function Planner() {
         <div className="planner-container container">
           <div>
             <div className="container-explanation">
-              <h2>Calculadora de Gasto Calórico</h2>
-              <p>
-                Esta herramienta te permite estimar la cantidad de calorías que
-                tu cuerpo necesita en un día, basándose en factores como tu
-                edad, peso, altura, género y nivel de actividad física.
-              </p>
-              <p>
-                La calculadora te proporciona información sobre tu metabolismo
-                basal, las calorías necesarias para mantener el peso, para
-                adelgazar y para ganar peso.
-              </p>
-              <p>
-                Usa esta información como referencia para tus objetivos
-                nutricionales. Siempre es recomendable consultar con un
-                profesional para recibir asesoramiento personalizado.
-              </p>
-            </div>
+                          <h2>Caloric Expenditure Calculator</h2>
+                          <p>
+                              This tool allows you to estimate the number of calories your body needs in a day, based on factors like your age, weight, height, gender, and level of physical activity.
+                          </p>
+                          <p>
+                              The calculator provides you with information about your basal metabolism, the calories needed to maintain, lose or gain weight.
+                          </p>
+                          <p>
+                              Use this information as a reference for your nutritional goals. It is always recommended to consult with a professional for personalized advice.
+                          </p>
+                      </div>
           </div>
           <div className="btn-calories-container">
             {!localStorageData && (
@@ -93,7 +87,7 @@ function Planner() {
           <Modal open={openModal} onClose={() => setOpenModal(false)} />
           <Calcula />
           <div className="container-explanation">
-            <h2>Calorie Planner</h2>
+            <h2>Meal Planner</h2>
             <p>
               Your personalized guide to reach your daily caloric goals.
             </p>
