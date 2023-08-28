@@ -32,6 +32,7 @@ function Planner() {
           `${API}/recipes/suggestions/${calories}/${dietary}`
         );
         if (res.data.success) {
+          console.log(res.data.data)
           setRecipes(res.data.data);
           localStorage.setItem("meal", JSON.stringify(res.data.data));
         } else {
@@ -47,7 +48,7 @@ function Planner() {
 
   useEffect(() => {
     const handler = (e) => {
-      if (!dropRef.current.contains(e.target)) {
+      if (!dropRef?.current?.contains(e.target)) {
         setOpen(false);
       }
     };
