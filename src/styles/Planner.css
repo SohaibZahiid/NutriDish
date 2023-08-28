@@ -9,7 +9,6 @@
     margin-bottom: .5em;
 }
 
-
 .planner-container .top {
   display: flex;
   flex-direction: column;
@@ -125,8 +124,6 @@
     gap: 2em;
 }
 
-
-
 .planned-meals {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -150,4 +147,10 @@
 }
 .container-explanation h2{
   text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;  /* Espaciado adicional en la parte superior, ajusta según tus necesidades */
 }
