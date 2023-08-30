@@ -34,7 +34,7 @@
   padding: 30px;
 }
 
-.team-members div {
+.team-members .team-members-card {
   text-align: center;
   margin: 26px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -43,9 +43,6 @@
   padding: 20px;
   background-color: var(--clr-box-bg);
   width: 199px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
 }
 
 .team-members img {
@@ -55,25 +52,23 @@
   object-fit: cover;
 }
 
-.team-members a {
-  text-align: center;
-  display: block;
-}
-
-
-.team-members a {
-  display: block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: var(--clr-primary-navbar);
-  font-weight: 600;
-  transition: color var(--ts);
-}
-
-.team-members a:hover {
+.team-members .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: .5em;
+  gap: .5em;
+  font-size: 3rem;
   color: var(--clr-btn);
 }
 
+.team-members .social-icons .icon {
+  cursor: pointer;
+  transition: var(--ts);
+}
+
+.team-members .social-icons .icon:hover {
+  color: var(--clr-btn-hover);
+}
 
 .mission-section p {
   color: var(--clr-black);
