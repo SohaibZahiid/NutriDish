@@ -67,7 +67,7 @@ function App() {
         </Routes>
      
         <Footer />
-        <ToastContainer />
+        <ToastContainer autoClose={1000}/>
       </Suspense>   
     </Router>
  
