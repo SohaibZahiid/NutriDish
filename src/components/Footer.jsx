@@ -26,14 +26,14 @@ function Footer() {
   return (
     <footer className="footer">
         <div className="links">
-          <h2>Quick Links</h2>
+          <h2>Quick links</h2>
           <a href="/About">About Us</a>
           <br></br>
-          <a href="/TermsAndConditions">Terms & Conditions</a>
+          <a href="/TermsAndConditions">Terms & conditions</a>
           <br></br>
         </div>
         <div className="links">
-          <h2>Developers</h2>
+          <h2>Contact</h2>
           <a
             href="https://www.linkedin.com/in/mirjan-kapxhiu-ba742527b"
             target="_blank"
@@ -61,7 +61,7 @@ function Footer() {
           <br></br>
         </div>
         <div className="newsletter">
-          <h2>Subscribe to Our Newsletter</h2>
+          <h2>Subscribe to our newsletter</h2>
           <form onSubmit={sendEmail}>
             <input
               type="email"

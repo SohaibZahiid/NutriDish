@@ -62,7 +62,7 @@ function Planner() {
         <div className="planner-container container">
           <div>
             <div className="container-explanation">
-              <h2>Caloric Expenditure Calculator</h2>
+              <h2>Caloric expenditure calculator</h2>
               <p>
                 This tool allows you to estimate the number of calories your
                 body needs in a day, based on factors like your age, weight,
@@ -86,14 +86,14 @@ function Planner() {
                 className="btn-modal btn"
                 onClick={() => setOpenModal(true)}
               >
-                Calculate Calories
+                Calculate calories
               </button>
             </div>
           )}
           <Modal open={openModal} onClose={() => setOpenModal(false)} />
           <Calcula />
           <div className="container-explanation">
-            <h2>Meal Planner</h2>
+            <h2>Meal planner</h2>
             <p>Your personalized guide to reach your daily caloric goals.</p>
             <p>
               Simply enter the number of calories you wish to consume, and our
@@ -142,7 +142,7 @@ function Planner() {
               </div>
             </div>
             <button className="btn" onClick={getRecipes}>
-              Get Plan
+              Get plan
             </button>
           </div>
           {recipes.recipes && (

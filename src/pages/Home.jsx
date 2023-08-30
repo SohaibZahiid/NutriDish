@@ -41,7 +41,7 @@ function Home() {
       <section id="hero" className="section-x2">
         {/* Hero Section */}
         <div id="hero-content">
-          <h1>Start Your Journey to a Healthier Life Today</h1>
+          <h1>Start your journey to a healthier life today</h1>
           <p>Discover delicious and healthy recipes that you'll love.</p>
           <Link to="lunch">
             <span className="btn">Explore recipes</span>
@@ -51,19 +51,19 @@ function Home() {
 
       {/* Features Section */}
       <section id="features" className="section-x2 container">
-        <h2>What We Offer</h2>
+        <h2>What we offer</h2>
         <div className="feature">
           <div className="card">
             <img src="/imgs/DietasPersonalizadas.png" alt="" />
-            <h3>Personalized Recipes</h3>
+            <h3>Personalized recipes</h3>
           </div>
           <div className="card">
             <img src="/imgs/GuiaNutricional.jpg" alt="" />
-            <h3>Nutritional Guides</h3>
+            <h3>Nutritional guides</h3>
           </div>
           <div className="card">
             <img src="/imgs/SoporteComunitario.jpg" alt="" />
-            <h3>Community Support</h3>
+            <h3>Community support</h3>
           </div>
         </div>
         {/* Add more features here */}
@@ -91,7 +91,7 @@ function Home() {
 
       {/* Sección de Testimonios */}
       <section id="testimonials" className="section-x2">
-        <h2>What Our Members Say</h2>
+        <h2>What our members say</h2>
         <div className="testimonial-container container">
           <Testimonial
             className="testimonial"
@@ -116,7 +116,7 @@ function Home() {
       <section id="final-cta" className="section-x2">
         <h2>Become a part of our community and revolutionize your life!</h2>
         <Link to="/register">
-          <span className="btn">Register Here</span>
+          <span className="btn">Register here</span>
         </Link>
       </section>
     </div>
