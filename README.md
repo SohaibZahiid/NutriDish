@@ -22,10 +22,11 @@ NutriDish es una aplicación web diseñada para ofrecerte recetas saludables per
 ## Tecnologías Utilizadas 💻
 
 - React
-- TypeScript
+- JavaScript
 - CSS
-- Node.js
-- ... y más!
+- Java
+- Spring Boot
+- MySQL
 
 ## Contribuir
 
