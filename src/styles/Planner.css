@@ -1,158 +1,159 @@
 .planner {
-  display: flex;
-  justify-content: center;
-  min-height: 70vh;
-}
-
-.planner h2 {
-  text-align: center;
-  margin-bottom: 0.5em;
-}
-
-.planner-container .top {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  padding-block: 2em;
-}
-
-.top .input-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-}
-
-.top .input-container .select {
-  position: relative;
-  width: 200px;
-  height: 50px;
-}
-
-.top .input-container .select::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 2px solid var(--clr-btn-hover);
-  right: 20px;
-  top: 15px;
-  z-index: 99;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  transform: rotate(-45deg);
-  transition: var(--ts);
-  pointer-events: none;
-}
-
-.top .input-container .select.active::before {
-  top: 20px;
-  transform: rotate(-225deg);
-}
-
-.top .input-container .input-box {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.top .input-container input[type="number"] {
-  background-color: white;
-  box-shadow: var(--bs);
-  padding: 12px 20px;
-  border-radius: var(--br);
-  border: none;
-  outline: none;
-  width: 200px;
-  height: 50px;
-}
-
-.top .input-container .select input {
-  caret-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background-color: white;
-  border: none;
-  outline: none;
-  box-shadow: var(--bs);
-  padding: 12px 20px;
-  border-radius: var(--br);
-}
-
-.top .input-container .select input::placeholder {
-  text-transform: capitalize;
-}
-
-.top .input-container .select .option {
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  background-color: white;
-  box-shadow: var(--bs);
-  border-radius: var(--br);
-  overflow: hidden;
-  display: none;
-  z-index: 999;
-}
-
-.top .input-container .select.active .option {
-  display: block;
-}
-
-.top .input-container .select .option div {
-  padding: 12px 20px;
-  cursor: pointer;
-  transition: var(--ts);
-}
-
-.top .input-container .select .option div:hover {
-  background-color: var(--clr-btn-hover);
-  color: white;
-}
-
-.total-nutritions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-}
-
-.planned-meals {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  justify-content: center;
-  gap: 2em;
-  padding-top: 20px;
-}
-
-.container-explanation {
-  padding: 1.5em;
-  border: 1px solid #e0e0e0; /* Borde sutil */
-  border-radius: var(
-    --br
-  ); /* Usando una variable para el borde redondeado que ya tienes definido */
-  background-color: #e8e4e6;
-  /*margin-top: 2em;             Espacio superior */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
-
-  /* Estilo para el texto */
-  font-size: 2rem;
-  line-height: 1.5;
-  color: var(--clr-black);
-}
-.container-explanation h2 {
-  text-align: center;
-}
-
-.btn-calories-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-block: 2em;
-}
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+  }
+  
+  .planner h2 {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  
+  .planner-container .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-block: 2em;
+  }
+  
+  .top .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+  
+  .top .input-container .select {
+    position: relative;
+    width: 200px;
+    height: 50px;
+  }
+  
+  .top .input-container .select::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--clr-btn-hover);
+    right: 20px;
+    top: 15px;
+    z-index: 99;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: var(--ts);
+    pointer-events: none;
+  }
+  
+  .top .input-container .select.active::before {
+    top: 20px;
+    transform: rotate(-225deg);
+  }
+  
+  .top .input-container .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .top .input-container input[type="number"] {
+    background-color: white;
+    box-shadow: var(--bs);
+    padding: 12px 20px;
+    border-radius: var(--br);
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+  }
+  
+  .top .input-container .select input {
+    caret-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    outline: none;
+    box-shadow: var(--bs);
+    padding: 12px 20px;
+    border-radius: var(--br);
+  }
+  
+  .top .input-container .select input::placeholder {
+    text-transform: capitalize;
+  }
+  
+  .top .input-container .select .option {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background-color: white;
+    box-shadow: var(--bs);
+    border-radius: var(--br);
+    overflow: hidden;
+    display: none;
+    z-index: 999;
+  }
+  
+  .top .input-container .select.active .option {
+    display: block;
+  }
+  
+  .top .input-container .select .option div {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: var(--ts);
+  }
+  
+  .top .input-container .select .option div:hover {
+    background-color: var(--clr-btn-hover);
+    color: white;
+  }
+  
+  .total-nutritions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+  
+  .planned-meals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: center;
+    gap: 2em;
+    padding-top: 20px;
+  }
+  
+  .container-explanation {
+    padding: 1.5em;
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: var(
+      --br
+    ); /* Usando una variable para el borde redondeado que ya tienes definido */
+    background-color: #e8e4e6;
+    /*margin-top: 2em;             Espacio superior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  
+    /* Estilo para el texto */
+    font-size: 2rem;
+    line-height: 1.5;
+    color: var(--clr-black);
+  }
+  .container-explanation h2 {
+    text-align: center;
+  }
+  
+  .btn-calories-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2em;
+  }
+  

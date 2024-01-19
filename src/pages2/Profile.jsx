@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import axios from "axios";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../cntx/AuthContext";
 import { toast } from "react-toastify";
 import "../styles/profile.css";
 function Profile() {

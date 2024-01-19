@@ -3,7 +3,7 @@ import "../styles/Recipe.css";
 import { FaHeart } from "react-icons/fa6";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "./../contexts/AuthContext";
+import { AuthContext } from "../cntx/AuthContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

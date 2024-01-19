@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import Recipe from "../components/Recipe";
-import Testimonial from "../components/Testimonial";
+import Recipe from "../component/Recipe";
+import Testimonial from "../component/Testimonial";
 import "../styles/Home.css";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../cntx/AuthContext";
 
 function Home() {
   const [recipes, setRecipes] = useState([]);

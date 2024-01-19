@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/Single.css";
 import { useParams } from "react-router";
 import axios from "axios";
-import Tab from "../components/Tab";
+import Tab from "../component/Tab";
 
 function SingleRecipe() {
   const [recipe, setRecipe] = useState({});

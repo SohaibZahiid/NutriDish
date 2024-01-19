@@ -1,74 +1,75 @@
-.recipe {
-  border-radius: var(--br);
-  background-color: var(--clr-receipe-box);
-  color: var(--clr-secondary-text);
-  transition: var(--ts);
-  cursor: pointer;
-  box-shadow: var(--bs);
-  position: relative;
-}
-
-.recipe:hover {
-  transform: translateY(-5px);
-}
-
-.recipe img {
-  object-fit: cover;
-  border-start-start-radius: var(--br);
-  display: block;
-  width: 100%;
-  height: 230px;
-}
-
-.recipe .heart {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 25px;
-  color: var(--clr-btn-hover);
-  transition: var(--tr);
-}
-
-.recipe .heart:hover,
-.recipe .heart.filled {
-  color: red;
-}
-
-.recipe-description {
-  padding: 0.5em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6em;
-  color: var(--clr-secondary-headline);
-}
-
-.small {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.small .allergens {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.small img {
-  width: 27px;
-  height: auto;
-}
-
-.title {
-  font-size: var(--fz-title);
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
-.creator {
-  font-size: 1.4rem;
-  text-transform: capitalize;
-}
+recipe {
+    border-radius: var(--br);
+    background-color: var(--clr-receipe-box);
+    color: var(--clr-secondary-text);
+    transition: var(--ts);
+    cursor: pointer;
+    box-shadow: var(--bs);
+    position: relative;
+  }
+  
+  .recipe:hover {
+    transform: translateY(-5px);
+  }
+  
+  .recipe img {
+    object-fit: cover;
+    border-start-start-radius: var(--br);
+    display: block;
+    width: 100%;
+    height: 230px;
+  }
+  
+  .recipe .heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+    color: var(--clr-btn-hover);
+    transition: var(--tr);
+  }
+  
+  .recipe .heart:hover,
+  .recipe .heart.filled {
+    color: red;
+  }
+  
+  .recipe-description {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    color: var(--clr-secondary-headline);
+  }
+  
+  .small {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .small .allergens {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .small img {
+    width: 27px;
+    height: auto;
+  }
+  
+  .title {
+    font-size: var(--fz-title);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .creator {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+  

@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import "../styles/Planner.css";
 import { toast } from "react-toastify";
-import Recipe from "../components/Recipe";
+import Recipe from "../component/Recipe";
 import Calcula from "./Calcula";
-import Modal from "../components/Modal";
+import Modal from "../component/Modal";
 
 function Planner() {
   const [recipes, setRecipes] = useState(

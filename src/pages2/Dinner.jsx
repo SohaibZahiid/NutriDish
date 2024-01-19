@@ -1,6 +1,6 @@
 import React from "react";
-import Meal from "../components/Meal";
-import { AuthContext } from "../contexts/AuthContext";
+import Meal from "../component/Meal";
+import { AuthContext } from "../cntx/AuthContext";
 import { useContext } from "react";
 
 function Dinner() {

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import { useContext, useEffect, useRef, useState } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../cntx/AuthContext";
 import DropdownProfile from "./DropdownProfile";
 import { FaBars, FaXmark } from "react-icons/fa6";
 

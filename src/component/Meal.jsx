@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import Recipe from "../components/Recipe";
-import Filter from "../components/Filter";
-import { AuthContext } from "../contexts/AuthContext";
+import Recipe from "./Recipe";
+import Filter from "./Filter";
+import { AuthContext } from "../cntx/AuthContext";
 import "../styles/Meal.css";
 
 function Meal({ APIEndpoint }) {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Calcula.css";
-import Modal from "../components/Modal";
+import Modal from "../component/Modal";
 const Calcula = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const data = JSON.parse(localStorage.getItem("calories"));
